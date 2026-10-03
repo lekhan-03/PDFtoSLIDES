@@ -94,15 +94,22 @@ def split_condition(c: str) -> str:
 def piecewise_to_cases(s: str) -> str:
     """'A = {V1, if C1  V2, if C2'  ->  A = \\begin{cases} V1 & \\text{if } C1 \\\\ V2 & ... \\end{cases}
     Returns s unchanged when it cannot split safely (caller sends it to review)."""
+    # Fix a: Cut the sentence from a formula before piecewise conversion
+    m_split = re.search(r"\s+\b(and hence|hence|then)\b", s, re.IGNORECASE)
+    tail = ""
+    if m_split:
+        tail = s[m_split.start():]
+        s = s[:m_split.start()]
+        
     m = re.search(r"=\s*\{", s)
     if not m:
-        return s
+        return s + tail
     head, body = s[:m.start()].strip(), s[m.end():].strip()
     if body.endswith("}") and body.count("}") > body.count("{"):
         body = body[:-1].strip()
     ifs = list(IF.finditer(body))
     if len(ifs) < 2:
-        return s
+        return s + tail
     values = [body[:ifs[0].start()].strip()]
     conds = []
     for i, f in enumerate(ifs):
@@ -111,12 +118,12 @@ def piecewise_to_cases(s: str) -> str:
         if i + 1 < len(ifs):
             parts = seg.rsplit(None, 1)                # last token before the next "if" = next value
             if len(parts) < 2:
-                return s
+                return s + tail
             seg, nxt = parts
             values.append(nxt.rstrip(","))
         conds.append(split_condition(seg))
     rows = [f"{v} & \\text{{if }} {c}" for v, c in zip(values, conds)]
-    return f"{head} = \\begin{{cases}} " + " \\\\ ".join(rows) + " \\end{cases}"
+    return f"{head} = \\begin{{cases}} " + " \\\\ ".join(rows) + " \\end{cases}" + tail
 
 
 # ---------------------------------------------------------------- main entry
@@ -168,6 +175,8 @@ TAG = re.compile(
 )
 
 
+FUNCS = {"arcsin", "arccos", "arctan", "cosec", "csc", "sin", "cos", "tan", "cot", "sec", "log", "ln"}
+
 def split_question(q: str):
     """-> (tag or None, runs). Splits at $...$, trims spaces inside the $ pair, pulls the trailing
     year tag "(2014,2015s,2019)" out of the stem, and re-attaches a bare 'dx' left outside the math."""
@@ -189,4 +198,7 @@ def split_question(q: str):
             out[-1][1] += " " + text.strip()
         else:
             out.append([kind, text])
+            
+    # "insert a space between a TEXT run and the next MATH run if the TEXT does not end with one"
     return tag, [(k, t) for k, t in out if t.strip()]
+

@@ -1,0 +1,1470 @@
+--- Slide 1 ---
+
+Chemistry Midterm — MCQ Practice
+196 Questions  ·  For: Boards
+
+--- Slide 2 ---
+For: Boar d s
+Solutions
+
+--- Slide 3 ---
+1. 68% of nitric acid in water
+A. Has zero enthalpy of mixing
+B. Cannot be separated by distillation
+C. Follows Raoult's Law
+D. Has zero volume change of mixing
+
+--- Slide 4 ---
+2. Assuming complete dissociation, the value of van't Hoff factor for Na 2 SO 4 is
+A. 1
+B. 2
+C. 3
+D. 4
+
+--- Slide 5 ---
+3. Consider a blood cell placed in a NaCl solution of concentration more than 0.9% (w/V). Which
+one of the following statements is true in this case?
+A. Osmosis takes place from the cell to the NaCl solution, and the cell shrinks.
+B. Osmosis takes place from the NaCl solution to the cell, and the cell swells.
+C. Osmosis takes place from the cell to the NaCl solution, and the cell swells.
+D. Osmosis takes place from the NaCl solution to the cell, and the cell shrinks.
+
+--- Slide 6 ---
+4. De-salination of sea water can be done by
+A. Dialysis
+B. Hypertonic solution
+C. Evaporation
+D. Reverse osmosis
+
+--- Slide 7 ---
+5. During osmosis, the solvent molecules are moving from
+A. Hypertonic solution to isotonic solution
+B. Hypertonic solution to hypotonic solution
+C. Higher concentrated solution to lower concentrated solution
+D. Hypotonic solution to hypertonic solution
+
+--- Slide 8 ---
+6. For a 0.1M solution, the colligative property will follow the order
+A. NaCl > Na 2 SO 4 > Na 3 PO 4
+B. NaCl < Na 2 SO 4 < Na 3 PO 4
+C. NaCl < Na 2 SO 4 ≈ Na 3 PO 4
+D. NaCl < Na 2 SO 4 = Na 3 PO 4
+
+--- Slide 9 ---
+7. If abnormal molar mass is more than normal molar mass, the Van't Hoff factor (i) is
+A. i > 1
+B. i = 1
+C. i < 1
+D. i ≥ 1
+
+--- Slide 10 ---
+8. In a solution containing a non-volatile solute, the mole fraction of solvent is 0.9. The relative
+lowering of vapor pressure is
+A. 1
+B. 0.1
+C. 0.9
+D. 1.1
+
+--- Slide 11 ---
+9. Isotonic solutions have the same
+A. Surface tension
+B. Vapour pressure
+C. Osmotic pressure
+D. Viscosity
+
+--- Slide 12 ---
+10. Pick out the ideal solution among the following
+A. Phenol and Aniline
+B. Ethanol and Acetone
+C. Chloroform and Acetone
+D. n-Hexane and n-Heptane
+
+--- Slide 13 ---
+For: Boar d s
+11. The concentration term depends on temperature is
+A. ppm
+B. mole fraction
+C. molality
+D. molarity
+
+--- Slide 14 ---
+12. The condition caused when scuba divers go into deep sea water is
+A. Anoxia
+B. Hemophilia
+C. Bends
+D. None -3
+
+--- Slide 15 ---
+13. The K H values for Ar(g), CO 2 (aq), HCHO (aq), and CH 4 (aq) are 40.39, 1.67, 1.83 × 10 , and
+0.413 respectively. Arrange them in the order of their increasing solubility
+A. HCHO < CH 4 < CO 2 < Ar
+B. HCHO < CO 2 < CH 4 < Ar
+C. Ar < CO 2 < CH 4 < HCHO
+D. Ar < CH 4 < CO 2 < HCHO
+
+--- Slide 16 ---
+14. The dissolution of a gas in a liquid is governed by
+A. Roult's law
+B. Henry's law
+C. Dalton's law of Pressure
+D. Boyle's law
+
+--- Slide 17 ---
+15. The maximum amount of a solid solute that can be dissolved in a specific amount of a given
+liquid solvent does not depend upon
+A. Nature of solvent
+B. Pressure
+C. Nature of solute
+D. Temperature
+
+--- Slide 18 ---
+16. The mixture which shows positive deviation from Raoult's law is
+A. Ethanol + Acetone
+B. Benzene + Toluene
+C. Acetone + Chloroform
+D. Chlorobenzene + Bromoethane -1
+
+--- Slide 19 ---
+17. The most diluted solution is (molar mass of NaCl = 58.5 g mol )
+A. 2% (w/w) NaCl in water
+B. 1M NaCl
+C. 2 ppm of NaCl
+D. 2 m NaCl
+
+--- Slide 20 ---
+18. The pressure cooker reduces the cooking timing because
+A. Heat is more evenly distributed
+B. The boiling point of water inside the cooker is elevated
+C. The boiling point of water inside the cooker is depressed
+D. Higher pressure inside the cooker tenderizes food
+
+--- Slide 21 ---
+19. The solubility of a gas in water depends on
+A. Nature of the gas
+B. Temperature
+C. Pressure of the gas
+D. All of the above
+
+--- Slide 22 ---
+20. The solubility of a solid gas does not depend on
+A. Nature of the solute
+B. Nature of the solvent
+C. Pressure
+D. None of these
+
+--- Slide 23 ---
+21. The solution which has lower osmotic pressure with respect to another is called
+A. Isotonic solution
+B. Hypertonic solution
+C. Hypotonic solution
+D. None of these
+
+--- Slide 24 ---
+22. The solutions which show a large positive deviation from Raoult's law form
+A. Minimum boiling point azeotrope
+B. Maximum boiling point azeotrope
+C. Minimum or maximum boiling point azeotrope
+D. No azeotrope
+
+--- Slide 25 ---
+For: Boar d s
+23. The tanks used by most scuba divers are filled with air diluted with helium of around
+A. 88.3%
+B. 56.2%
+C. 32.1%
+D. 11.7%
+
+--- Slide 26 ---
+24. The value of Henry's constant K H is
+A. Greater for gases with higher solubility.
+B. Greater for gases with lower solubility.
+C. Constant for all gases.
+D. Not related to the solubility of gases.
+
+--- Slide 27 ---
+25. Value of Henry's constant (K H )
+A. Increases with increase in temperature
+B. Decreases with increase in temperature
+C. Remains constant
+D. First increases, then decreases
+
+--- Slide 28 ---
+26. When a substance is dissolved in a solvent, the vapor pressure for the solvent is decreased. This
+results in
+A. The solution having a lower osmotic pressure than the solvent
+B. A decrease in the boiling point of the solvent
+C. The solution having a higher freezing point than the solvent
+D. An increase in the boiling point of the solution
+
+--- Slide 29 ---
+27. Which of the following aqueous solutions should have the highest boiling point?
+A. 1.0 M NaOH
+B. 1.0 M Na 2 SO 4
+C. 1.0 M NH 4 NO 3
+D. 1.0 M KNO 3
+
+--- Slide 30 ---
+28. Which of the following liquid-liquid solutions show negative deviation from Raoult's law?
+A. Benzene and Toluene
+B. Water and Ethanol
+C. Acetone and Chloroform
+D. Chlorobenzene and Bromobenzene
+
+--- Slide 31 ---
+29. Which of the following solutions is used as an antifreezing agent in car radiators to cool the
+engine?
+A. 35% (v/v) solution of ethylene glycol
+B. 35% (m/m) solution of ethylene glycol
+C. 35% (m/v) solution of ethylene glycol
+D. 35% (v/m) solution of ethylene glycol
+
+--- Slide 32 ---
+For: Boar d s
+Electrochemistry:
+30. Which one of the following is not a solid solution?
+A. Hydrogen in palladium
+B. Camphor in nitrogen gas
+C. Amalgam of mercury & sodium
+D. Copper in gold
+
+--- Slide 33 ---
+31. A galvanic cell has an electrical potential of 1.1 V. If an opposing potential of 1.1 V is applied
+to this cell, what will happen to the cell reaction and current flowing through the cell?
+A. The reaction stops and no current flows through the cell.
+B. The reaction continues but current flows in the opposite direction.
+C. The concentration of reactants becomes unity and current flows from cathode to anode.
+D. The cell does not function as a galvanic cell and zinc is deposited on the zinc plate.
+
+--- Slide 34 ---
+32. An electrochemical cell can behave like an electrolytic cell when
+A. E cell = 0
+B. E cell > E ext
+C. E cell < E ext
+D. E cell = E ext
+
+--- Slide 35 ---
+33. Assertion: The specific conductivity decreases with dilution.
+Reason: The number of ions per unit volume that carry the current in a solution decreases on
+dilution.
+A. Both assertion and reason are true, and the reason is the correct explanation of the
+B. Both assertion and reason are true, but the reason is not the correct explanation of the
+C. Assertion is true, but the reason is false.
+D. Both assertion and reason are false.
+
+--- Slide 36 ---
+34. E cell of Daniel cell is calculated by using the following formula
+A. ​
+B. ​
+C. ​
+D. ​
+
+--- Slide 37 ---
+35. Fluorine has the highest standard electrode potential, indicating that fluorine gas is
+A. Strongest reducing agent
+B. Strongest oxidizing agent
+C. Weak oxidizing agent
+D. SEP value is zero
+
+--- Slide 38 ---
+36. If the E relationship for the value of ΔG cell for a given reaction has a negative value, then which of the following is the correct 0 and Keq?
+A. ΔG 0 >0 and Keq>1
+B. ΔG 0 <0 and Keq<1
+C. ΔG 0 >0 and Keq<1
+D. ΔG 0 <0 and Keq>1
+
+--- Slide 39 ---
+37. In a galvanic cell
+A. Chemical energy is converted into heat
+B. Electrical energy is converted into heat
+C. Chemical energy is converted into electrical energy
+D. Electrical energy is converted into chemical energy
+
+--- Slide 40 ---
+For: Boar d s
+(i) Leclanché cell
+A. Lead (Pb)
+B. Hydrogen(H 2 ) gas
+C. Zinc (Zn)
+D. Zinc – Mercury amalgam(Zn(Hg))
+
+--- Slide 41 ---
+39. Saturated solution of KNO 3 is used to make a salt bridge because
+A. Velocity of K + is greater than that of NO 3 -
+B. Velocity of NO 3 - is greater than that of K +
+C. Velocity of both K + and NO 3 - are nearly the same
+D. KNO 3 is highly soluble in water
+
+--- Slide 42 ---
+40. Statement I: Conductivity (κ) of a solution decreases with dilution.
+Statement II: Molar conductivity (λ m ) of solution increases with dilution.
+Identify the correct statement
+A. Both statements I and II are correct
+B. Both statements I and II are incorrect
+C. Statement I is correct but statement II is incorrect
+D. Statement I is incorrect but statement II is correct
+
+--- Slide 43 ---
+41. Statement I: Cu displaces H Statement II: ions Cu 2+ get reduced more easily than H 2 gas from dilute acids. + ions
+A. Both Statement I and II are correct
+B. Both Statement I and II are incorrect
+C. Statement I is correct and Statement II is incorrect
+D. Statement I is incorrect and Statement II is correct
+
+--- Slide 44 ---
+42. The E° values of Fe / Fe, Zn / Zn, and Sn / Sn are -0.44V, -0.76V, and -0.14V
+respectively. Which of these metals can displace iron from an Fe 2+ solution?
+A. Both Zn and Sn
+B. Zn only
+C. Sn only
+D. Neither Zn nor Sn
+
+--- Slide 45 ---
+43. The molar conductivity is maximum for the solution of concentration
+A. 0.005 M
+B. 0.001 M
+C. 0.004 M
+D. 0.002 M
+
+--- Slide 46 ---
+3+ For: Boar d s
+44. The product formed at the anode during the electrolysis of aqueous NaCl is
+A. H 2
+B. O 2
+C. Na
+D. Cl 2
+
+--- Slide 47 ---
+45. The quantity of electricity required for the reduction of one mole of Al ions is
+A. 1 Faraday
+B. 2 Faraday
+C. 3 Faraday
+D. 4 Faraday
+
+--- Slide 48 ---
+46. What will happen in the Daniel cell, when Eext<1.1 V?
+A. Electrons flow from Zn rod to Cu rod; hence current flows from Cu to Zn
+B. Electrons flow from Cu rod to Zn rod; hence current flows from Cu to Zn
+C. Electrons flow from Zn rod to Cu rod; hence current flows from Zn to Cu
+D. Electrons flow from Cu rod to Zn rod; hence current flows from Zn to Cu
+
+--- Slide 49 ---
+47. When one Faraday current is passed, which of the following would deposit one-gram atomic
+mass of the metal?
+A. NaCl
+B. ZnSO 4
+C. AlCl 3
+D. BaCl 2
+
+--- Slide 50 ---
+For: Boar d s
+Chemical Kinetics:
+48. Which of these statements about a galvanic cell are not true?
+i) The cathode carries a positive sign.
+ii) Oxidation occurs at the anode.
+iii) Electrons flow from cathode to anode in the external circuit.
+iv) The anode carries a negative sign
+A. i and iii
+B. i and ii
+C. ii and iii
+D. ii and iv
+
+--- Slide 51 ---
+49. Acid hydrolysis of ethyl acetate is an example of
+A. Zero order reaction
+B. First order reaction
+C. Second order reaction
+D. Pseudo first order reaction
+
+--- Slide 52 ---
+50. All natural and artificial radioactive decay of unstable nuclei take place by
+A. Zero order kinetics
+B. Half-order kinetics
+C. First-order kinetics
+D. Second-order kinetics
+
+--- Slide 53 ---
+51. For 2NO(g) + O 2 (g) → 2NO 2(g) , the following initial-rate data were obtained. Choose the rate
+equation.
+A. Rate = k[NO] 2
+B. Rate = k[NO] 2 [O 2 ] 2
+C. Rate = k[NO] [O 2 ]
+D. Rate = k[NO] 2 [O 2 ]
+
+--- Slide 54 ---
+52. Consider the Arrhenius equation k=e−Ea/RT and mark the correct option
+A. Rate constant increases exponentially with increasing activation energy and decreasing
+B. Rate constant decreases exponentially with increasing activation energy and decreasing
+C. Rate constant increases exponentially with increasing activation energy and increasing
+D. Rate constant increases exponentially with decreasing activation energy and decreasing
+
+--- Slide 55 ---
+53. For a chemical reaction A → B, it is found that the rate of a reaction doubles when the
+concentration of A is doubled. The order of the reaction is
+A. One
+B. Two
+C. Zero
+D. Three
+
+--- Slide 56 ---
+54. For a zero-order reaction, the intercept for the plot of concentration of reactants vs. time is
+equal to
+A. -k
+B. ​
+C. [R 0 ]
+D. ​
+
+--- Slide 57 ---
+For: Boar d s
+(D) Rate = 𝐾 [A] [B]
+
+55. In a reaction A + B → products, rate is doubled when the concentration of B is doubled, and
+rate increases by a factor of 8 when the concentrations of both the reactants (A and B. are
+doubled. The rate law for the reaction can be written as:
+(A) Rate = K [A][B] 2
+(B) Rate = K [A] 2 [B] 2
+(C) Rate = K [A] 2 [B]
+✉
+
+--- Slide 58 ---
+56. In a reaction Hg + Cl 2 → HgCl 2 , the rate of disappearance of Hg is equal to
+A. Rate of disappearance of Cl 2
+B. Rate of appearance of HgCl 2
+C. Rate of appearance of Cl 2
+D. Both (a) and (b)
+
+--- Slide 59 ---
+57. In a reaction, when the concentration of a reactant is increased two times, the increase in the
+rate of reaction was four times. The order of the reaction is
+A. First order
+B. Zero order
+C. Pseudo first order
+D. Second order
+
+--- Slide 60 ---
+58. In presence of a catalyst, the heat evolved or absorbed during the reaction
+A. Increases
+B. Decreases
+C. Depends on the reaction
+D. Remains unchanged
+
+--- Slide 61 ---
+59. Order of a reaction in which unit of rate of reaction and rate constant are the same
+A. 0
+B. 1
+C. 1 2
+D. 2
+
+--- Slide 62 ---
+60. Statement I: A catalyst does not alter Gibb’s energy (ΔG) of a reaction.
+Statement II: A catalyst alters the activation energy (Ea) of a reaction by providing an alternate
+pathway.
+A. Both Statement I and II are correct
+B. Both Statement I and II are incorrect
+C. Statement I is correct, but Statement II is incorrect
+D. Statement I is incorrect, but Statement II is correct
+
+--- Slide 63 ---
+61. Statement I: If in a zero-order reaction, the concentration of the reactant is doubled, the half-life
+period is also doubled.
+Statement II: For a first-order reaction, the half-life period is independent of the initial
+concentration of the reactant.
+A. Both Statement I and II are correct
+B. Both Statement I and II are incorrect
+C. Statement I is correct but Statement II is incorrect
+D. Statement I is incorrect but Statement II is correct
+
+--- Slide 64 ---
+For: Boar d s
+62. The collision frequency in a reaction depends on
+A. Number of moles of reactants
+B. Proper orientation
+C. Activated reactant molecules
+D. Both (b) and (c)
+
+--- Slide 65 ---
+63. The following factor which does not affect the rate of reaction is
+A. Molecularity
+B. Temperature
+C. Catalyst
+D. Concentration of reactant
+
+--- Slide 66 ---
+64. The half-life period of a first-order reaction is 15 minutes. The amount of substance left after
+one hour will be
+A. One-half
+B. One-fourth
+C. One-eighth
+D. One-sixteenth
+
+--- Slide 67 ---
+65. The molecularity of a reaction cannot be
+A. Zero
+B. One
+C. Both (a) and (b)
+D. Whole number
+
+--- Slide 68 ---
+66. The number of collisions per second per unit volume of the reaction is known as
+A. Collision energy
+B. Activation energy
+C. Collision frequency
+D. Kinetic energy
+
+--- Slide 69 ---
+67. The order of a chemical reaction having the rate expression, Rate = k[A] [B] is
+A. 1
+B. 2
+C. 1 2
+D. 1 4
+
+--- Slide 70 ---
+68. The overall order of a reaction which has the rate expression Rate = K[A] / [B] / is
+A. ½
+B. 2
+C. 3 2
+D. 1 1 1
+
+--- Slide 71 ---
+69. The order for a reaction with the rate law Rate= 𝑘 [ 𝐴 ] [ 𝐵 ] is:
+A. Zero
+B. Fraction
+C. One
+D. Two
+
+--- Slide 72 ---
+70. The rate constant of a reaction is k = 2.3 × 10 L mol s . The order of the reaction is
+A. Zero
+B. One
+C. Two
+D. Three
+
+--- Slide 73 ---
+71. The S.I. unit of the rate constant of a first-order reaction is
+A. s -1
+B. mol dm -3
+C. mol dm -3 s -1
+D. mol -1 dm 3 s -1
+
+--- Slide 74 ---
+​
+A. 38,314.5 J mol −1 (or E a ) of the reaction in 38.3 kJ mol −1 ) J mol −1 ? (Given R = 8.314
+B. 19,157.2 J K −1 mol J mol −1 ) −1
+C. 76,629.0 J mol −1
+D. 8,314.0 J mol −1
+
+--- Slide 75 ---
+73. The time required for 100 percent completion of a zero-order reaction is
+A. 2k / [R] 0
+B. [R] 0 / 2k
+C. [R] 0 / k
+D. [R] 0 k
+
+--- Slide 76 ---
+74. The unit of the rate constant of a reaction is the same as that of its rate. The order of the
+reaction is
+A. Zero order.
+B. First order.
+C. Second order.
+D. Pseudo order.
+
+--- Slide 77 ---
+For: Boar d s
+Application Based Questions:
+75. What is the value of ‘x' if the total order of the reaction, which has the rate expression:
+Rate = k [A]ˣ [B] 2 ˣ is 3/2?
+A. ½
+B. 3/2
+C. 4
+D. 1
+
+--- Slide 78 ---
+76. When the initial concentration of the reactant is doubled, then the half-life of a zero-order
+reaction
+A. Is halved
+B. Is doubled
+C. Is tripled
+D. Remains unchanged
+
+--- Slide 79 ---
+77. Which of the following factors does not affect the rate of reaction?
+A. Molecularity
+B. Temperature
+C. Catalyst
+D. Concentration of reactant
+
+--- Slide 80 ---
+For: Boar d s
+D and F Block elements:
+78. Which of the following is correct for a zero-order reaction?
+A. t½ ∝ [R 0 ] 0
+B. t½ ∝ [R 0 ] 2
+C. t½ ∝ [R 0 ] -1
+D. t½ ∝ [R 0 ] 1
+
+--- Slide 81 ---
+79. Actinoids are
+A. Radioactive
+B. Prepared in nanograms
+C. Having smaller half-lives
+D. All the above are correct
+
+--- Slide 82 ---
+80. Among ScCl 3 , TiCl 3 , and ZnCl 2 , the colored compound is
+A. ScCl 3
+B. TiCl 3
+C. ZnCl 2
+D. All the above
+
+--- Slide 83 ---
+81. Diamagnetic compound among the following is
+A. Cu 2 O
+B. MnO 2
+C. V 2 O 3
+D. FeO
+
+--- Slide 84 ---
+82. Identify the correct sequence of the number of unpaired electrons of the following ions.
+A. Ti 3+ > Cr 3+ > Fe 3+ > Ni 2+
+B. Fe 3+ > Ni 2+ > Ti 2+ > Cr 3+
+C. Fe 3+ > Cr 3+ > Ni 2+ > Ti 3+
+D. Fe 3+ > Cr 3+ > Ti 3+ > Ni 2+
+
+--- Slide 85 ---
+83. In a neutral or faintly alkaline medium, KMnO4 oxidizes iodide ions into iodate. The
+change in oxidation state of manganese in this reaction is from
+A. +7 to +2
+B. +7 to +4
+C. +6 to +4
+D. +7 to +6
+
+--- Slide 86 ---
+84. In aqueous solution, copper (I) ions undergo
+A. Oxidation
+B. Reduction
+C. Disproportionation
+D. Redox reaction
+
+--- Slide 87 ---
+85. Potassium permanganate oxidizes sulphurous acid (H 2 SO 3 ) into
+A. S
+B. S 2 O 7 2-
+C. SO 4 2-
+D. SO 3 2-
+
+--- Slide 88 ---
+86. The aqueous solution of a transition metal ion M is colorless. The ion M is
+A. Mn 2+
+B. Cr 3+
+C. V 4+
+D. Ti 4+
+
+--- Slide 89 ---
+87. The characteristic feature of transition metal is
+A. They show variable oxidation state
+B. They do not form complexes
+C. They are not good catalysts
+D. They exhibit only diamagnetism
+
+--- Slide 90 ---
+88. The correct order of magnetic moment is
+A. Sc 3+ < Ti 3+ < Ti 2+
+B. Ti 3+ < Ti 2+ < Sc 3+
+C. Ti 2+ < Sc 3+ < Ti 3+
+D. Sc 3+ < Ti 2+ < Ti 3+
+
+--- Slide 91 ---
+For: Boar d s
+A. Cr > Mn > Fe
+B. Fe > Mn > Cr
+C. Cr > Fe > Mn
+D. Mn > Fe > Cr
+
+--- Slide 92 ---
+90. The electronic configuration of Cu (II) is 3d , whereas Cu(I) is 3d . Which of the following
+is correct?
+A. Cu (II) is less stable.
+B. Cu (II) is more stable.
+C. Stability of both depends upon the nature of their salts.
+D. Cu(I) and Cu (II) are equally stable.
+
+--- Slide 93 ---
+91. The magnetic moment of an element is 1.73 BM. The number of unpaired electrons in it is
+A. 2
+B. 3
+C. 1
+D. 0
+
+--- Slide 94 ---
+92. The most stable manganese compound is
+A. Mn 2 O 7
+B. MnF 4
+C. MnO 2
+D. Mn 2 SO 4
+
+--- Slide 95 ---
+93. The number of moles of K 2 Cr 2 O 7 reduced by one mole of Sn ion is
+A. 1/3
+B. 3
+C. 1/6
+D. 6
+
+--- Slide 96 ---
+94. The set of 3d series elements that show anomalous electronic configurations are
+A. Cr and Mn
+B. Cu and Zn
+C. Cr and Cu
+D. Mn and Zn
+
+--- Slide 97 ---
+95. The transition metal present in bronze is
+A. Zinc
+B. Tin
+C. Silver
+D. Copper
+
+--- Slide 98 ---
+96. The transition metal present in the red pigment of blood haemoglobin is
+A. cobalt
+B. Nickel
+C. Iron
+D. copper
+
+--- Slide 99 ---
+97. Which of the following actinoids show oxidation states up to +7?
+A. Am (Americium)
+B. Th (Thorium)
+C. U (Uranium)
+D. Np (Neptunium)
+
+--- Slide 100 ---
+98. Which of the following ions has the least magnetic moment?
+A. Cu 2+
+B. Co 3+
+C. Ni 2+
+D. Fe 2+
+
+--- Slide 101 ---
+99. Which of the following is a colorless ion?
+A. V 3+
+B. Fe 3+
+C. Ti 3+
+D. Zn 2+
+
+--- Slide 102 ---
+For: Boar d s
+100. Which of the following pairs have the same paramagnetic moment?
+(Atomic numbers: Ti = 22, Mn = 25, Ni = 28, Cu = 29)
+A. Ti 3+ , Ni 2+
+B. Cu 2+ , Ti 3+
+C. Ti 2+ , Cu 2+
+D. Mn 2+ , Cu 2+
+
+--- Slide 103 ---
+101. Which of the following statements about transition elements is incorrect?
+A. They show variable oxidation states.
+B. All the ions are colored.
+C. They exhibit diamagnetic and paramagnetic properties.
+D. They exhibit catalytic properties.
+
+--- Slide 104 ---
+102. Which of the following transition metal ions is colorless?
+A. V 2+
+B. Cr 3+
+C. Zn 2+
+D. Ti 3+
+
+--- Slide 105 ---
+103. A mixture of chloromethane and chlorobenzene are treated with sodium in dry ether,
+the product obtained is
+A. Ethane
+B. Toluene
+C. Diphenyl
+D. All the above
+
+--- Slide 106 ---
+104. Among the following alkyl halides, which is more reactive towards SN2 reaction?
+A. R-I
+B. R-Cl
+C. R-F
+D. R-Br
+
+--- Slide 107 ---
+105. Assertion: SN2 reactions do not proceed with retention.
+Reason: SN2 reaction proceeds in single steps.
+Identify the correct statement
+A. If both assertion and reason are correct and reason is correct explanation for assertion
+B. If both assertion and reason are correct but reason is not correct explanation for assertion
+C. If assertion is correct but reason is incorrect
+D. If assertion is incorrect but reason is correct
+
+--- Slide 108 ---
+106. Chlorobenzene reacts with magnesium in dry ether to give a compound A, which is
+A. C 6 H 5 OH
+B. C 6 H 5 MgCl
+C. C 2 H 5 CH 2 MgCl
+D. MgCl 2
+
+--- Slide 109 ---
+107. Chloroform is stored completely filled in a closed dark-colored bottle. This is to
+A. Prevent the oxidation of chloroform by air in the presence of sunlight.
+B. Prevent the evaporation of chloroform.
+C. Prevent the reaction of chloroform with nitrogen in the air.
+D. Prevent the reaction of chloroform with CO 2 to form extremely poisonous gas carbonyl
+
+--- Slide 110 ---
+108. Four haloalkane compounds represented by the letters M, N, O, and P having boiling
+points of 24.2°C, 38°C, 3.56°C, and 101.6°C respectively. Among the four compounds, N
+is most likely to be
+A. CH 3 Cl
+B. CH 3 Br
+C. C 2 H 5 Br
+D. C 3 H 7 I
+
+--- Slide 111 ---
+For: Boar d s
+109. Freon can be prepared by
+A. Finkelstein reaction
+B. Wurtz reaction
+C. Friedel-Crafts reaction
+D. Swartz reaction
+
+--- Slide 112 ---
+110. In vinylic halides, the halogen atom is attached to a carbon atom with
+A. sp 3 hybridization
+B. sp 2 hybridization
+C. sp hybridization
+D. dsp 2 hybridization
+
+--- Slide 113 ---
+111. Match the organic compounds in
+COLUMN I
+COLUMN II
+
+(1)  Carbon tetrachloride (CCl4)
+A. Fire extinguisher
+B. Antiseptic
+C. Solvent for fats
+D. Paint remover
+
+--- Slide 114 ---
+112. R - X + NaI (dry acetone) → RI + NaX, name the reaction
+A. Wurtz reaction
+B. Fittig reaction
+C. Swarts reaction
+D. Finkelstein reaction
+
+--- Slide 115 ---
+113. Select the incorrect match
+A. Swartz reaction - CoF 2
+B. Finkelstein reaction - NaI
+C. Sandmeyer's reaction - CuCl 2
+D. Wurtz reaction - Na / dry ether
+
+--- Slide 116 ---
+114. Tertiary alkyl halides are least reactive towards SN2 reaction because of
+A. Inductive effect
+B. Steric effect
+C. Resonance effect
+D. Electrometric effect
+
+--- Slide 117 ---
+115. The best reagent used to produce pure alkyl halides from alcohol is
+A. Concentrated HCl
+B. Concentrated HBr
+C. SOCl 2
+D. NaBr
+
+--- Slide 118 ---
+116. The chemical formula of phosgene is
+A. SOCl 2
+B. CH 2 Cl 2
+C. COCl 2
+D. CCl 4
+
+--- Slide 119 ---
+117. The chemical name of phosgene is
+A. Acetyl chloride
+B. Methyl chloride
+C. Carbonyl chloride
+D. Chloroform
+
+--- Slide 120 ---
+For: Boar d s
+C. 2-Bromo propane D. 2-Bromopropan-2-ol
+118. The chiral molecule among the following is
+A. 1-Bromo butane B. 2-Bromobutane
+✉
+
+--- Slide 121 ---
+119. The compound H 2 C=CH-Cl is an example of
+A. Allylic halides
+B. Aryl halides
+C. Benzylic halides
+D. Vinylic halides
+
+--- Slide 122 ---
+120. The increasing order of boiling points of alkyl halides is
+A. RF > RCl > RBr > RI
+B. RF > RI > RCl > RBr
+C. RI > RBr > RCl > RF
+D. RCl > RBr > RF > RI
+
+--- Slide 123 ---
+121. The IUPAC name of ethylidene chloride is
+A. 1-Chloroethene
+B. 1-Chloroethyne
+C. 1,2-Dichloroethane
+D. 1,1-Dichloroethane
+
+--- Slide 124 ---
+122. The reaction CH 3 Br + AgF → CH 3 F + AgBr is called
+A. Swarts reaction
+B. Wurtz reaction
+C. Finkelstein reaction
+D. Gattermann reaction
+
+--- Slide 125 ---
+123. When 2-Bromo pentane is treated with alcoholic potash, the major product produced
+is
+A. 1-Pentene
+B. 2-Pentene
+C. 2-Pentane
+D. 3-Pentene
+
+--- Slide 126 ---
+124. Which of the following alkyl halides will undergo SN1 reaction most readily?
+A. (CH 3 ) 3 C-F
+B. (CH 3 ) 3 C-Cl
+C. (CH 3 ) 3 C-Br
+D. (CH 3 ) 3 C-I
+
+--- Slide 127 ---
+125. A compound P with formula C 3 H 6 on reaction with H 2 O in presence of H 2 SO 4 gives
+the compound Q. Compound Q on heating with Cu at 573K produces the compound R.
+Compounds P, Q, and R are
+A. P = Propan-1-ol, Q = Propene, R = Propanone
+B. P = Propene, Q = Propan-2-ol, R = Propene
+C. P = Propene, Q = Propan-2-ol, R = Propanone
+D. P = Propanone, Q = Propan-1-ol, R = Propane
+
+--- Slide 128 ---
+126. An organic compound ‘A' containing C, H, and O has a pleasant odor with a boiling
+point of 78°C. On boiling ‘A' with conc. H 2 SO 4 , a colorless gas is produced which
+decolorizes bromine water and alkaline KMnO 4 . The organic compound A is
+A. C 2 H 5 Cl
+B. C 2 H 5 OH
+C. C 2 H 5 COOCH 3
+D. C 6 H 6
+
+--- Slide 129 ---
+127. By which test can 1°, 2°, and 3° alcohols be detected?
+A. Hinsberg test
+B. Tollen's test
+C. Lucas test
+D. All of these
+
+--- Slide 130 ---
+For: Boar d s
+A. Ketone
+B. Aldehyde
+C. Alcohol
+D. Cresol
+
+--- Slide 131 ---
+129. Enantiomers only differ with respect to
+A. Melting point
+B. Boiling point
+C. Refractive index
+D. The rotation of plane-polarized light
+
+--- Slide 132 ---
+130. Ethane-1,2-diol is an example of
+A. Monohydric alcohol
+B. Dihydric alcohol
+C. Dihydric phenol
+D. Monohydric phenol
+
+--- Slide 133 ---
+131. Find out the product of the following reaction:
+(Reaction involving NaOH, 623K, 300 atm)
+A. Aromatic amine
+B. Aromatic hydroxyl compound
+C. Aromatic dihydroxy compound
+D. Aromatic nitro compound
+
+--- Slide 134 ---
+132. Halogenation of benzene occurs in the presence of Lewis acid, but halogenation of
+phenol occurs even in the absence of Lewis acid due to
+A. Highly deactivating effect of -OH group attached to the benzene ring
+B. Highly activating effect of -OH group attached to the benzene ring
+C. Highly deactivating effect of the benzene ring
+D. Highly activating effect of the benzene ring
+
+--- Slide 135 ---
+133. How many alcohols with molecular formula C 4 H 10 O are chiral in nature?
+A. 1
+B. 2
+C. 3
+D. 4
+
+--- Slide 136 ---
+134. Identify the simple ether from the following
+A. CH 3 OC 2 H 5
+B. C 2 H 5 OC 6 H 5
+C. C 6 H 5 OC 6 H 5
+D. C 6 H 5 OCH 3
+
+--- Slide 137 ---
+135. In Kolbe's reaction, phenol is converted into
+A. Salicylic acid
+B. Salicylaldehyde
+C. Benzoic acid
+D. Benzaldehyde
+
+--- Slide 138 ---
+136. In picric acid
+A. Three -OH groups are present
+B. Two -OH groups are present
+C. Three -NO 2 groups are present
+D. One -NO 2 group is present
+
+--- Slide 139 ---
+137. O-nitrophenol and p-nitrophenol are separated by
+A. Sublimation
+B. Fractional distillation
+C. Crystallization
+D. Steam distillation
+
+--- Slide 140 ---
+138. Phenol is less acidic than
+A. o-Nitrophenol
+B. Ethanol
+C. o-Methylphenol
+D. o-Methoxyphenol
+
+--- Slide 141 ---
+For: Boar d s
+A. Ethanol
+B. o-Nitrophenol
+C. m-Nitrophenol
+D. p-Nitrophenol
+
+--- Slide 142 ---
+140. Phenol on oxidation with chromic acid gives
+A. Benzoquinone
+B. Catechol
+C. Hydroquinone
+D. Phthalic acid
+
+--- Slide 143 ---
+141. Salicylaldehyde can be prepared by
+A. Finkelstein reaction
+B. Dow's process
+C. Reimer-Tiemann reaction
+D. Kolbe's reaction
+
+--- Slide 144 ---
+142. The boiling points of alcohols increase with
+A. Increase in the number of C-atoms
+B. Decrease in van der Waals forces
+C. Increase of branching in the C-chain
+D. Decrease in the surface area of the C-chain
+
+--- Slide 145 ---
+143. The C-O bond angles of P, Q, and R are found to be 111.7°, 109°, and 108.9°,
+respectively. Compound P, Q, and R are
+A. P = Phenol, Q = Methanol, R = Methoxy Methane
+B. P = Methoxy Methane, Q = Methanol, R = Phenol
+C. P = Methanol, Q = Phenol, R = Methoxy Methane
+D. P = Methoxy Methane, Q = Phenol, R = Methanol
+
+--- Slide 146 ---
+144. The chemicals used to convert commercial alcohol into denatured alcohol are
+A. CuSO 4 and Pyrolidine
+B. Cu 2 S and Pyrolidine
+C. CuSO 4 and Pyridine
+D. Cu 2 S and Pyridine
+
+--- Slide 147 ---
+145. The compound that reacts fastest with Luca’s reagent at room temperature is
+A. 2-Methylpropan-2-ol
+B. Butan-2-ol
+C. 2-Methylpropan-1-ol
+D. Butan-1-ol
+
+--- Slide 148 ---
+For: Boar d s
+146. The correct order of acid strength of the following compounds is:
+(i) o -bromophenol
+(ii) p -bromophenol
+(iii) picric acid (2,4,6-trinitrophenol)
+(iv) 2,4,6-tribromophenol
+A. (iii) > (iv) > (i) > (ii)
+B. (iii) > (iv) > (ii) > (i)
+C. (iv) > (iii) > (i) > (ii)
+D. (i) > (ii) > (iv) > (iii)
+
+--- Slide 149 ---
+147. The decreasing order of boiling points of ethanol, propane, and dimethyl ether is
+A. Ethanol > Dimethyl ether > Propane
+B. Ethanol > Propane > Dimethyl ether
+C. Propane > Dimethyl ether > Ethanol
+D. Propane > Ethanol > Dimethyl ether
+
+--- Slide 150 ---
+148. The high boiling point of ethanol [C 2 H 5 OH] compared to methoxy methane
+[CH 3 OCH 3 ] and propane is due to
+A. Intra-molecular hydrogen bonding
+B. Inter-molecular hydrogen bonding
+C. Both (A) and (B)
+D. None of these
+
+--- Slide 151 ---
+149. The major byproduct during the preparation of phenol from cumene is
+A. Acetone.
+B. Cresol.
+C. Alcohol.
+D. Acetaldehyde.
+
+--- Slide 152 ---
+150. The major product formed when phenol is treated with excess bromine water is
+A. o-Bromophenol
+B. p-Bromophenol
+C. Picric acid
+D. 2,4,6-Tribromophenol
+
+--- Slide 153 ---
+151. The role of CO 2 in Kolbe's reaction is
+A. acts as catalyst
+B. act as nucleophile
+C. act as weak electrophile
+D. act as strong electrophile.
+
+--- Slide 154 ---
+152. What is the correct order of boiling points of alcohols having the same number of
+carbon atoms?
+A. 1° > 2° > 3°
+B. 3° > 2° > 1°
+C. 3° > 1° > 2°
+D. 2° > 1° > 3°
+
+--- Slide 155 ---
+153. When an alcohol is treated with Luca’s reagent, if immediate turbidity appears, then it
+confirms the presence of
+A. Primary alcohol
+B. Secondary alcohol
+C. Tertiary alcohol
+D. All of these
+
+--- Slide 156 ---
+154. When phenol is heated with chloroform in sodium hydroxide followed by
+acidification, the product is
+A. Chlorobenzene
+B. Benzyl chloride
+C. Salicylaldehyde
+D. Salicylic acid
+
+--- Slide 157 ---
+For: Boar d s
+C. Methanol D. Benzene
+155. When phenol is heated with Zn dust, it gives
+A. Benzyl alcohol B. Ethanol
+✉
+
+--- Slide 158 ---
+156. When phenol is treated with bromine water, a white precipitate of the product
+obtained is
+A. 2-Bromophenol
+B. 4-Bromophenol
+C. Both 2-Bromophenol and 4-Bromophenol
+D. 2,4,6-Tribromophenol
+
+--- Slide 159 ---
+157. According to the spectrochemical series, the strongest field ligand is
+A. F -
+B. NH 3
+C. H 2 O
+D. CO
+
+--- Slide 160 ---
+158. According to Werner's theory, the primary valencies of the central atom are
+A. Satisfied by negative ions or neutral molecules
+B. Satisfied by negative ions
+C. Are equal to coordination number
+D. Decide the geometry of the complex
+
+--- Slide 161 ---
+159. Among the following statements, which statement is correct about metal carbonyls?
+A. Metal carbonyls are s-bonded organometallic compounds
+B. Metal carbonyls are p-bonded organometallic compounds
+C. Metal carbonyls involve both s and p bonds between metal and oxygen of the carbonyl
+D. Metal carbonyls involve both s and p bonds between metal and carbon of the carbonyl
+
+--- Slide 162 ---
+160. An ambidentate ligand is
+A. Cl -
+B. CN -
+C. OH -
+D. NO 2 +
+
+--- Slide 163 ---
+161. An example of an ambidentate ligand is
+A. CO
+B. CN -
+C. NO 3 -
+D. SO 4 2-
+
+--- Slide 164 ---
+162. Cobalt (III) chloride forms several octahedral complexes with ammonia. Which of the
+following will not give a test for chloride ion with silver nitrate solution?
+A. CoCl 3 .4NH 3
+B. CoCl 3 .5NH 3
+C. CoCl 3 .6NH 3
+D. CoCl 3 .3NH 3
+
+--- Slide 165 ---
+For: Boar d s
+163. If Δo<P (Pairing energy), for the d4 ion, an entry of the 4th electron gives the
+configuration
+A. t 2 g 2 e 2 g
+B. t 2 g 4 e 0 g
+C. t 42 g e 0 g
+D. t 32 g e 1 g
+
+--- Slide 166 ---
+164. In coordination compound [CoCl 2 (en) 2 ]Br, the primary and secondary valencies of Co
+are
+A. 4 and 1
+B. 6 and 1
+C. 2 and 3
+D. 3 and 6
+
+--- Slide 167 ---
+165. In Fe(CO) 5 , Fe-C bond processes involve
+A. π-character only.
+B. Both σ- and π-characters.
+C. Ionic character.
+D. σ-character.
+
+--- Slide 168 ---
+166. In metal carbonyls, the M-C sigma bond is formed by the donation of a lone pair of
+electrons on the
+A. Carbonyl carbon atom to filled orbital of metal
+B. Carbonyl carbon atom to vacant orbital of metal
+C. Filled d-orbital of metal to vacant antibonding π orbital of CO
+D. Filled d-orbital of metal to vacant bonding π orbital of CO
+
+--- Slide 169 ---
+167. IUPAC name of [CoCl(en) 2 ONO] Br is
+A. ChloridoethylenediaminenitroCobalt (III) Bromide
+B. ChloridoethylenediaminenitroCobaltate (III) Bromide
+C. Chloridobis(ethylenediamine)nitritoCobaltate(III) Bromide
+D. Chloridobis(ethylenediamine)nitritoCobalt (III) Bromide
+
+--- Slide 170 ---
+168. Square planar complex of the type [MABXL] (where A, B, X, L are unidentate)
+shows
+A. Two Cis and one Trans
+B. Two Cis and Two Trans
+C. One Cis and two Trans
+D. One Cis and One Trans
+
+--- Slide 171 ---
+169. Square planar complex of the type MABXL (where A, B, X, L are unidentates) shows
+three isomers. Among them
+A. Two cis and one trans
+B. One cis and two trans
+C. All three are cis only
+D. All three are trans only
+
+--- Slide 172 ---
+170. The bond between CO and metal in metal carbonyl is stronger due to
+A. Synergic effect
+B. Chelating effect
+C. Only σ bond effect
+D. Ambidentate nature of CO ligand
+
+--- Slide 173 ---
+171. The central metal atoms/ions in coordination compounds are also called as
+A. Lewis bases
+B. Brønsted acids
+C. Brønsted bases
+D. Lewis acids
+
+--- Slide 174 ---
+For: Boar d s
+C. Ionization isomerism D. Cis-trans isomerism
+172. The complex [Pt (NH 3 ) 2 Cl 2 ] exhibits
+A. Linkage isomerism B. Fac-mer isomerism
+✉
+
+--- Slide 175 ---
+173. The complex [PtCl 2 .4NH 3 Br 2 ] is treated with excess of AgNO 3 solution, and two
+moles of AgBr is precipitated. The primary and secondary valency of this complex is
+A. 6 and 1
+B. 6 and 2
+C. 4 and 6
+D. 3 and 6
+
+--- Slide 176 ---
+174. The complex PtCl 2 .4NH 3 Br 2 is treated with excess of AgNO 3 solution, two mole of
+AgBr is precipitated. The primary and secondary valence of this complex is
+A. 6 and 1
+B. 6 and 2
+C. 4 and 6
+D. 3 and 6
+
+--- Slide 177 ---
+175. The complexes [Co (NH 3 ) 6 ] [Cr (CN) 6 ] and [Cr (NH 3 ) 6 ] [Co (CN) 6 ] are examples of
+which type of isomerism?
+A. Geometrical isomerism
+B. Ionization isomerism
+C. Coordination isomerism
+D. Linkage isomerism
+
+--- Slide 178 ---
+176. The electron configuration of an octahedral d coordination entity with Δ 0 > P is
+A. t 2 g 2 e 1 g
+B. t 2 g 3 e 1 g
+C. t 2 g 4 e 0 g
+D. t 2 g 2 e 2 g
+
+--- Slide 179 ---
+177. The geometry of the complex Fe (CO) 5 is
+A. octahedral
+B. tetrahedral
+C. trigonal bipyramidal
+D. square pyramidal
+
+--- Slide 180 ---
+178. The isomerism exhibited by complexes [Co (NH 3 ) 5 SO 4 ] Br and [Co (NH 3 ) 5 Br]SO 4 is
+A. Linkage isomerism
+B. Coordination isomerism
+C. Ionisation isomerism
+D. Solvate isomerism
+
+--- Slide 181 ---
+179. The IUPAC name of the complex ion [CoCl 2 (en) 2 ] is
+A. Di-chloridodiethylene diamine cobalt (III)
+B. Dichlorido bis(ethane-1,2-diamine) cobalt (III)
+C. Dichlorido bis(ethane-1,2-diamine) cobalt (IV)
+D. Bis (ethane-1,2-diamine) dichlorido cobalt (III)
+
+--- Slide 182 ---
+180. The IUPAC name of the ionization isomer of [Co (NH 3 ) 5 SO 4 ] Br is
+A. Penta-ammine sulphato cobalt (III) bromide
+B. Penta-ammine bromido cobalt (III) sulphate
+C. Penta-ammine sulphato cobalt (II) sulphate
+D. Penta-ammine bromido sulphato cobaltate (III)
+
+--- Slide 183 ---
+181. The magnitude of CFSE (Crystal Field Splitting Energy) (Δ 0 ) can be related to the
+configuration of d-orbitals in a coordination entity as
+A. If Δ 0 < P, the configuration is t 2 g 3 e 1 g
+B. If Δ 0 > P, the configuration is t 2 g 6 e 0 g
+C. If Δ 0 > P, the configuration is t 2 g 5 e 0 g
+D. If Δ 0 < P, the configuration is t 2 g 4 e 1 g
+
+--- Slide 184 ---
+
+A.
+B.
+C.
+D.
+
+--- Slide 185 ---
+183. The oxidation number of Cu in [Cu (CN) 4 ] is
+A. +1
+B. +4
+C. +2
+D. +3
+
+--- Slide 186 ---
+184. The oxidation state of metal in metal carbonyl complexes is
+A. 1
+B. 2
+C. 3
+D. 0
+
+--- Slide 187 ---
+185. The primary and secondary valencies of [Fe(C 2 O 4 ) 3 ] complexes are
+224 [M(en)(CO)] Cl is
+A. 3 and 3
+B. 3 and 6
+C. 6 and 3
+D. 0 and 3
+
+--- Slide 188 ---
+186. The primary and secondary valencies of iron in the complex [Fe(C 2 O 4 ) 3 ] are
+A. 3 and 3
+B. 6 and 6
+C. 3 and 6
+D. 6 and 3
+
+--- Slide 189 ---
+187. The sum of coordination number and oxidation number of the metal M in the complex
+A. 6
+B. 7
+C. 8
+D. 9
+
+--- Slide 190 ---
+188. The terminal and bridged CO ligands in the compound [Co 2 (CO) 8 ] are respectively
+A. 0, 2
+B. 6, 1
+C. 5, 2
+D. 6, 2
+
+--- Slide 191 ---
+189. Which of the following is an ambidentate ligand?
+A. CO
+B. NH 3
+C. SCN -
+D. Cl -
+
+--- Slide 192 ---
+190. Which of the following is the correct increasing order of strength in the
+spectrochemical series of ligands?
+A. EDTA 4- < C 2 O 4 2- < Cl - < OH - < CN -
+B. EDTA 4- < C 2 O 4 2- < CN - < OH - < Cl -
+C. Cl - < C 2 O 4 2- < Cl - < OH - < EDTA 4-
+D. Cl - < OH - < C 2 O 4 2- < EDTA 4- < CN -
+
+--- Slide 193 ---
+191. Which of the following ligands can exhibit linkage isomerism?
+A. NO 2 -
+B. NH 3
+C. H 2 O
+D. CO
+
+--- Slide 194 ---
+192. Which of the following ligands produces a synergic effect in coordination complexes?
+A. Oxalates
+B. Carbon Monoxide
+C. Sulphate
+D. Nitrates
+
+--- Slide 195 ---
+193. Which of the following species is not a ligand?
+A. NH 4 +
+B. NO
+C. CO
+D. H 2 N-CH 2 -CH 2 -NH 2
+
+--- Slide 196 ---
+For: Boar d s
+D. Both Primary and Secondary Valencies are ionisable.
+Application Based Questions:
+194. Which of the following statements regarding primary and secondary valencies is
+correct?
+A. Primary Valencies are ionisable while Secondary Valencies are non-ionisable.
+B. Primary Valencies are non-ionisable while Secondary Valencies are ionisable.
+C. Both Primary and Secondary Valencies are non-ionisable.
+✉
+
+--- Slide 197 ---
+195. Which type of complexes doesn't show geometrical isomerism?
+A. [MX 2 L 2 ] Tetrahedral
+B. [MABXL] Square planar
+C. [MX 2 L 2 ] Square planar
+D. [MX 4 L 2 ] Octahedral

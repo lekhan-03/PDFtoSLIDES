@@ -1,0 +1,944 @@
+--- Slide 1 ---
+
+Chemistry Midterm — MCQ Practice
+141 Questions  ·  For: Boards
+
+--- Slide 2 ---
+
+
+2024M
+∫ sin 2x dx is
+A. -(sin 2x)/(2) + c
+B. - (cos 2x)/(2)+c
+C. (cos 2x)/(2)+ c
+D. (sin 2x)/(2) + c
+
+--- Slide 3 ---
+
+
+2024M,2026,2025-2
+∫ e ˣ ( (1)/(x) - (1)/(x²) ) dx is
+A. e-x ( (1)/(x) ) + c
+B. e-x ((1)/(x²)) + c
+C. e x ( (1)/(x) )+ c
+D. ex ((1)/(x²)) + c
+
+--- Slide 4 ---
+
+
+2025M
+∫ x sin x dx=
+A. -xcos⁡x-sin⁡x+c
+B. xcos⁡x+sin⁡x+c
+C. xcos⁡x-sin⁡x+c
+D. -cos⁡x-sin⁡x+c
+
+--- Slide 5 ---
+
+
+2025M
+The point of inflection for the following graph is
+A. 0
+B. point of inflection does not exist
+C. -(π)/(2)
+D. (π)/(2)
+
+--- Slide 6 ---
+
+
+2025M
+​
+A. sec⁡x+C
+B. \cosec⁡^{-1}x+C
+C. ​
+D. cosec⁡x+C
+
+--- Slide 7 ---
+
+
+2025M
+​
+A. Statement 1 is true, and Statement 2 is false.
+B. Statement 1 is true, and Statement 2 is true, Statement 2 is correct explanation for Statement
+C. Statement 1 is true, and Statement 2 is true, Statement 2 is not a correct explanation for Statement1
+D. Both statements are false.
+
+--- Slide 8 ---
+
+
+2026M
+​
+A. 2
+B. 3
+C. 0
+D. 1
+
+--- Slide 9 ---
+
+
+2026-1
+​
+A. ​
+B. ​
+C. -\cosec⁡^{-1}x+C
+D. ​
+
+--- Slide 10 ---
+
+
+2026M
+​
+A. 2tan⁡x-3sec⁡x+c
+B. 2tan⁡x+3sec⁡x+c
+C. 2tan⁡x-2sec⁡x+c
+D. 2sec⁡x-3tan⁡x+c
+
+--- Slide 11 ---
+
+
+2026M,2025-2
+​
+A. (π)/(3)
+B. (2π)/(3)
+C. (π)/(6)
+D. (π)/(12)
+
+--- Slide 12 ---
+
+
+2026M
+∫ (1-x)/(sqrt(x)) dx is
+A. ​
+B. ​
+C. ​
+D. ​
+
+--- Slide 13 ---
+
+
+2026M
+​
+A. 0
+B. 1
+C. –1
+D. –2
+
+--- Slide 14 ---
+
+
+2024,2026M
+​
+A. ​
+B. ​
+C. ​
+D. ​
+
+--- Slide 15 ---
+
+
+2026M
+∫xcos⁡x dx=
+A. -xsin⁡x+cos⁡x+c
+B. xcos⁡x-sin⁡x+c
+C. xsin⁡x-cos⁡x+c
+D. xsin⁡x+cos⁡x+c
+
+--- Slide 16 ---
+
+
+2026M
+​
+A. (π)/(2)
+B. (π)/(4)
+C. (π)/(6)
+D. (π)/(12)
+
+--- Slide 17 ---
+
+
+2026M
+The anti-derivative of (sqrt(x)) is
+A. ​
+B. ​
+C. ​
+D. ​
+
+--- Slide 18 ---
+
+
+2026M
+​
+A. tan⁡x+c
+B. cos⁡2x+c
+C. sin⁡2x+c
+D. tan⁡2x+c
+
+--- Slide 19 ---
+
+
+2024-1
+∫eˣ(sin x + cos x) dx is equal to
+A. eˣ cos x + c
+B. eˣ tan x + c
+C. eˣ sin x + c
+D. −eˣ cos x + c
+
+--- Slide 20 ---
+
+
+2024-1
+∫sec x (sec x + tan x) dx is
+A. sec² x + tan x + c
+B. sec x + tan x + c
+C. sec x - tan x + c
+D. - tan x - sec x + c
+
+--- Slide 21 ---
+
+
+2024-2
+The value of ∫cosec x (cosec x + cot x) dx is
+A. cot x + cosec x + c
+B. − cot x + cosec x + c
+C. − cot x − cosec x + c
+D. cot x − cosec x + c
+
+--- Slide 22 ---
+
+
+2024-2
+​
+A. (π)/(3)
+B. (π)/(6)
+C. (π)/(2)
+D. (π)/(4)
+
+--- Slide 23 ---
+
+
+2024-3
+∫ tan2x dx is equal to
+A. x-tan x +c
+B. tan x - x +c
+C. sec2x-x + c
+D. x – sec2x + c
+
+--- Slide 24 ---
+
+
+2025-1
+​
+A. ​
+B. ​
+C. ​
+D. ​
+
+--- Slide 25 ---
+
+
+2025-3
+​
+A. tan⁡x+C
+B. ​
+C. ​
+D. sec⁡x+C
+
+--- Slide 26 ---
+
+
+2024-3,2026-1
+​
+A. 1
+B. 0
+C. -1
+D. 7
+
+--- Slide 27 ---
+
+
+2014
+Evaluate ∫ (sinsin x+coscos x ). dx.
+
+--- Slide 28 ---
+
+
+2014S
+​
+
+--- Slide 29 ---
+
+
+2015
+​
+
+--- Slide 30 ---
+
+
+2015S,2017S,2022
+Evaluate: ∫ secsec x (secsec x+tantan x ). dx.
+
+--- Slide 31 ---
+
+
+2016
+Find ∫ cosecx(cosecx+cotx)dx
+
+--- Slide 32 ---
+
+
+2016S,2020,2021M
+​
+
+--- Slide 33 ---
+
+
+2017
+Find ∫ sqrt(x)+(1)/(sqrt(x)) dx
+
+--- Slide 34 ---
+
+
+2017S
+Find ∫ cos3x dx
+
+--- Slide 35 ---
+
+
+2018
+​
+
+--- Slide 36 ---
+
+
+2019
+Evaluate: ∫ (1-x)sqrt(x) dx
+
+--- Slide 37 ---
+
+
+2019S
+​
+
+--- Slide 38 ---
+
+
+2022
+​
+
+--- Slide 39 ---
+
+
+2023
+​
+
+--- Slide 40 ---
+
+
+2021M
+Evaluate: ∫ sqrt(ax+b) dx
+
+--- Slide 41 ---
+
+
+2014
+​
+
+--- Slide 42 ---
+
+
+2014S
+Integrate sin x sin(cosx) w.r.t.x
+
+--- Slide 43 ---
+
+
+2014S
+​
+
+--- Slide 44 ---
+
+
+2014,2022
+​
+
+--- Slide 45 ---
+
+
+2015
+Evaluate ∫ (cos2x-cos2α)/(cosx-cosα)dx
+
+--- Slide 46 ---
+
+
+2015
+Evaluate: ∫ (dx)/(x-sqrt(x))
+
+--- Slide 47 ---
+
+
+2015S
+​
+
+--- Slide 48 ---
+
+
+2015S
+​
+
+--- Slide 49 ---
+
+
+2016
+​
+
+--- Slide 50 ---
+
+
+2016,2021M
+​
+
+--- Slide 51 ---
+
+
+2016S
+​
+
+--- Slide 52 ---
+
+
+2016S
+​
+
+--- Slide 53 ---
+
+
+2017
+​
+
+--- Slide 54 ---
+
+
+2017
+​
+
+--- Slide 55 ---
+
+
+2017S
+Evaluate: ∫ (sqrt(tanx))/(sinxcosx) dx
+
+--- Slide 56 ---
+
+
+2017S
+​
+
+--- Slide 57 ---
+
+
+2018S
+Evaluate ∫ coscos 6x sqrt(1+sin6x) dx
+
+--- Slide 58 ---
+
+
+2018S
+​
+
+--- Slide 59 ---
+
+
+2018
+​
+
+--- Slide 60 ---
+
+
+2018
+​
+
+--- Slide 61 ---
+
+
+2019
+​
+
+--- Slide 62 ---
+
+
+2019
+Evaluate: ∫ sinsin 2x .coscos 3x dx
+
+--- Slide 63 ---
+
+
+2020
+Find ∫ cotcot x log⁡(sinsin x )
+
+--- Slide 64 ---
+
+
+2022
+​
+
+--- Slide 65 ---
+
+
+2024M,3
+Evaluate ∫ (x)/((x+1)(x+2)) dx
+
+--- Slide 66 ---
+
+
+2023
+​
+
+--- Slide 67 ---
+
+
+2023,2024-1
+​
+
+--- Slide 68 ---
+
+
+2020,2021M
+​
+
+--- Slide 69 ---
+
+
+2021M
+​
+
+--- Slide 70 ---
+
+
+2021M
+Find ∫ log⁡(x)
+
+--- Slide 71 ---
+
+
+2024M
+​
+
+--- Slide 72 ---
+
+
+2024-2
+Find ∫ (x)/((x-1)(x-2))dx.
+
+--- Slide 73 ---
+
+
+2024-2
+​
+
+--- Slide 74 ---
+
+
+2024-3
+​
+
+--- Slide 75 ---
+
+
+2025-1
+Find ∫ cot x.log(sinx)dx.
+
+--- Slide 76 ---
+
+
+2025-2
+​
+
+--- Slide 77 ---
+
+
+2025-3
+​
+
+--- Slide 78 ---
+
+
+2026-1
+Find ∫ (1)/(x+x log x) dx
+
+--- Slide 79 ---
+
+
+2014,2022
+​
+
+--- Slide 80 ---
+
+
+2014
+Evaluate ∫ x .dx
+
+--- Slide 81 ---
+
+
+2014S
+Evaluate∫ sin3x.cos4x.dx
+
+--- Slide 82 ---
+
+
+2014S
+​
+
+--- Slide 83 ---
+
+
+2015,2024
+Evaluate: ∫ x x dx
+
+--- Slide 84 ---
+
+
+2015,2015S
+​
+
+--- Slide 85 ---
+
+
+2015S,2016S,2017S,2018,2021M,2023M,2026-1
+Evaluate ∫ (x)/((x+1)(x+2)) dx
+
+--- Slide 86 ---
+
+
+2016
+Evaluate ∫ (x)/((x-1)(x-2))dx
+
+--- Slide 87 ---
+
+
+2016
+​
+
+--- Slide 88 ---
+
+
+2016S
+​
+
+--- Slide 89 ---
+
+
+2017
+​
+
+--- Slide 90 ---
+
+
+2017,2018
+​
+
+--- Slide 91 ---
+
+
+2018S,2023
+​
+
+--- Slide 92 ---
+
+
+2018S
+​
+
+--- Slide 93 ---
+
+
+2017S
+​
+
+--- Slide 94 ---
+
+
+2019
+Find ∫ xloglog x dx
+
+--- Slide 95 ---
+
+
+2019
+​
+
+--- Slide 96 ---
+
+
+2020,2021M,2023
+​
+
+--- Slide 97 ---
+
+
+2020
+​
+
+--- Slide 98 ---
+
+
+2023
+Evaluate ∫ x sin3x dx
+
+--- Slide 99 ---
+
+
+2021M,2022
+​
+
+--- Slide 100 ---
+
+
+2021M
+Evaluate ∫ x .dx
+
+--- Slide 101 ---
+
+
+2021M
+​
+
+--- Slide 102 ---
+​
+
+--- Slide 103 ---
+
+
+2024-1
+​
+
+--- Slide 104 ---
+
+
+2024-2,3
+​
+
+--- Slide 105 ---
+
+
+2025-1
+​
+
+--- Slide 106 ---
+
+
+2014
+​
+
+--- Slide 107 ---
+
+
+2014S
+​
+
+--- Slide 108 ---
+
+
+2015
+​
+
+--- Slide 109 ---
+
+
+2015S
+​
+
+--- Slide 110 ---
+
+
+2016,2020,2024-1
+​
+
+--- Slide 111 ---
+
+
+2016S
+​
+
+--- Slide 112 ---
+
+
+2017
+​
+
+--- Slide 113 ---
+
+
+2017S
+​
+
+--- Slide 114 ---
+
+
+2018S
+​
+
+--- Slide 115 ---
+
+
+2018
+​
+
+--- Slide 116 ---
+
+
+2019,2022,2024M
+​
+
+--- Slide 117 ---
+
+
+2019S
+​
+
+--- Slide 118 ---
+
+
+2023
+​
+
+--- Slide 119 ---
+
+
+2021M,2025-2
+​
+
+--- Slide 120 ---
+
+
+2021M
+​
+
+--- Slide 121 ---
+
+
+2024-2
+​
+
+--- Slide 122 ---
+
+
+2024-3
+​
+
+--- Slide 123 ---
+
+
+2025-1
+​
+
+--- Slide 124 ---
+
+
+2025-3
+​
+
+--- Slide 125 ---
+
+
+2026-1
+​
+
+--- Slide 126 ---
+
+
+2014
+​
+
+--- Slide 127 ---
+
+
+2014S,2019S
+​
+
+--- Slide 128 ---
+
+
+2015,2017S
+$Prove that∫_{0}^{a} f(x).dx={2∫_{0}^{a} f(x)dx, if f(x)is an even function 0, if f(x)is an odd function and hence evaluate ∫_{-1}^{1} \sin^{5}xcos^{4}x dx$
+
+--- Slide 129 ---
+
+
+2014,2015S,2019,2021M
+​
+
+--- Slide 130 ---
+
+
+2016
+$Prove that∫_{0}^{a} f(x).dx={2∫_{0}^{a} f(x)dx, if f(2a-x)=f(x) 0, if f(2a-x)= -f(x) and hence evaluate ∫_{0}^{2π} \cos^{5}x dx$
+
+--- Slide 131 ---
+
+
+2016S,2022,2026-1
+​
+
+--- Slide 132 ---
+
+
+2017
+​
+
+--- Slide 133 ---
+
+
+2018,2021M
+​
+
+--- Slide 134 ---
+
+
+2018S,2024M
+$Prove that ∫_{-a}^{a} f(x)dx={2∫_{0}^{a} f(x)dx if f(x) is even function 0,if f (x)is odd function And hence evaluate ∫_{-(π)/(2)}^{(π)/(2)} sin7x dx$
+
+--- Slide 135 ---
+
+
+2019,2023,2024-2
+​
+
+--- Slide 136 ---
+$Prove that∫_{-a}^{a} f(x).dx= {2∫_{0}^{a} f(x)dx, if f(x)is an even function 0, if f(x)is an odd function and hence evaluate ∫_{-1}^{1} \sin^{5}xcos^{4}x dx$
+
+--- Slide 137 ---
+
+
+2020
+​
+
+--- Slide 138 ---
+
+
+2024-1
+​
+
+--- Slide 139 ---
+
+
+2024-3
+​
+
+--- Slide 140 ---
+
+
+2025-1
+​
+
+--- Slide 141 ---
+
+
+2025-2
+​
+
+--- Slide 142 ---
+
+
+2025-3
+​

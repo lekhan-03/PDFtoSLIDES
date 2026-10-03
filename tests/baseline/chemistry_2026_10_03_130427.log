@@ -1,0 +1,9 @@
+[INFO] Output will be written to: tests\baseline\chemistry_2026_10_03_130427.pptx
+[*] Building deck for 196 questions ...
+
+[OK] Saved 197 slides -> tests\baseline\chemistry_2026_10_03_130427.pptx
+    1 title  +  0 dividers  +  189 MCQ  +  6 open/SA  +  1 match-the-column
+
+[*] Verifying no literal '$' or '^{' leaked into slides...
+✅  Verification complete: 0 leaks detected.
+

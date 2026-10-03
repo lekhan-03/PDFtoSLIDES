@@ -1,0 +1,51 @@
+[INFO] Output will be written to: tests\baseline\Integrals.pptx
+[*] Building deck for 141 questions ...
+[!] Pandoc failed to parse formula on Slide /ppt/slides/slide6.xml, falling back to plain text:
+    $\cosec⁡^{-1}x+C$
+[!] Pandoc failed to parse formula on Slide /ppt/slides/slide9.xml, falling back to plain text:
+    $-\cosec⁡^{-1}x+C$
+[!] Slide /ppt/slides/slide128.xml: Unbalanced braces in formula, falling back: $Prove that∫_{0}^{a} f(x).dx={2∫_{0}^{a} f(x)dx, if f(x)is an even function 0, if f(x)is an odd function and hence evaluate ∫_{-1}^{1} \sin^{5}xcos^{4}x dx$
+[!] Slide /ppt/slides/slide130.xml: Unbalanced braces in formula, falling back: $Prove that∫_{0}^{a} f(x).dx={2∫_{0}^{a} f(x)dx, if f(2a-x)=f(x) 0, if f(2a-x)= -f(x) and hence evaluate ∫_{0}^{2π} \cos^{5}x dx$
+[!] Slide /ppt/slides/slide134.xml: Unbalanced braces in formula, falling back: $Prove that ∫_{-a}^{a} f(x)dx={2∫_{0}^{a} f(x)dx if f(x) is even function 0,if f (x)is odd function And hence evaluate ∫_{-(π)/(2)}^{(π)/(2)} sin7x dx$
+[!] Slide /ppt/slides/slide136.xml: Unbalanced braces in formula, falling back: $Prove that∫_{-a}^{a} f(x).dx= {2∫_{0}^{a} f(x)dx, if f(x)is an even function 0, if f(x)is an odd function and hence evaluate ∫_{-1}^{1} \sin^{5}xcos^{4}x dx$
+
+[OK] Saved 142 slides -> tests\baseline\Integrals.pptx
+    1 title  +  0 dividers  +  25 MCQ  +  116 open/SA  +  0 match-the-column
+
+[*] Verifying no literal '$' or '^{' leaked into slides...
+    [!] Leaked math text on Slide 6:
+        B. \cosec⁡^{-1}x+C
+    [!] Leaked math text on Slide 9:
+        C. -\cosec⁡^{-1}x+C
+    [!] Leaked math text on Slide 128:
+        $Prove that∫_{0}^{a} f(x).dx={2∫_{0}^{a} f(x)dx, if f(x)is an even function 0, if f(x)is an odd function and hence evaluate ∫_{-1}^{1} \sin^{5}xcos^{4}x dx$
+    [!] Leaked math text on Slide 130:
+        $Prove that∫_{0}^{a} f(x).dx={2∫_{0}^{a} f(x)dx, if f(2a-x)=f(x) 0, if f(2a-x)= -f(x) and hence evaluate ∫_{0}^{2π} \cos^{5}x dx$
+    [!] Leaked math text on Slide 134:
+        $Prove that ∫_{-a}^{a} f(x)dx={2∫_{0}^{a} f(x)dx if f(x) is even function 0,if f (x)is odd function And hence evaluate ∫_{-(π)/(2)}^{(π)/(2)} sin7x dx$
+    [!] Leaked math text on Slide 136:
+        $Prove that∫_{-a}^{a} f(x).dx= {2∫_{0}^{a} f(x)dx, if f(x)is an even function 0, if f(x)is an odd function and hence evaluate ∫_{-1}^{1} \sin^{5}xcos^{4}x dx$
+✅  Verification complete: 6 leaks detected.
+
+[WARNING] Could not convert TeX math \cosec⁡^{-1}x+C, rendering as TeX:
+
+  \cosec⁡^{-1}x+C
+
+        ^
+
+  unexpected control sequence \cosec
+
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+
+[WARNING] Could not convert TeX math -\cosec⁡^{-1}x+C, rendering as TeX:
+
+  -\cosec⁡^{-1}x+C
+
+         ^
+
+  unexpected control sequence \cosec
+
+  expecting "%", "\\label", "\\tag", "\\nonumber", whitespace or "\\allowbreak"
+
+
