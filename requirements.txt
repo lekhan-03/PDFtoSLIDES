@@ -1,0 +1,12 @@
+# Core extraction
+pymupdf          # PDF text extraction  (import as pymupdf)
+python-docx      # DOCX extraction
+
+# Environment variable loading from .env
+python-dotenv
+
+# LLM fallback (only needed when using --use-llm)
+groq             # Groq API client
+
+# Dev / testing
+pytest

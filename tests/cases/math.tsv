@@ -1,0 +1,5 @@
+input	expected
+\cosec^{-1}x+C	\operatorname{cosec}^{-1}x+C
+-xcosx-sinx+c	-x\cos x-\sin x+c
+sin^{5}xcos^{4}x	\sin^{5}x\cos^{4}x
+∫_{0}^{a} f(x).dx={2∫_{0}^{a} f(x)dx, if f(x)is even 0, if f(x)is odd	\int_{0}^{a} f(x)\,dx= \begin{cases} 2\int_{0}^{a} f(x)\,dx & \text{if } f(x)is even \\ 0 & \text{if } f(x)is odd \end{cases}

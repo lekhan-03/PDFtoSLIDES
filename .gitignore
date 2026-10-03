@@ -1,0 +1,30 @@
+# ── secrets / credentials ─────────────────────────────────
+.env
+
+# ── Python cache ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environments ──────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── Pytest / coverage ─────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Generated output ──────────────────────────────────────
+# data/outputs/ is TRACKED — it's your permanent archive of all runs.
+# Only ignore the old single-file location.
+data/questions.json
+
+# ── IDE / OS ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db

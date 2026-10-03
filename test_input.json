@@ -1,0 +1,1 @@
+[{"parsed_ok": true, "question": "Solve the integral: $\\int e^{x}\\left(\\frac{1}{x}-\\frac{1}{x^{2}}\\right)dx$", "options": {"A": "$e^{-x}\\left(\\frac{1}{x}\\right)+c$", "B": "$e^{x}\\left(\\frac{1}{x}\\right)+c$", "C": "$\\frac{e^x}{x^2}+c$", "D": "None of the above"}, "answer": "B", "section": "Math", "question_type": "mcq"}]

@@ -1,0 +1,1014 @@
+[
+  {
+    "id": 1,
+    "section": "Chemistry",
+    "question": "For: Boar d s\nSolutions",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 1,
+    "section": "Chemistry",
+    "question": "1. 68% of nitric acid in water",
+    "options": {
+      "A": "Has zero enthalpy of mixing",
+      "B": "Cannot be separated by distillation",
+      "C": "Follows Raoult's Law",
+      "D": "Has zero volume change of mixing"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 2,
+    "section": "Chemistry",
+    "question": "2. Assuming complete dissociation, the value of van't Hoff factor for Na 2 SO 4 is",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 3,
+    "section": "Chemistry",
+    "question": "3. Consider a blood cell placed in a NaCl solution of concentration more than 0.9% (w/V). Which\none of the following statements is true in this case?",
+    "options": {
+      "A": "Osmosis takes place from the cell to the NaCl solution, and the cell shrinks.",
+      "B": "Osmosis takes place from the NaCl solution to the cell, and the cell swells.",
+      "C": "Osmosis takes place from the cell to the NaCl solution, and the cell swells.",
+      "D": "Osmosis takes place from the NaCl solution to the cell, and the cell shrinks."
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 4,
+    "section": "Chemistry",
+    "question": "4. De-salination of sea water can be done by",
+    "options": {
+      "A": "Dialysis",
+      "B": "Hypertonic solution",
+      "C": "Evaporation",
+      "D": "Reverse osmosis"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 5,
+    "section": "Chemistry",
+    "question": "5. During osmosis, the solvent molecules are moving from",
+    "options": {
+      "A": "Hypertonic solution to isotonic solution",
+      "B": "Hypertonic solution to hypotonic solution",
+      "C": "Higher concentrated solution to lower concentrated solution",
+      "D": "Hypotonic solution to hypertonic solution"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 6,
+    "section": "Chemistry",
+    "question": "6. For a 0.1M solution, the colligative property will follow the order",
+    "options": {
+      "A": "NaCl > Na 2 SO 4 > Na 3 PO 4",
+      "B": "NaCl < Na 2 SO 4 < Na 3 PO 4",
+      "C": "NaCl < Na 2 SO 4 ≈ Na 3 PO 4",
+      "D": "NaCl < Na 2 SO 4 = Na 3 PO 4"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 7,
+    "section": "Chemistry",
+    "question": "7. If abnormal molar mass is more than normal molar mass, the Van't Hoff factor (i) is",
+    "options": {
+      "A": "i > 1",
+      "B": "i = 1",
+      "C": "i < 1",
+      "D": "i ≥ 1"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 8,
+    "section": "Chemistry",
+    "question": "8. In a solution containing a non-volatile solute, the mole fraction of solvent is 0.9. The relative\nlowering of vapor pressure is",
+    "options": {
+      "A": "1",
+      "B": "0.1",
+      "C": "0.9",
+      "D": "1.1"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 9,
+    "section": "Chemistry",
+    "question": "9. Isotonic solutions have the same",
+    "options": {
+      "A": "Surface tension",
+      "B": "Vapour pressure",
+      "C": "Osmotic pressure",
+      "D": "Viscosity"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 10,
+    "section": "Chemistry",
+    "question": "10. Pick out the ideal solution among the following",
+    "options": {
+      "A": "Phenol and Aniline",
+      "B": "Ethanol and Acetone",
+      "C": "Chloroform and Acetone",
+      "D": "n-Hexane and n-Heptane"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 11,
+    "section": "Chemistry",
+    "question": "For: Boar d s\n11. The concentration term depends on temperature is",
+    "options": {
+      "A": "ppm",
+      "B": "mole fraction",
+      "C": "molality",
+      "D": "molarity"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 12,
+    "section": "Chemistry",
+    "question": "12. The condition caused when scuba divers go into deep sea water is",
+    "options": {
+      "A": "Anoxia",
+      "B": "Hemophilia",
+      "C": "Bends",
+      "D": "None -3"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 13,
+    "section": "Chemistry",
+    "question": "13. The K H values for Ar(g), CO 2 (aq), HCHO (aq), and CH 4 (aq) are 40.39, 1.67, 1.83 × 10 , and\n0.413 respectively. Arrange them in the order of their increasing solubility",
+    "options": {
+      "A": "HCHO < CH 4 < CO 2 < Ar",
+      "B": "HCHO < CO 2 < CH 4 < Ar",
+      "C": "Ar < CO 2 < CH 4 < HCHO",
+      "D": "Ar < CH 4 < CO 2 < HCHO"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 14,
+    "section": "Chemistry",
+    "question": "14. The dissolution of a gas in a liquid is governed by",
+    "options": {
+      "A": "Roult's law",
+      "B": "Henry's law",
+      "C": "Dalton's law of Pressure",
+      "D": "Boyle's law"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 15,
+    "section": "Chemistry",
+    "question": "15. The maximum amount of a solid solute that can be dissolved in a specific amount of a given\nliquid solvent does not depend upon",
+    "options": {
+      "A": "Nature of solvent",
+      "B": "Pressure",
+      "C": "Nature of solute",
+      "D": "Temperature"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 16,
+    "section": "Chemistry",
+    "question": "16. The mixture which shows positive deviation from Raoult's law is",
+    "options": {
+      "A": "Ethanol + Acetone",
+      "B": "Benzene + Toluene",
+      "C": "Acetone + Chloroform",
+      "D": "Chlorobenzene + Bromoethane -1"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 17,
+    "section": "Chemistry",
+    "question": "17. The most diluted solution is (molar mass of NaCl = 58.5 g mol )",
+    "options": {
+      "A": "2% (w/w) NaCl in water",
+      "B": "1M NaCl",
+      "C": "2 ppm of NaCl",
+      "D": "2 m NaCl"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 18,
+    "section": "Chemistry",
+    "question": "18. The pressure cooker reduces the cooking timing because",
+    "options": {
+      "A": "Heat is more evenly distributed",
+      "B": "The boiling point of water inside the cooker is elevated",
+      "C": "The boiling point of water inside the cooker is depressed",
+      "D": "Higher pressure inside the cooker tenderizes food"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 19,
+    "section": "Chemistry",
+    "question": "19. The solubility of a gas in water depends on",
+    "options": {
+      "A": "Nature of the gas",
+      "B": "Temperature",
+      "C": "Pressure of the gas",
+      "D": "All of the above"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 20,
+    "section": "Chemistry",
+    "question": "20. The solubility of a solid gas does not depend on",
+    "options": {
+      "A": "Nature of the solute",
+      "B": "Nature of the solvent",
+      "C": "Pressure",
+      "D": "None of these"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 21,
+    "section": "Chemistry",
+    "question": "21. The solution which has lower osmotic pressure with respect to another is called",
+    "options": {
+      "A": "Isotonic solution",
+      "B": "Hypertonic solution",
+      "C": "Hypotonic solution",
+      "D": "None of these"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 22,
+    "section": "Chemistry",
+    "question": "22. The solutions which show a large positive deviation from Raoult's law form",
+    "options": {
+      "A": "Minimum boiling point azeotrope",
+      "B": "Maximum boiling point azeotrope",
+      "C": "Minimum or maximum boiling point azeotrope",
+      "D": "No azeotrope"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 23,
+    "section": "Chemistry",
+    "question": "For: Boar d s\n23. The tanks used by most scuba divers are filled with air diluted with helium of around",
+    "options": {
+      "A": "88.3%",
+      "B": "56.2%",
+      "C": "32.1%",
+      "D": "11.7%"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 24,
+    "section": "Chemistry",
+    "question": "24. The value of Henry's constant K H is",
+    "options": {
+      "A": "Greater for gases with higher solubility.",
+      "B": "Greater for gases with lower solubility.",
+      "C": "Constant for all gases.",
+      "D": "Not related to the solubility of gases."
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 25,
+    "section": "Chemistry",
+    "question": "25. Value of Henry's constant (K H )",
+    "options": {
+      "A": "Increases with increase in temperature",
+      "B": "Decreases with increase in temperature",
+      "C": "Remains constant",
+      "D": "First increases, then decreases"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 26,
+    "section": "Chemistry",
+    "question": "26. When a substance is dissolved in a solvent, the vapor pressure for the solvent is decreased. This\nresults in",
+    "options": {
+      "A": "The solution having a lower osmotic pressure than the solvent",
+      "B": "A decrease in the boiling point of the solvent",
+      "C": "The solution having a higher freezing point than the solvent",
+      "D": "An increase in the boiling point of the solution"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 27,
+    "section": "Chemistry",
+    "question": "27. Which of the following aqueous solutions should have the highest boiling point?",
+    "options": {
+      "A": "1.0 M NaOH",
+      "B": "1.0 M Na 2 SO 4",
+      "C": "1.0 M NH 4 NO 3",
+      "D": "1.0 M KNO 3"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 28,
+    "section": "Chemistry",
+    "question": "28. Which of the following liquid-liquid solutions show negative deviation from Raoult's law?",
+    "options": {
+      "A": "Benzene and Toluene",
+      "B": "Water and Ethanol",
+      "C": "Acetone and Chloroform",
+      "D": "Chlorobenzene and Bromobenzene"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 29,
+    "section": "Chemistry",
+    "question": "29. Which of the following solutions is used as an antifreezing agent in car radiators to cool the\nengine?",
+    "options": {
+      "A": "35% (v/v) solution of ethylene glycol",
+      "B": "35% (m/m) solution of ethylene glycol",
+      "C": "35% (m/v) solution of ethylene glycol",
+      "D": "35% (v/m) solution of ethylene glycol"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 30,
+    "section": "Chemistry",
+    "question": "For: Boar d s\nElectrochemistry:\n30. Which one of the following is not a solid solution?",
+    "options": {
+      "A": "Hydrogen in palladium",
+      "B": "Camphor in nitrogen gas",
+      "C": "Amalgam of mercury & sodium",
+      "D": "Copper in gold"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 31,
+    "section": "Chemistry",
+    "question": "31. A galvanic cell has an electrical potential of 1.1 V. If an opposing potential of 1.1 V is applied\nto this cell, what will happen to the cell reaction and current flowing through the cell?",
+    "options": {
+      "A": "The reaction stops and no current flows through the cell.",
+      "B": "The reaction continues but current flows in the opposite direction.",
+      "C": "The concentration of reactants becomes unity and current flows from cathode to anode.",
+      "D": "The cell does not function as a galvanic cell and zinc is deposited on the zinc plate."
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 32,
+    "section": "Chemistry",
+    "question": "32. An electrochemical cell can behave like an electrolytic cell when",
+    "options": {
+      "A": "E cell = 0",
+      "B": "E cell > E ext",
+      "C": "E cell < E ext",
+      "D": "E cell = E ext"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 33,
+    "section": "Chemistry",
+    "question": "33. Assertion: The specific conductivity decreases with dilution.\nReason: The number of ions per unit volume that carry the current in a solution decreases on\ndilution.",
+    "options": {
+      "A": "Both assertion and reason are true, and the reason is the correct explanation of the",
+      "B": "Both assertion and reason are true, but the reason is not the correct explanation of the",
+      "C": "Assertion is true, but the reason is false.",
+      "D": "Both assertion and reason are false."
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 34,
+    "section": "Chemistry",
+    "question": "34. E cell of Daniel cell is calculated by using the following formula",
+    "options": {
+      "A": "E cell = E° cell - 0.0295 \\log (Cu 2+ /Zn 2+ )",
+      "B": "E cell = E° cell - 0.0295 \\log (Cu/Zn 2+ )",
+      "C": "E cell = E° cell - 0.0295 \\log (Zn 2+ /Cu 2+ )",
+      "D": "E cell = E° cell - 0.0295 \\log (Cu 2+ /Zn)"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 35,
+    "section": "Chemistry",
+    "question": "35. Fluorine has the highest standard electrode potential, indicating that fluorine gas is",
+    "options": {
+      "A": "Strongest reducing agent",
+      "B": "Strongest oxidizing agent",
+      "C": "Weak oxidizing agent",
+      "D": "SEP value is zero"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 36,
+    "section": "Chemistry",
+    "question": "36. If the E relationship for the value of ΔG cell for a given reaction has a negative value, then which of the following is the correct 0 and Keq?",
+    "options": {
+      "A": "ΔG 0 >0 and Keq>1",
+      "B": "ΔG 0 <0 and Keq<1",
+      "C": "ΔG 0 >0 and Keq<1",
+      "D": "ΔG 0 <0 and Keq>1"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 37,
+    "section": "Chemistry",
+    "question": "37. In a galvanic cell",
+    "options": {
+      "A": "Chemical energy is converted into heat",
+      "B": "Electrical energy is converted into heat",
+      "C": "Chemical energy is converted into electrical energy",
+      "D": "Electrical energy is converted into chemical energy"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 38,
+    "section": "Chemistry",
+    "question": "For: Boar d s\n(i) Leclanché cell",
+    "options": {
+      "A": "Lead (Pb)",
+      "B": "Hydrogen(H 2 ) gas",
+      "C": "Zinc (Zn)",
+      "D": "Zinc – Mercury amalgam(Zn(Hg))"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 39,
+    "section": "Chemistry",
+    "question": "39. Saturated solution of KNO 3 is used to make a salt bridge because",
+    "options": {
+      "A": "Velocity of K + is greater than that of NO 3 -",
+      "B": "Velocity of NO 3 - is greater than that of K +",
+      "C": "Velocity of both K + and NO 3 - are nearly the same",
+      "D": "KNO 3 is highly soluble in water"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 40,
+    "section": "Chemistry",
+    "question": "40. Statement I: Conductivity (κ) of a solution decreases with dilution.\nStatement II: Molar conductivity (λ m ) of solution increases with dilution.\nIdentify the correct statement",
+    "options": {
+      "A": "Both statements I and II are correct",
+      "B": "Both statements I and II are incorrect",
+      "C": "Statement I is correct but statement II is incorrect",
+      "D": "Statement I is incorrect but statement II is correct"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 41,
+    "section": "Chemistry",
+    "question": "41. Statement I: Cu displaces H Statement II: ions Cu 2+ get reduced more easily than H 2 gas from dilute acids. + ions",
+    "options": {
+      "A": "Both Statement I and II are correct",
+      "B": "Both Statement I and II are incorrect",
+      "C": "Statement I is correct and Statement II is incorrect",
+      "D": "Statement I is incorrect and Statement II is correct"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 42,
+    "section": "Chemistry",
+    "question": "42. The E° values of Fe / Fe, Zn / Zn, and Sn / Sn are -0.44V, -0.76V, and -0.14V\nrespectively. Which of these metals can displace iron from an Fe 2+ solution?",
+    "options": {
+      "A": "Both Zn and Sn",
+      "B": "Zn only",
+      "C": "Sn only",
+      "D": "Neither Zn nor Sn"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 43,
+    "section": "Chemistry",
+    "question": "43. The molar conductivity is maximum for the solution of concentration",
+    "options": {
+      "A": "0.005 M",
+      "B": "0.001 M",
+      "C": "0.004 M",
+      "D": "0.002 M"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 44,
+    "section": "Chemistry",
+    "question": "3+ For: Boar d s\n44. The product formed at the anode during the electrolysis of aqueous NaCl is",
+    "options": {
+      "A": "H 2",
+      "B": "O 2",
+      "C": "Na",
+      "D": "Cl 2"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 45,
+    "section": "Chemistry",
+    "question": "45. The quantity of electricity required for the reduction of one mole of Al ions is",
+    "options": {
+      "A": "1 Faraday",
+      "B": "2 Faraday",
+      "C": "3 Faraday",
+      "D": "4 Faraday"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 46,
+    "section": "Chemistry",
+    "question": "46. What will happen in the Daniel cell, when Eext<1.1 V?",
+    "options": {
+      "A": "Electrons flow from Zn rod to Cu rod; hence current flows from Cu to Zn",
+      "B": "Electrons flow from Cu rod to Zn rod; hence current flows from Cu to Zn",
+      "C": "Electrons flow from Zn rod to Cu rod; hence current flows from Zn to Cu",
+      "D": "Electrons flow from Cu rod to Zn rod; hence current flows from Zn to Cu"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 47,
+    "section": "Chemistry",
+    "question": "47. When one Faraday current is passed, which of the following would deposit one-gram atomic\nmass of the metal?",
+    "options": {
+      "A": "NaCl",
+      "B": "ZnSO 4",
+      "C": "AlCl 3",
+      "D": "BaCl 2"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 48,
+    "section": "Chemistry",
+    "question": "For: Boar d s\nChemical Kinetics:\n48. Which of these statements about a galvanic cell are not true?\ni) The cathode carries a positive sign.\nii) Oxidation occurs at the anode.\niii) Electrons flow from cathode to anode in the external circuit.\niv) The anode carries a negative sign",
+    "options": {
+      "A": "i and iii",
+      "B": "i and ii",
+      "C": "ii and iii",
+      "D": "ii and iv"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 49,
+    "section": "Chemistry",
+    "question": "49. Acid hydrolysis of ethyl acetate is an example of",
+    "options": {
+      "A": "Zero order reaction",
+      "B": "First order reaction",
+      "C": "Second order reaction",
+      "D": "Pseudo first order reaction"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 50,
+    "section": "Chemistry",
+    "question": "50. All natural and artificial radioactive decay of unstable nuclei take place by",
+    "options": {
+      "A": "Zero order kinetics",
+      "B": "Half-order kinetics",
+      "C": "First-order kinetics",
+      "D": "Second-order kinetics"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 51,
+    "section": "Chemistry",
+    "question": "51. For 2NO(g) + O 2 (g) → 2NO 2(g) , the following initial-rate data were obtained. Choose the rate\nequation.",
+    "options": {
+      "A": "Rate = k[NO] 2",
+      "B": "Rate = k[NO] 2 [O 2 ] 2",
+      "C": "Rate = k[NO] [O 2 ]",
+      "D": "Rate = k[NO] 2 [O 2 ]"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 52,
+    "section": "Chemistry",
+    "question": "52. Consider the Arrhenius equation k=e−Ea/RT and mark the correct option",
+    "options": {
+      "A": "Rate constant increases exponentially with increasing activation energy and decreasing",
+      "B": "Rate constant decreases exponentially with increasing activation energy and decreasing",
+      "C": "Rate constant increases exponentially with increasing activation energy and increasing",
+      "D": "Rate constant increases exponentially with decreasing activation energy and decreasing"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 53,
+    "section": "Chemistry",
+    "question": "53. For a chemical reaction A → B, it is found that the rate of a reaction doubles when the\nconcentration of A is doubled. The order of the reaction is",
+    "options": {
+      "A": "One",
+      "B": "Two",
+      "C": "Zero",
+      "D": "Three"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 54,
+    "section": "Chemistry",
+    "question": "54. For a zero-order reaction, the intercept for the plot of concentration of reactants vs. time is\nequal to",
+    "options": {
+      "A": "-k",
+      "B": "\\log k",
+      "C": "[R 0 ]",
+      "D": "\\log [R 0 ]"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 55,
+    "section": "Chemistry",
+    "question": "For: Boar d s\n(D) Rate = 𝐾 [A] [B]\n\n55. In a reaction A + B → products, rate is doubled when the concentration of B is doubled, and\nrate increases by a factor of 8 when the concentrations of both the reactants (A and B. are\ndoubled. The rate law for the reaction can be written as:\n(A) Rate = K [A][B] 2\n(B) Rate = K [A] 2 [B] 2\n(C) Rate = K [A] 2 [B]\n✉",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 56,
+    "section": "Chemistry",
+    "question": "56. In a reaction Hg + Cl 2 → HgCl 2 , the rate of disappearance of Hg is equal to",
+    "options": {
+      "A": "Rate of disappearance of Cl 2",
+      "B": "Rate of appearance of HgCl 2",
+      "C": "Rate of appearance of Cl 2",
+      "D": "Both (a) and (b)"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 57,
+    "section": "Chemistry",
+    "question": "57. In a reaction, when the concentration of a reactant is increased two times, the increase in the\nrate of reaction was four times. The order of the reaction is",
+    "options": {
+      "A": "First order",
+      "B": "Zero order",
+      "C": "Pseudo first order",
+      "D": "Second order"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 58,
+    "section": "Chemistry",
+    "question": "58. In presence of a catalyst, the heat evolved or absorbed during the reaction",
+    "options": {
+      "A": "Increases",
+      "B": "Decreases",
+      "C": "Depends on the reaction",
+      "D": "Remains unchanged"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 59,
+    "section": "Chemistry",
+    "question": "59. Order of a reaction in which unit of rate of reaction and rate constant are the same",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "1 2",
+      "D": "2"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 60,
+    "section": "Chemistry",
+    "question": "60. Statement I: A catalyst does not alter Gibb’s energy (ΔG) of a reaction.\nStatement II: A catalyst alters the activation energy (Ea) of a reaction by providing an alternate\npathway.",
+    "options": {
+      "A": "Both Statement I and II are correct",
+      "B": "Both Statement I and II are incorrect",
+      "C": "Statement I is correct, but Statement II is incorrect",
+      "D": "Statement I is incorrect, but Statement II is correct"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 61,
+    "section": "Chemistry",
+    "question": "61. Statement I: If in a zero-order reaction, the concentration of the reactant is doubled, the half-life\nperiod is also doubled.\nStatement II: For a first-order reaction, the half-life period is independent of the initial\nconcentration of the reactant.",
+    "options": {
+      "A": "Both Statement I and II are correct",
+      "B": "Both Statement I and II are incorrect",
+      "C": "Statement I is correct but Statement II is incorrect",
+      "D": "Statement I is incorrect but Statement II is correct"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 62,
+    "section": "Chemistry",
+    "question": "For: Boar d s\n62. The collision frequency in a reaction depends on",
+    "options": {
+      "A": "Number of moles of reactants",
+      "B": "Proper orientation",
+      "C": "Activated reactant molecules",
+      "D": "Both (b) and (c)"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 63,
+    "section": "Chemistry",
+    "question": "63. The following factor which does not affect the rate of reaction is",
+    "options": {
+      "A": "Molecularity",
+      "B": "Temperature",
+      "C": "Catalyst",
+      "D": "Concentration of reactant"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 64,
+    "section": "Chemistry",
+    "question": "64. The half-life period of a first-order reaction is 15 minutes. The amount of substance left after\none hour will be",
+    "options": {
+      "A": "One-half",
+      "B": "One-fourth",
+      "C": "One-eighth",
+      "D": "One-sixteenth"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 65,
+    "section": "Chemistry",
+    "question": "65. The molecularity of a reaction cannot be",
+    "options": {
+      "A": "Zero",
+      "B": "One",
+      "C": "Both (a) and (b)",
+      "D": "Whole number"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 66,
+    "section": "Chemistry",
+    "question": "66. The number of collisions per second per unit volume of the reaction is known as",
+    "options": {
+      "A": "Collision energy",
+      "B": "Activation energy",
+      "C": "Collision frequency",
+      "D": "Kinetic energy"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 67,
+    "section": "Chemistry",
+    "question": "67. The order of a chemical reaction having the rate expression, Rate = k[A] [B] is",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "1 2",
+      "D": "1 4"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 68,
+    "section": "Chemistry",
+    "question": "68. The overall order of a reaction which has the rate expression Rate = K[A] / [B] / is",
+    "options": {
+      "A": "½",
+      "B": "2",
+      "C": "3 2",
+      "D": "1 1 1"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 69,
+    "section": "Chemistry",
+    "question": "69. The order for a reaction with the rate law Rate= 𝑘 [ 𝐴 ] [ 𝐵 ] is:",
+    "options": {
+      "A": "Zero",
+      "B": "Fraction",
+      "C": "One",
+      "D": "Two"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 70,
+    "section": "Chemistry",
+    "question": "70. The rate constant of a reaction is k = 2.3 × 10 L mol s . The order of the reaction is",
+    "options": {
+      "A": "Zero",
+      "B": "One",
+      "C": "Two",
+      "D": "Three"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 71,
+    "section": "Chemistry",
+    "question": "71. The S.I. unit of the rate constant of a first-order reaction is",
+    "options": {
+      "A": "s -1",
+      "B": "mol dm -3",
+      "C": "mol dm -3 s -1",
+      "D": "mol -1 dm 3 s -1"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 72,
+    "section": "Chemistry",
+    "question": "101. 110. 164.",
+    "options": {
+      "A": "Cr > Mn > Fe C. 2-Bromo propane A. Ketone A. Ethanol C. Methanol C. Ionization isomerism A. If Δ D. Both Primary and Secondary Valencies are ionisable. 0 Which of the following statements about transition elements is incorrect? In vinylic halides, the halogen atom is attached to a carbon atom with In coordination compound [CoCl < P, the configuration is t",
+      "B": "Fe > Mn > Cr B. Aldehyde D. Benzene 2 g 3 e D. 2-Bromopropan-2-ol B. o-Nitrophenol D. Cis-trans isomerism 1 g 2 (en) 2 ]Br, the primary and secondary valencies of Co",
+      "C": "Alcohol For: Boar For: Boar For: Boar For: Boar For: Boar For: Boar For: Boar For: Boar For: Boar For: Boar For: Boar For: Boar For: Boar For: Boar",
+      "D": "Cresol d d d d d d d d d d d d d d s s s s s s s s s s s s s s"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  }
+]
