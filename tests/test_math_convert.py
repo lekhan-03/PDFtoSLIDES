@@ -47,6 +47,8 @@ SPLIT = [
   [("TEXT", "Prove that "), ("MATH", "∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx"), ("TEXT", " and hence evaluate"),
    ("MATH", "∫_{0}^{a} f(x)dx")]),
  ("Prove that no math here (2017)", "2017", [("TEXT", "Prove that no math here")]),
+ (r"$∫ (2-3 sinx)/(cos^{2}x)$ dx = (2026M)", "2026M",
+  [("MATH", r"∫ (2-3 sinx)/(cos^{2}x) dx"), ("TEXT", " =")]),
 ]
 
 

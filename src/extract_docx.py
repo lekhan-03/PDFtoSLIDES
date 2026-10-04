@@ -89,6 +89,8 @@ def extract_lines(docx_path: str) -> list[str]:
             e_node = node.find(f'.//{M_NS}e')
             e_txt = extract_node(e_node) if e_node is not None else ''
             text.append(f'{beg}{e_txt}{end}')
+        elif tag == 'br':
+            text.append('\n')
         elif tag == 'acc':
             pr = node.find(f'.//{M_NS}accPr')
             chr_val = '̂'
@@ -181,17 +183,21 @@ def extract_lines(docx_path: str) -> list[str]:
         return ''.join(text)
 
     for para in doc.paragraphs:
-        line = " ".join(extract_node(para._element).split())
-        if line:
-            lines.append(line)
+        text = extract_node(para._element)
+        for line in text.split('\n'):
+            line = " ".join(line.split())
+            if line:
+                lines.append(line)
 
     for table in doc.tables:
         for row in table.rows:
             for cell in row.cells:
                 for para in cell.paragraphs:
-                    line = " ".join(extract_node(para._element).split())
-                    if line:
-                        lines.append(line)
+                    text = extract_node(para._element)
+                    for line in text.split('\n'):
+                        line = " ".join(line.split())
+                        if line:
+                            lines.append(line)
 
     return lines
 

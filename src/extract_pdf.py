@@ -2,21 +2,6 @@
 import re
 import pymupdf
 
-NOISE_PATTERNS = [
-    r"^Midterm Multiple Choice Questions$",
-    r"^For: Boards$",
-    r".*learn@simplifiedminds\.com$",
-    r"^Play Store$",
-    r"^7411-008-008$",
-    r"^SimplifiedMinds Karnataka$",
-    r"^www\.simplifiedminds\.com$",
-    r"^simplified_minds$",
-]
-NOISE_RE = re.compile("|".join(f"(?:{p})" for p in NOISE_PATTERNS))
-
-def is_noise(text: str) -> bool:
-    return bool(NOISE_RE.match(text))
-
 def clean_text(text: str) -> str:
     # C. Clean the text before conversion.
     # Collapse repeated function names
@@ -34,29 +19,36 @@ def clean_text(text: str) -> str:
     text = re.sub(r'  +', ' ', text)
     return text.strip()
 
+
+def find_repeating_lines(doc, threshold_ratio=0.30):
+    import collections
+    line_counts = collections.defaultdict(set)
+    num_pages = len(doc)
+    threshold = num_pages * threshold_ratio
+    for i, page in enumerate(doc):
+        blocks = page.get_text("dict").get("blocks", [])
+        for b in blocks:
+            if b.get("type") == 0:
+                for l in b.get("lines", []):
+                    y = round(l["bbox"][3])
+                    t = "".join([s.get("text", "") for s in l.get("spans", [])]).strip()
+                    if t:
+                        line_counts[(t, y)].add(i)
+    return {text for (text, y), pages in line_counts.items() if len(pages) >= threshold}
+
 def extract_pdf_questions(pdf_path: str) -> list[dict]:
+    import src.pdf_spans as pdf_spans
     doc = pymupdf.open(pdf_path)
+    repeating = find_repeating_lines(doc)
     
-    # A. Segment questions with geometry
     all_items = []
     
     for page_num, page in enumerate(doc):
-        items = []
         pdict = page.get_text("dict")
         
-        for block in pdict.get("blocks", []):
-            if block.get("type") == 0:
-                for line in block.get("lines", []):
-                    for span in line.get("spans", []):
-                        text = span.get("text", "").strip()
-                        if text and not is_noise(text):
-                            items.append({
-                                "type": "text",
-                                "text": text,
-                                "bbox": span["bbox"],
-                                "page": page_num + 1
-                            })
-                            
+        # Use pdf_spans
+        items = pdf_spans.page_items(pdict, page_num + 1, repeating)
+        
         for p in page.get_drawings():
             for d_item in p["items"]:
                 if d_item[0] == "l":
@@ -79,7 +71,8 @@ def extract_pdf_questions(pdf_path: str) -> list[dict]:
                             "page": page_num + 1
                         })
                         
-        items.sort(key=lambda i: (i["bbox"][1], i["bbox"][0]))
+        for it in items: it.setdefault("line_y0", it["bbox"][1])
+        items.sort(key=lambda i: (i["line_y0"], i["bbox"][0]))
         all_items.extend(items)
         
     return segment_and_process(all_items)
@@ -162,6 +155,8 @@ def segment_and_process(items):
     return questions
 
 def parse_question_text(text: str, q_id: int) -> dict:
+    from src.parser import clean_noise
+    text = clean_noise(text)
     from src.parser import _extract_options, OPTION_RE_TEMPLATE
     
     result = {
@@ -189,9 +184,17 @@ def parse_question_text(text: str, q_id: int) -> dict:
         result["options"] = _extract_options(text, positions)
         result["parsed_ok"] = True
     else:
-        result["question"] = text.strip()
-        result["question_type"] = "open"
-        result["parsed_ok"] = True
+        question_text = text.strip()
+        words = question_text.split()
+        if len(words) <= 4 and question_text and question_text[0].isalpha() and not re.search(r'\([A-Da-d]\)', question_text):
+            result["question"] = question_text
+            result["question_type"] = "divider"
+            result["id"] = None
+            result["parsed_ok"] = True
+        else:
+            result["question"] = question_text
+            result["question_type"] = "open"
+            result["parsed_ok"] = True
         
     return result
 
@@ -223,7 +226,7 @@ def validate_question(text: str, parsed: dict) -> bool:
     return True
 
 def group_and_rebuild(region):
-    sorted_items = sorted(region, key=lambda i: i['bbox'][1])
+    sorted_items = sorted(region, key=lambda i: i.get('line_y0', i['bbox'][1]))
     
     groups = []
     if not sorted_items:

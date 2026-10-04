@@ -303,6 +303,14 @@ def split_questions(lines: list[str]) -> list[dict]:
     return blocks
 
 
+
+def clean_noise(text: str) -> str:
+    text = re.sub(r'o%', '', text)
+    text = re.sub(r'For:\s*Boar\s*d\s*s|For:\s*Boards', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'✉.*?(\n|$)', '', text, flags=re.IGNORECASE)
+    return text.strip()
+
+
 def _extract_options(text: str, positions: dict) -> dict[str, str]:
     keys = list("ABCD")
     options = {}
@@ -310,7 +318,7 @@ def _extract_options(text: str, positions: dict) -> dict[str, str]:
         end = positions[keys[i + 1]][0] if i < 3 else len(text)
         opt_text = text[positions[letter][1]: end].strip()
         if '\n' in opt_text:
-            opt_text = opt_text.split('\n')[0].strip()
+            opt_text = " ".join(line.strip() for line in opt_text.split('\n') if line.strip())
         options[letter] = opt_text
     return options
 
@@ -322,6 +330,7 @@ def parse_block(block: dict) -> dict:
     MCQ blocks: parsed_ok=True if 4 options found, else False.
     """
     text = "\n".join(block["lines"])
+    text = clean_noise(text)
     in_open = block.get("in_open_section", False)
 
     result = {
@@ -370,13 +379,28 @@ def parse_block(block: dict) -> dict:
             result["question_type"] = "open"
             result["parsed_ok"]     = True
             return result
+        
+        words = text.strip().split()
+        if len(words) <= 4 and text.strip() and text.strip()[0].isalpha() and not re.search(r'\([A-Da-d]\)', text):
+            result["question"] = text.strip()
+            result["question_type"] = "divider"
+            result["id"] = None
+            result["parsed_ok"] = True
+            return result
+            
         result["question"] = text.strip()
         return result
+
 
     question = text[: positions["A"][0]].strip()
     options = _extract_options(text, positions)
 
+    if bool(re.search(r'\([A-Da-d]\)', options.get("D", ""))):
+        result["parsed_ok"] = False
+        return result
+
     if not question or any(not v for v in options.values()):
+
         result["question"] = text.strip()
         return result
 

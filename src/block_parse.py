@@ -26,13 +26,19 @@ def fold_math_alnum(s: str) -> str:
     return "".join(unicodedata.normalize("NFKC", c) if 0x1D400 <= ord(c) <= 0x1D7FF else c for c in s)
 
 
+BOARDS_RE = re.compile(r"[Ff]\s*o\s*r\s*:\s*[Bb]\s*o\s*a\s*r\s*d\s*s")
+
 def strip_noise(raw: str):
     text = fold_math_alnum(PICTO.sub("", raw))
     lines = text.split("\n")
     qi = next((i for i, l in enumerate(lines) if QNUM.match(l)), len(lines))
     chapter, out = None, []
+    header_leftovers = []
     for i, ln in enumerate(lines):
-        if re.sub(r"\s+", "", ln).lower() in HEADERS:
+        if BOARDS_RE.search(ln):
+            leftover = BOARDS_RE.sub("", ln).strip()
+            if leftover:
+                header_leftovers.append(leftover)
             continue
         # chapter labels only count BEFORE the question number, so a stem line such as
         # "Identify the correct statement:" is never dropped
@@ -40,15 +46,15 @@ def strip_noise(raw: str):
             chapter = ln.strip().rstrip(":")
             continue
         out.append(ln)
-    return "\n".join(out).strip(), chapter
+    return "\n".join(out).strip(), chapter, header_leftovers
 
 
 def parse_block(raw: str) -> dict:
-    text, chapter = strip_noise(raw)
+    text, chapter, header_leftovers = strip_noise(raw)
     lines = [l for l in text.split("\n")]
     qi = next((i for i, l in enumerate(lines) if QNUM.match(l)), None)
     if qi is None:
-        return {"stem": text, "options": {}, "chapter": chapter, "spill": {}}
+        return {"stem": text, "options": {}, "chapter": chapter, "spill": {}, "header_leftovers": header_leftovers}
 
     orphans = {}
     for l in lines[:qi]:
@@ -75,4 +81,4 @@ def parse_block(raw: str) -> dict:
         else:
             options[k] = v
     return {"stem": "\n".join(stem), "options": dict(sorted(options.items())),
-            "chapter": chapter, "spill": spill}
+            "chapter": chapter, "spill": spill, "header_leftovers": header_leftovers}

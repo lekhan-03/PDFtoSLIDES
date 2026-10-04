@@ -81,6 +81,8 @@ def test_q48_q62_header_and_chapter():                                          
     assert "ii) Oxidation occurs at the anode." in r["stem"]          # i) ii) are stem lines, not options
     assert parse_block("For: Boar d s\n62. The collision frequency in a reaction depends on")["stem"] == \
            "62. The collision frequency in a reaction depends on"
+    assert parse_block("3+ For: Boar d s\n44. The product formed at the anode during the electrolysis of aqueous NaCl is")["stem"] == \
+           "44. The product formed at the anode during the electrolysis of aqueous NaCl is"
 
 
 def test_stem_line_ending_in_colon_is_kept():

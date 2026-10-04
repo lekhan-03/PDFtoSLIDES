@@ -16,6 +16,7 @@ INVISIBLE = dict.fromkeys(map(ord, "\u2061\u2062\u2063\u2064\u200b\u200c\u200d\u
 SYMBOLS = {
     "∫": r"\int ", "π": r"\pi ", "∑": r"\sum ", "±": r"\pm ", "×": r"\times ",
     "∞": r"\infty ", "≤": r"\le ", "≥": r"\ge ", "≠": r"\ne ", "→": r"\to ",
+    "–": "-", "—": "-",
 }
 
 FUNC = re.compile(r"\\?(arcsin|arccos|arctan|cosec|sin|cos|tan|cot|sec|log|ln)")
@@ -127,8 +128,23 @@ def piecewise_to_cases(s: str) -> str:
 
 
 # ---------------------------------------------------------------- main entry
+def unicode_scripts(s: str) -> str:
+    sup = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿˣ", "0123456789+-=()nx")
+    sub = str.maketrans("₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎", "0123456789+-=()")
+    
+    # We want to replace sequences of superscripts with ^{...} and subscripts with _{...}
+    def repl_sup(m):
+        return "^{" + m.group(0).translate(sup) + "}"
+    def repl_sub(m):
+        return "_{" + m.group(0).translate(sub) + "}"
+        
+    s = re.sub(r'[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿˣ]+', repl_sup, s)
+    s = re.sub(r'[₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎]+', repl_sub, s)
+    return s
+
 def convert_math(s: str) -> str:
-    s = s.translate(INVISIBLE).strip().strip("$").strip()
+    s = s.translate(INVISIBLE)
+    s = unicode_scripts(s).strip().strip("$").strip()
     s = collapse_doubles(s)
     s = piecewise_to_cases(s)
 
@@ -194,9 +210,13 @@ def split_question(q: str):
         runs.append(["TEXT", q[pos:]])
     out = []
     for kind, text in runs:
-        if kind == "TEXT" and out and out[-1][0] == "MATH" and re.fullmatch(r"\s*d[xt]\s*", text):
-            out[-1][1] += " " + text.strip()
-        else:
+        if kind == "TEXT" and out and out[-1][0] == "MATH":
+            # Extract dx even if it's not the entire TEXT run
+            m_dx = re.match(r"^\s*d[xt]\b", text)
+            if m_dx:
+                out[-1][1] += " " + m_dx.group(0).strip()
+                text = text[m_dx.end():]
+        if text.strip():
             out.append([kind, text])
             
     # "insert a space between a TEXT run and the next MATH run if the TEXT does not end with one"

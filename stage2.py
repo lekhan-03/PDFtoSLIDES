@@ -4,8 +4,13 @@ from src.block_parse import parse_block
 from src.chem_convert import convert_chem, conc_to_latex, suspect_options
 from src.convert.math import split_question, convert_math, check_math
 
+from src.unmarked import split_runs_auto
+from src.run_merge import merge_runs
+from src.chem_extra import attached_subscripts
+
 def process_text(text):
-    tag, runs = split_question(text)
+    tag, runs = split_runs_auto(text)
+    runs = merge_runs(runs)
     out_runs = []
     problems = []
     for kind, content in runs:
@@ -17,6 +22,7 @@ def process_text(text):
             problems.extend(probs)
             out_runs.append({"type": "MATH", "text": converted})
         else: # TEXT
+            content = attached_subscripts(content)
             converted = convert_chem(content)
             out_runs.append({"type": "TEXT", "text": converted})
     return tag, out_runs, problems
@@ -40,6 +46,31 @@ def count_leaks(runs_list):
 
 def process_file(json_path, ids_to_print):
     data = json.load(open(json_path, encoding='utf-8'))
+
+    # ── Load and apply corrections ──────────────────────────────────────────
+    import os
+    corrections_path = os.path.join("data", "corrections", os.path.basename(json_path))
+    if os.path.exists(corrections_path):
+        try:
+            with open(corrections_path, 'r', encoding='utf-8') as f:
+                corrections = json.load(f)
+            
+            applied = []
+            for q in data:
+                q_id = str(q['id'])
+                if q_id in corrections:
+                    c = corrections[q_id]
+                    if 'question' in c:
+                        q['question'] = c['question']
+                    if 'options' in c:
+                        q['options'] = c['options']
+                    q['_corrected'] = True
+                    applied.append(q_id)
+                    
+            if applied:
+                print(f"applied {len(applied)} corrections: ids {', '.join(applied)}")
+        except Exception as e:
+            print(f"Error loading corrections: {e}")
     review_list = []
     processed = []
     
@@ -73,25 +104,36 @@ def process_file(json_path, ids_to_print):
                 review_list.append({"id": q.get("id"), "reason": "unresolved spill", "spill": parsed["spill"]})
                 
         # process stem
-        tag, stem_runs, stem_probs = process_text(parsed["stem"])
+        stem_raw = parsed["stem"]
+        options_raw = parsed["options"]
+        
+        from src.unmarked import option_tag_report
+        stem_tag, _, _ = process_text(stem_raw) if stem_raw else (None, [], [])
+        tag, cleaned_options, swallowed = option_tag_report(stem_tag, options_raw)
+        
+        _, stem_runs, stem_probs = process_text(stem_raw)
         
         # process options
         opt_runs = {}
         opt_probs = []
-        for k, v in parsed["options"].items():
-            _, oruns, oprobs = process_text(v)
+        for k, v in options_raw.items():
+            if k in swallowed:
+                opt_runs[k] = [{"type": "TEXT", "text": v}]
+                continue
+            _, oruns, oprobs = process_text(cleaned_options.get(k, v))
             opt_runs[k] = oruns
             opt_probs.extend(oprobs)
             
         # validation for review_list
-        mid_sentence = [k for k, v in parsed["options"].items() if re.search(r'\b(and|or|with|of|the)\s*$', v.strip(), re.IGNORECASE)]
-        suspects = suspect_options(parsed["options"])
+        mid_sentence = [k for k, v in options_raw.items() if re.search(r'\b(and|or|with|of|the)\s*$', v.strip(), re.IGNORECASE)]
+        suspects = suspect_options(options_raw)
         
         reasons = []
         if stem_probs: reasons.append(f"math problems in stem: {stem_probs}")
         if opt_probs: reasons.append(f"math problems in options: {opt_probs}")
         if mid_sentence: reasons.append(f"options ending mid-sentence: {mid_sentence}")
         if suspects: reasons.append(f"suspect options: {suspects}")
+        if swallowed: reasons.append(f"swallowed next stem (year tag): {swallowed}")
         if "Boar" in parsed["stem"]: reasons.append("stem contains 'Boar'")
         if re.search(r'(^|\s)✉(\s|$)', parsed["stem"]): reasons.append("stem contains lone ✉")
         if "$" in parsed["stem"]: reasons.append("stem contains leaked $")
@@ -139,7 +181,7 @@ def process_file(json_path, ids_to_print):
     return review_list
 
 def main():
-    integrals = "data/tests/testres/Integrals.json"
+    integrals = "data/testres/Integrals_v2.json"
     integrals_ids = [str(i) for i in range(128, 137)]
     
     chem = "data/outputs/chemistry_2026_10_03_130427.json"

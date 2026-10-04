@@ -175,7 +175,15 @@ def main() -> None:
                 })
 
     # ── Write output ───────────────────────────────────────────────────────────
-    parsed.sort(key=lambda q: q["id"])
+    
+    # Apply corrections if they exist
+    corr_path = Path(f"data/corrections/{in_path.stem}.json")
+    if corr_path.exists():
+        from src.corrections import apply_corrections
+        corr_dict = json.loads(corr_path.read_text(encoding="utf-8"))
+        parsed = apply_corrections(parsed, corr_dict)
+
+    parsed.sort(key=lambda q: q["id"] if q.get("id") is not None else float("inf"))
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(
         json.dumps(parsed, indent=2, ensure_ascii=False), encoding="utf-8"
