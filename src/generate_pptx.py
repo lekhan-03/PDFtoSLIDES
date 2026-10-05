@@ -812,6 +812,7 @@ def generate(json_path: Path, output_path: Path,
     last_section: str | None = None
     match_col_count = 0
     open_count = 0
+    divider_count = 0
 
     for q in ok_qs:
         section = q.get("section") or "General"
@@ -831,6 +832,9 @@ def generate(json_path: Path, output_path: Path,
         elif q_type == "open":
             build_open_question_slide(prs, q, logo_path)
             open_count += 1
+        elif q_type == "divider":
+            build_divider_slide(prs, q.get("question", "Section"), logo_path)
+            divider_count += 1
         else:
             build_normal_slide(prs, q, logo_path)
 
@@ -845,10 +849,10 @@ def generate(json_path: Path, output_path: Path,
         output_path = alt_path
 
     total = len(prs.slides)
-    mcq_count = len(ok_qs) - match_col_count - open_count
-    dividers = total - 1 - len(ok_qs)
+    mcq_count = len(ok_qs) - match_col_count - open_count - divider_count
+    
     print(f"\n[OK] Saved {total} slides -> {output_path}")
-    print(f"    1 title  +  {dividers} dividers  "
+    print(f"    1 title  +  {divider_count} dividers  "
           f"+  {mcq_count} MCQ  "
           f"+  {open_count} open/SA  "
           f"+  {match_col_count} match-the-column")

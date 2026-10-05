@@ -1,4 +1,5 @@
 def apply_corrections(parsed_list: list[dict], corrections_dict: dict) -> list[dict]:
+    applied_ids = []
     for item in parsed_list:
         if not item.get("question"):
             continue
@@ -10,6 +11,7 @@ def apply_corrections(parsed_list: list[dict], corrections_dict: dict) -> list[d
         item_id = str(item.get("id", ""))
         if item_id in corrections_dict:
             corr = corrections_dict[item_id]
+            applied_ids.append(item_id)
             if "options" in corr:
                 item["options"].update(corr["options"])
             if "question" in corr:
@@ -25,6 +27,7 @@ def apply_corrections(parsed_list: list[dict], corrections_dict: dict) -> list[d
             match_str = corr.get("match")
             # If match_str is provided, see if the question text contains it anywhere.
             if match_str and match_str in item.get("question", ""):
+                applied_ids.append(item_id)
                 if "options" in corr:
                     item["options"].update(corr["options"])
                 if "question" in corr:
@@ -33,5 +36,8 @@ def apply_corrections(parsed_list: list[dict], corrections_dict: dict) -> list[d
                     item["question_type"] = corr["question_type"]
                 if "parsed_ok" in corr:
                     item["parsed_ok"] = corr["parsed_ok"]
+                    
+    if applied_ids:
+        print(f"applied {len(applied_ids)} corrections: ids {', '.join(applied_ids)}")
                     
     return parsed_list

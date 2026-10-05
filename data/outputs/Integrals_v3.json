@@ -1,0 +1,1396 @@
+[
+  {
+    "id": 1,
+    "section": "MCQ’s",
+    "question": "∫ sin 2x dx is (2024M)",
+    "options": {
+      "A": "$-(sin 2x)/(2)$ + c",
+      "B": "$-$ $(cos 2x)/(2)$+c",
+      "C": "$(cos 2x)/(2)$+ c",
+      "D": "$(sin 2x)/(2)$ + c"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 2,
+    "section": "MCQ’s",
+    "question": "∫ e ˣ $( (1)/(x) - (1)/(x²) )$ dx is (2024M,2026,2025-2)",
+    "options": {
+      "A": "e-x $( (1)/(x) )$ + c",
+      "B": "e-x $((1)/(x²))$ + c",
+      "C": "e x $( (1)/(x) )$+ c",
+      "D": "ex$ ((1)/(x²))$ + c"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 3,
+    "section": "MCQ’s",
+    "question": "∫ x sin x dx= (2025M)",
+    "options": {
+      "A": "$-xcos⁡x-sin⁡x+c$",
+      "B": "$xcos⁡x+sin⁡x+c$",
+      "C": "$xcos⁡x-sin⁡x+c$",
+      "D": "$-cos⁡x-sin⁡x+c$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 4,
+    "section": "MCQ’s",
+    "question": "The point of inflection for the following graph is (2025M)\n[IMG: data/tests/Integrals_PU_board_Questions_images/img_rId8.png]",
+    "options": {
+      "A": "0",
+      "B": "point of inflection does not exist",
+      "C": "$-(π)/(2)$",
+      "D": "$(π)/(2)$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 5,
+    "section": "MCQ’s",
+    "question": "$∫(1)/(xsqrt(x^{2}-1)) dx=$ (2025M)",
+    "options": {
+      "A": "$sec⁡x+C$",
+      "B": "$cosec⁡^{-1}x+C$",
+      "C": "$sec⁡^{-1}x+C$",
+      "D": "$cosec⁡x+C$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 6,
+    "section": "MCQ’s",
+    "question": "Statement 1: The anti-derivative of $((1)/(sqrt(1+X^{2})) )$with respect to x is $(X)/(2)$ $sqrt(1+X^{2})$ +$(1)/(2)$ log|𝑥 +$sqrt(1+X^{2})$| + 𝐶\nStatement 2: The derivative of $ (X)/(2)$ $sqrt(1+X^{2})$ +$(1)/(2)$ log|𝑥 +$sqrt(1+X^{2})$| + 𝐶. with respect to x is $(1)/(sqrt(1+X^{2}))$ (2025M)",
+    "options": {
+      "A": "Statement 1 is true, and Statement 2 is false.",
+      "B": "Statement 1 is true, and Statement 2 is true, Statement 2 is correct explanation for Statement",
+      "C": "Statement 1 is true, and Statement 2 is true, Statement 2 is not a correct explanation for Statement1",
+      "D": "Both statements are false."
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 7,
+    "section": "MCQ’s",
+    "question": "Find the value of $∫_{-1}^{1} x^{99} dx=$ (2026M)",
+    "options": {
+      "A": "2",
+      "B": "3",
+      "C": "0",
+      "D": "1"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 8,
+    "section": "MCQ’s",
+    "question": "The anti-derivative of $(1)/(x sqrt(x^{2}-1))$,x>1 with respective to x (2026-1)",
+    "options": {
+      "A": "$sin⁡^{-1}x+C$",
+      "B": "$cos⁡^{-1}x+C$",
+      "C": "$-cosec⁡^{-1}x+C$",
+      "D": "$cot⁡^{-1}x+C$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 9,
+    "section": "MCQ’s",
+    "question": "$∫ (2-3 sinx)/(cos^{2}x)$ dx = (2026M)",
+    "options": {
+      "A": "$2tan⁡x-3sec⁡x+c$",
+      "B": "$2tan⁡x+3sec⁡x+c$",
+      "C": "$2tan⁡x-2sec⁡x+c$",
+      "D": "$2sec⁡x-3tan⁡x+c$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 10,
+    "section": "MCQ’s",
+    "question": "$∫_{1}^{sqrt(3)} 3 $ (2026M,2025-2)",
+    "options": {
+      "A": "$(π)/(3)$",
+      "B": "$(2π)/(3)$",
+      "C": "$(π)/(6)$",
+      "D": "$(π)/(12)$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 11,
+    "section": "MCQ’s",
+    "question": "$∫ (1-x)/(sqrt(x)) dx $is (2026M)",
+    "options": {
+      "A": "$2sqrt(x)+(3x^{3/2})/(2)+C$",
+      "B": "$2sqrt(x)-(2x^{3/2})/(3)+C$",
+      "C": "$2sqrt(x)+(2x^{3/2})/(3)+C$",
+      "D": "$2sqrt(x)-(3x^{3/2})/(2)+C$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 12,
+    "section": "MCQ’s",
+    "question": "$∫_{0}^{π} (sin^{2}(x)/(2)-cos^{2}(x)/(2))dx=$ (2026M)",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "–1",
+      "D": "–2"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 13,
+    "section": "MCQ’s",
+    "question": "$∫ e^{x} secx (1+tanx)dx=$ (2024,2026M)",
+    "options": {
+      "A": "$e^{x}sec⁡x+c$",
+      "B": "$e^{x}sec⁡^{2}x+c$",
+      "C": "$e^{x}tan⁡x+c$",
+      "D": "$e^{x}(1+tan⁡x)+c$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 14,
+    "section": "MCQ’s",
+    "question": "$∫xcos⁡x dx=$ (2026M)",
+    "options": {
+      "A": "$-xsin⁡x+cos⁡x+c$",
+      "B": "$xcos⁡x-sin⁡x+c$",
+      "C": "$xsin⁡x-cos⁡x+c$",
+      "D": "$xsin⁡x+cos⁡x+c$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 15,
+    "section": "MCQ’s",
+    "question": "The value of $∫_{0}^{π/3} (sqrt(3))/(1+x^{2}) dx$ is (2026M)",
+    "options": {
+      "A": "$(π)/(2)$",
+      "B": "$(π)/(4)$",
+      "C": "$(π)/(6)$",
+      "D": "$(π)/(12)$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 16,
+    "section": "MCQ’s",
+    "question": "The anti-derivative of $(sqrt(x))$ is",
+    "options": {
+      "A": "$(1)/(3)x^{3/2}+2x^{1/2}+c$",
+      "B": "$(2)/(3)x^{3/2}+(1)/(2)x^{2}+c$",
+      "C": "$(2)/(3)x^{3/2}+2x^{1/2}+c$",
+      "D": "$(3)/(2)x^{3/2}+(1)/(2)x^{1/2}+c$ (2026M)"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 17,
+    "section": "MCQ’s",
+    "question": "The value of $∫ (cos2x+2 sin^{2}x)/(cos^{2}x)$",
+    "options": {
+      "A": "$tan⁡x+c$",
+      "B": "$cos⁡2x+c$",
+      "C": "$sin⁡2x+c$",
+      "D": "$tan⁡2x+c$ (2026M)"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 18,
+    "section": "MCQ’s",
+    "question": "∫eˣ(sin x + cos x) dx is equal to",
+    "options": {
+      "A": "eˣ cos x + c",
+      "B": "eˣ tan x + c",
+      "C": "eˣ sin x + c",
+      "D": "−eˣ cos x + c (2024-1)"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 19,
+    "section": "MCQ’s",
+    "question": "∫sec x (sec x + tan x) dx is",
+    "options": {
+      "A": "sec² x + tan x + c",
+      "B": "sec x + tan x + c",
+      "C": "sec x - tan x + c",
+      "D": "- tan x - sec x + c (2024-1)"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 20,
+    "section": "MCQ’s",
+    "question": "The value of ∫cosec x (cosec x + cot x) dx is",
+    "options": {
+      "A": "cot x + cosec x + c",
+      "B": "− cot x + cosec x + c",
+      "C": "− cot x − cosec x + c",
+      "D": "cot x − cosec x + c (2024-2)"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 21,
+    "section": "MCQ’s",
+    "question": "$∫_{0}^{1} (1)/((1 + x²))$ dx is (2024-2)",
+    "options": {
+      "A": "$(π)/(3)$",
+      "B": "$(π)/(6)$",
+      "C": "$(π)/(2)$",
+      "D": "$(π)/(4)$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 22,
+    "section": "MCQ’s",
+    "question": "∫ tan2x dx is equal to: (2024-3)",
+    "options": {
+      "A": "x-tan x +c",
+      "B": "tan x - x +c",
+      "C": "sec2x-x + c",
+      "D": "x – sec2x + c"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 23,
+    "section": "MCQ’s",
+    "question": "$∫e^{x}(sin⁡x-cos⁡x) dx$ is (2025-1)",
+    "options": {
+      "A": "$-e^{x}cos⁡x$",
+      "B": "$e^{x}cos⁡x$",
+      "C": "$e^{x}sin⁡x$",
+      "D": "$e^{x}sin⁡^{2}x$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 24,
+    "section": "MCQ’s",
+    "question": "$∫ e^{x}(1+tanx+tan^{2}x)dx=$ (2025-3)",
+    "options": {
+      "A": "$tan⁡x+C$",
+      "B": "$e^{x}tan⁡x+C$",
+      "C": "$e^{x}sec⁡x+C$",
+      "D": "$sec⁡x+C$"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 25,
+    "section": "MCQ’s",
+    "question": "The value of $∫_{-(π)/(2)}^{(π)/(2)} sin^{7}$ x dx is: (2024-3,2026-1)",
+    "options": {
+      "A": "1",
+      "B": "0",
+      "C": "-1",
+      "D": "7"
+    },
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "mcq"
+  },
+  {
+    "id": 26,
+    "section": "1 Marks",
+    "question": "Evaluate $∫ (sinsin x+coscos x ). dx. $ (2014)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 27,
+    "section": "1 Marks",
+    "question": "Evaluate $∫ (2x-3cosx+e^{x}) dx$ (2014s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 28,
+    "section": "1 Marks",
+    "question": "Evaluate $∫ e^{x}((x-1)/(x^{2}))$ (2015)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 29,
+    "section": "1 Marks",
+    "question": "Evaluate: $∫ secsec x (secsec x+tantan x ). dx. $ (2015s,2017s,2022)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 30,
+    "section": "1 Marks",
+    "question": "Find $∫ cosecx(cosecx+cotx)dx$ (2016)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 31,
+    "section": "1 Marks",
+    "question": "Find $∫ (2x^{2}+e^{2})dx$ (2016s,2020,2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 32,
+    "section": "1 Marks",
+    "question": "Find $∫ sqrt(x)+(1)/(sqrt(x)) dx$ (2017)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 33,
+    "section": "1 Marks",
+    "question": "Find $∫ cos3x dx$ (2017s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 34,
+    "section": "1 Marks",
+    "question": "Find $∫ ((x^{3}-1)/(x^{2}))dx$ (2018)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 35,
+    "section": "1 Marks",
+    "question": "Evaluate: $∫ (1-x)sqrt(x) dx$ (2019)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 36,
+    "section": "1 Marks",
+    "question": "Find$ ∫ sec^{2}(7-4x)dx$ (2019s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 37,
+    "section": "1 Marks",
+    "question": "$∫_{2}^{3} x^{2}dx$ (2022)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 38,
+    "section": "1 Marks",
+    "question": "Evaluate: $∫ e^{x}secsec x (secsec x+tantan x ). dx. $ (2023)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 39,
+    "section": "1 Marks",
+    "question": "Evaluate: $∫ sqrt(ax+b) dx$ (2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 40,
+    "section": "2 Marks",
+    "question": "Evaluate $∫_{1}^{e} (1)/(x) dx$ (2014)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 41,
+    "section": "2 Marks",
+    "question": "Integrate sin x sin(cosx) w.r.t.x (2014s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 42,
+    "section": "2 Marks",
+    "question": "Evaluate $∫_{0}^{1} (1)/(1+x^{2})dx$. (2014s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 43,
+    "section": "2 Marks",
+    "question": "Evaluate $∫ (sin^{2})/(1+cosx) dx.$ (2014,2022)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 44,
+    "section": "2 Marks",
+    "question": "Evaluate $∫ (cos2x-cos2α)/(cosx-cosα)dx$ (2015)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 45,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ (dx)/(x-sqrt(x))$ (2015)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 46,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ (x^{2})/(1-x^{6})dx.$ (2015s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 47,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ e^{x}((1)/(x)-(1)/(x^{2}))dx$ (2015s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 48,
+    "section": "2 Marks",
+    "question": "Find $∫ (1)/(sinxcos^{3}x)dx$. (2016)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 49,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫_{0}^{π} sin^{2}(x)/(2)-cos^{2}(x)/(2) dx$ (2016,2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 50,
+    "section": "2 Marks",
+    "question": "Find: $∫ x^{2} logx dx$ (2016s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 51,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫_{0}^{1} (dx)/(sqrt(1-x^{2}))$ (2016s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 52,
+    "section": "2 Marks",
+    "question": "Integrate $(tan^{4}sqrt(x) sec^{2}sqrt(x))/(sqrt(x))$ (2017)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 53,
+    "section": "2 Marks",
+    "question": "Evaluate $∫_{0}^{(2)/(3)} (1)/(4+9x^{2}) dx$ (2017)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 54,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ (sqrt(tanx))/(sinxcosx) dx$ (2017s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 55,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ (x-3)/((x-1)^{3}) ex dx$ (2017s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 56,
+    "section": "2 Marks",
+    "question": "Evaluate $∫ coscos 6x sqrt(1+sin6x) dx$ (2018s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 57,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ (xe^{x})/((1+x)^{2}) dx$ (2018s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 58,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ (e^{x})/(1+x^{2})dx$with respect to x (2018)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 59,
+    "section": "2 Marks",
+    "question": "Evaluate $∫_{2}^{3} (x)/(1+x^{2})dx$. (2018)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 60,
+    "section": "2 Marks",
+    "question": "Find $∫ (dx)/(cos^{2}x(1-tanx)^{2})$ (2019)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 61,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ sinsin 2x .coscos 3x dx$ (2019)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 62,
+    "section": "2 Marks",
+    "question": "Find $∫ cotcot x log⁡(sinsin x )$ (2020)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 63,
+    "section": "2 Marks",
+    "question": "Find $∫ x^{2}loglog x dx$ (2022)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 64,
+    "section": "2 Marks",
+    "question": "Evaluate $∫ (x)/((x+1)(x+2)) dx$ (2024m,3)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 65,
+    "section": "2 Marks",
+    "question": "Integrate $∫ (2-3sinx)/(cos^{2}x)$ (2023)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 66,
+    "section": "2 Marks",
+    "question": "Evaluate $∫_{1}^{sqrt(3)} 3$ (2023,2024-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 67,
+    "section": "2 Marks",
+    "question": "Find $∫ x sec^{2}x dx$ (2020,2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 68,
+    "section": "2 Marks",
+    "question": "Evaluate $∫ (sin^{2}x-cos^{2}x)/(sin^{2}x. cos^{2}x) dx$ (2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 69,
+    "section": "2 Marks",
+    "question": "Find $∫ log⁡(x)$ (2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 70,
+    "section": "2 Marks",
+    "question": "$∫_{0}^{π/2} sin^{2}(x)/(2)-cos^{2}(x)/(2) dx$ (2024m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 71,
+    "section": "2 Marks",
+    "question": "Find $∫ (x)/((x-1)(x-2))dx.$ (2024-2)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 72,
+    "section": "2 Marks",
+    "question": "Evaluate $∫_{0}^{π/2} cos^{2}x dx.$ (2024-2)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 73,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫_{0}^{1} (x)/(x^{2}+1) dx$ (2024-3)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 74,
+    "section": "2 Marks",
+    "question": "Find $∫ cot x.log(sinx)dx.$ (2025-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 75,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ (x^{3}-x^{2}+x-1)/(x-1) dx.$ (2025-2)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 76,
+    "section": "2 Marks",
+    "question": "Evaluate: $∫ (x^{3} tan^{-1}(x^{4}))/(1+x^{8}) dx.$ (2025-3)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 77,
+    "section": "2 Marks",
+    "question": "Find $∫ (1)/(x+x log x) dx$ (2026-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 78,
+    "section": "3 Marks",
+    "question": "$∫ ((x^{2}+1)e^{x})/((x+1)^{2}) dx$ (2014,2022)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 79,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ x .dx$ (2014)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 80,
+    "section": "3 Marks",
+    "question": "Evaluate$∫ sin3x.cos4x.dx$ (2014s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 81,
+    "section": "3 Marks",
+    "question": "Integrate $x^{2}e^{x}$ w.r.t x. (2014s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 82,
+    "section": "3 Marks",
+    "question": "Evaluate: $∫ x x dx $ (2015,2024)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 83,
+    "section": "3 Marks",
+    "question": "Evaluate: $∫_{0}^{2} e^{x} dx$as a limit of sum (2015,2015s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 84,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ (x)/((x+1)(x+2)) dx$ (2015s,2016s,2017s,2018,2021m,2023m,2026-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 85,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ (x)/((x-1)(x-2))dx$ (2016)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 86,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ (2x)/((x^{2}+1)(x^{2}+2))dx$with respect to x. (2016)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 87,
+    "section": "3 Marks",
+    "question": "Evaluate: $∫ e^{x}((1+sinx)/(1+cosx))dx$ (2016s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 88,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ (x)/(x^{2}+3x+2)dx$ (2017)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 89,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ e^{x}sinx dx$ (2017,2018)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 90,
+    "section": "3 Marks",
+    "question": "Evaluate: $∫_{0}^{1} (x)/(1+x^{2}) dx$ (2018s,2023)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 91,
+    "section": "3 Marks",
+    "question": "Integrate $(dx)/(x(x^{2}+1))$ with respect to x. (2018s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 92,
+    "section": "3 Marks",
+    "question": "Evaluate: $∫ (xx)/(sqrt(1-x^{2})) dx$ (2017s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 93,
+    "section": "3 Marks",
+    "question": "Find $∫ xloglog x dx$ (2019)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 94,
+    "section": "3 Marks",
+    "question": "Evaluate $∫_{0}^{(π)/(2)} (sinsin x)/(1+cos^{2}x) dx$ (2019)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 95,
+    "section": "3 Marks",
+    "question": "$∫ ((x-3)e^{x})/((x-1)^{3}) dx$ (2020,2021m,2023)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 96,
+    "section": "3 Marks",
+    "question": "Evaluate $∫_{0}^{(π)/(2)} cos^{2}x dx$ (2020)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 97,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ x sin3x dx$ (2023)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 98,
+    "section": "3 Marks",
+    "question": "Evaluate $∫_{0}^{(π)/(4)} sin2x dx$ (2021m,2022)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 99,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ x .dx$ (2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 100,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ (sin^{3}x+cos^{3}x)/(sin^{2}x. cos^{2}x) dx$ (2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 101,
+    "section": "3 Marks",
+    "question": "Evaluate $∫ (3x-2)/((x+1)^{2}(x+3))dx$",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 102,
+    "section": "3 Marks",
+    "question": "Find $∫ xtan^{-1}x dx$. (2024-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 103,
+    "section": "3 Marks",
+    "question": "Find $∫ (x sin^{-1}x)/(sqrt(1-x^{2}))$ dx. (2024-2,3)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 104,
+    "section": "3 Marks",
+    "question": "Evaluate: $∫ (2x)/(x^{2}+3x+2)dx.$ (2025-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 105,
+    "section": "5 Marks",
+    "question": "Find $∫ (dx)/(x^{2}-a^{2}) $and hence evaluate $∫ (dx)/(3x^{2}+13x-10)$ (2014)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 106,
+    "section": "5 Marks",
+    "question": "Find $∫ (1)/(sqrt(x^{2}-a^{2}))$with respect to x and hence evaluate $∫ (dx)/(sqrt(x^{2}+6x-7))$ (2014s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 107,
+    "section": "5 Marks",
+    "question": "Find $∫ (1)/(sqrt(x^{2}-a^{2}))$with respect to x and hence evaluate $∫ (dx)/(sqrt(x^{2}+6x-7)) $ (2015)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 108,
+    "section": "5 Marks",
+    "question": "Find the integral of $sqrt(x^{2}+a^{2})$ with respect to x and hence evaluate $∫ sqrt(x^{2}+4x+6)dx$\n(2015s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 109,
+    "section": "5 Marks",
+    "question": "Find $∫ (1)/(x^{2}+a^{2})$with respect to x and hence evaluate $∫ (dx)/(x^{2}+2x+3)$ (2016,2020,2024-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 110,
+    "section": "5 Marks",
+    "question": "Find the integral of $sqrt(x^{2}-a^{2})$ with respect to x and hence evaluate $∫ sqrt(5-x^{2}+2x)dx$\n(2016s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 111,
+    "section": "5 Marks",
+    "question": "Find the integral of $sqrt(x^{2}-a^{2})$ with respect to x and hence evaluate $∫ sqrt(x^{2}-8x+7)dx$\n(2017)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 112,
+    "section": "5 Marks",
+    "question": "Find the integral of $sqrt(a^{2}+x^{2})$ with respect to x and hence evaluate $∫ sqrt(1+x^{2}) dx$ (2017s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 113,
+    "section": "5 Marks",
+    "question": "Find the integral of $(1)/(sqrt(a^{2}-x^{2}))$ with respect to x and hence find $∫ (1)/(sqrt(7-6x-x^{2})) dx$ (2018s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 114,
+    "section": "5 Marks",
+    "question": "Find $∫ (1)/(x^{2}+a^{2})$with respect to x and hence evaluate $∫ (dx)/(x^{2}-6x+13) $ (2018)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 115,
+    "section": "5 Marks",
+    "question": "Find $∫ (dx)/(x^{2}-a^{2})$and hence evaluate $∫ (dx)/(x^{2}-16)$ (2019,2022,2024m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 116,
+    "section": "5 Marks",
+    "question": "Find the integral of $sqrt(x^{2}+a^{2})$ with respect to x, and hence find $∫ sqrt(x^{2}+2x+5) dx$ (2019s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 117,
+    "section": "5 Marks",
+    "question": "Find $∫ (1)/(sqrt(x^{2}+a^{2}))$with respect to x and hence evaluate $∫ (dx)/(sqrt(x^{2}+2x+2)) $ (2023)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 118,
+    "section": "5 Marks",
+    "question": "Find $∫ (dx)/(x^{2}-a^{2})$and hence evaluate $∫ (dx)/(4x^{2}-9)$ . (2021m,2025-2)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 119,
+    "section": "5 Marks",
+    "question": "Find the integral of $(1)/(sqrt(a^{2}-x^{2}))$ with respect to x and hence find $∫ (1)/(sqrt(9-25x^{2})) dx$ (2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 120,
+    "section": "5 Marks",
+    "question": "Find the integral of $(1)/(sqrt(a^{2}+ x^{2}))$ with respect to x and hence find $∫ (1)/(sqrt((2-x)^{2}+1)) dx$. (2024-2)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 121,
+    "section": "5 Marks",
+    "question": "Find $∫ (1)/(x^{2}-a^{2})$and hence evaluate $∫ (dx)/(5-x^{2})$. (2024-3)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 122,
+    "section": "5 Marks",
+    "question": "Find the integral of $(1)/(sqrt(a^{2}+ x^{2}))$ with respect to x and hence find $∫ (1)/(x^{2}-6x+13)dx$. (2025-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 123,
+    "section": "5 Marks",
+    "question": "Find the integral of $∫ (1)/(x^{2}-a^{2})$ with respect to x and hence evaluate $∫ (1)/(3-x^{2}-2x)dx$. (2025-3)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 124,
+    "section": "5 Marks",
+    "question": "Find the integral of $(1)/(a^{2}-x^{2})$ with respect to x and hence find $∫ (1)/(25-x^{2})$ dx. (2026-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 125,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx$ and hence evaluate $∫_{0}^{(π)/(4)} loglog (1+tanx)dx$ (2014)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 126,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{a}^{b} f(x).dx=∫_{a}^{b} f(a+b-x)dx$and hence evaluate $∫_{(π)/(6)}^{(π)/(3)} (1)/(1+sqrt(tanx)) dx$ (2014s,2019s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 127,
+    "section": "6 Marks",
+    "question": "Prove that$∫_{0}^{a} f(x).dx={2∫_{0}^{a} f(x)dx, if f(x)is an even function 0, if f(x)is an odd function $ and hence evaluate $∫_{-1}^{1} sin^{5}xcos^{4}x dx$ (2015,2017s)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 128,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{a}^{b} f(x).dx=∫_{a}^{b} f(a+b-x)dx$ and hence evaluate $∫_{(π)/(6)}^{(π)/(3)} (1)/(1+sqrt(tanx)) dx$ (2014,2015s,2019,2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 129,
+    "section": "6 Marks",
+    "question": "Prove that$∫_{0}^{a} f(x).dx={2∫_{0}^{a} f(x)dx, if f(2a-x)=f(x) 0, if f(2a-x)= -f(x) $ and hence evaluate $∫_{0}^{2π} cos^{5}x dx$ (2016)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 130,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx$ and hence evaluate$∫_{0}^{(π)/(2)} (sqrt(sinx))/(sqrt(sinx)sqrt(cosx))$ (2016s,2022,2026-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 131,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx$ and hence evaluate $∫_{0}^{(π)/(2)} (2loglog sinx-loglog sin2x) dx$ (2017)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 132,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx$ and hence evaluate$∫_{0}^{a} (sqrt(x))/(sqrt(x)+sqrt(a-x))$ (2018,2021m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 133,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{-a}^{a} f(x)dx={2∫_{0}^{a} f(x)dx if f(x) is even function 0,if f (x)is odd function $ And hence evaluate $∫_{-(π)/(2)}^{(π)/(2)} sin7x dx$ (2018s,2024m)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 134,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx$ and hence evaluate$∫_{0}^{(π)/(2)} (cos^{5}x)/(cos^{5}x+sin^{5}x)$ dx (2019,2023,2024-2)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 135,
+    "section": "6 Marks",
+    "question": "Prove that$∫_{-a}^{a} f(x).dx= {2∫_{0}^{a} f(x)dx, if f(x)is an even function 0, if f(x)is an odd function $ and hence evaluate $∫_{-1}^{1} sin^{5}xcos^{4}x dx $",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 136,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{a}^{c} f(x)dx+∫_{c}^{b} f(x)dx$ and hence evaluate $∫_{-1}^{2} dx $ (2020)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 137,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx$ and hence evaluate $∫_{0}^{(π)/(2)} (sin x- cosx)/(1+sinx cosx) dx.$(2024-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 138,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx$ and hence evaluate $∫_{0}^{(π)/(2)} (sin^{(3)/(2)}x)/(2) dx$. (2024-3)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 139,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx$ and hence evaluate $∫_{0}^{(π)/(4)} log(1+tan x)dx$. (2025-1)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 140,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{b} f(a+b-x)dx$ and hence evaluate $∫_{2}^{3} (sqrt(x))/(sqrt(x)+sqrt(5)-x)dx.$ (2025-2)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  },
+  {
+    "id": 141,
+    "section": "6 Marks",
+    "question": "Prove that $∫_{0}^{a} f(x).dx=∫_{0}^{a} f(a-x)dx$ and hence evaluate $∫_{0}^{1} x(1-x)^{n}dx.$ (2025-3)",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "open"
+  }
+]

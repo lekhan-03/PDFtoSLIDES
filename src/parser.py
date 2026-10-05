@@ -305,7 +305,6 @@ def split_questions(lines: list[str]) -> list[dict]:
 
 
 def clean_noise(text: str) -> str:
-    text = re.sub(r'o%', '', text)
     text = re.sub(r'For:\s*Boar\s*d\s*s|For:\s*Boards', '', text, flags=re.IGNORECASE)
     text = re.sub(r'✉.*?(\n|$)', '', text, flags=re.IGNORECASE)
     return text.strip()
