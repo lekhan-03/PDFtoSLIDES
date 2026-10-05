@@ -29,7 +29,7 @@ def _script(text, table, marker):
     return f"{marker}{{{t}}}"                          # unmappable: keep as ^{..} / _{..} for the math path
 
 
-def spans_to_text(spans, small=0.85, min_shift=1.0):
+def spans_to_text(spans, small=0.95, min_shift=1.0):
     real = [s for s in spans if s["text"].strip()]
     if not real:
         return "".join(s["text"] for s in spans)
@@ -80,5 +80,5 @@ def page_items(page_dict, page_no, gap_factor=2.0, repeating_lines=None):
                 if text:
                     items.append({"type": "text", "text": text, "page": page_no,
                                   "bbox": (g[0]["bbox"][0], ly0, g[-1]["bbox"][2], ly1)})
-    items.sort(key=lambda i: (round(i["bbox"][1], 1), i["bbox"][0]))
+    items.sort(key=lambda i: (round(i["bbox"][1] / 5) * 5, i["bbox"][0]))
     return items

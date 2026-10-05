@@ -1,7 +1,17 @@
 [
   {
+    "id": null,
+    "section": "Chemistry",
+    "question": "Solutions",
+    "options": {},
+    "answer": null,
+    "parsed_ok": true,
+    "question_type": "divider",
+    "page": 1
+  },
+  {
     "id": 1,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "68% of nitric acid in water",
     "options": {
       "A": "Has zero enthalpy of mixing",
@@ -10,11 +20,13 @@
       "D": "Has zero volume change of mixing"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 2,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "Assuming complete dissociation, the value of van't Hoff factor for Na2SO4 is",
     "options": {
       "A": "1",
@@ -23,12 +35,14 @@
       "D": "4"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 3,
-    "section": "Solutions",
-    "question": "Consider a blood cell placed in a NaCl solution of concentration more than 0.9% (w/V). Which one of the following statements is true in this case?",
+    "section": "Chemistry",
+    "question": "Consider a blood cell placed in a NaCl solution of concentration more than 0.9% (w/V). Which\none of the following statements is true in this case?",
     "options": {
       "A": "Osmosis takes place from the cell to the NaCl solution, and the cell shrinks.",
       "B": "Osmosis takes place from the NaCl solution to the cell, and the cell swells.",
@@ -36,11 +50,13 @@
       "D": "Osmosis takes place from the NaCl solution to the cell, and the cell shrinks."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 4,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "De-salination of sea water can be done by",
     "options": {
       "A": "Dialysis",
@@ -49,11 +65,13 @@
       "D": "Reverse osmosis"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 5,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "During osmosis, the solvent molecules are moving from",
     "options": {
       "A": "Hypertonic solution to isotonic solution",
@@ -62,11 +80,13 @@
       "D": "Hypotonic solution to hypertonic solution"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 6,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "For a 0.1M solution, the colligative property will follow the order",
     "options": {
       "A": "NaCl > Na2SO4 > Na3PO4",
@@ -75,11 +95,13 @@
       "D": "NaCl < Na2SO4 = Na3PO4"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 7,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "If abnormal molar mass is more than normal molar mass, the Van't Hoff factor (i) is",
     "options": {
       "A": "i > 1",
@@ -88,12 +110,14 @@
       "D": "i ≥ 1"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 8,
-    "section": "Solutions",
-    "question": "In a solution containing a non-volatile solute, the mole fraction of solvent is 0.9. The relative lowering of vapor pressure is",
+    "section": "Chemistry",
+    "question": "In a solution containing a non-volatile solute, the mole fraction of solvent is 0.9. The relative\nlowering of vapor pressure is",
     "options": {
       "A": "1",
       "B": "0.1",
@@ -101,11 +125,13 @@
       "D": "1.1"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 9,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "Isotonic solutions have the same",
     "options": {
       "A": "Surface tension",
@@ -114,11 +140,13 @@
       "D": "Viscosity"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 10,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "Pick out the ideal solution among the following",
     "options": {
       "A": "Phenol and Aniline",
@@ -127,11 +155,13 @@
       "D": "n-Hexane and n-Heptane"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 11,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The concentration term depends on temperature is",
     "options": {
       "A": "ppm",
@@ -140,11 +170,13 @@
       "D": "molarity"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 1
   },
   {
     "id": 12,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The condition caused when scuba divers go into deep sea water is",
     "options": {
       "A": "Anoxia",
@@ -153,12 +185,14 @@
       "D": "None"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 13,
-    "section": "Solutions",
-    "question": "The KH values for Ar(g), CO2 (aq), HCHO (aq), and CH4(aq) are 40.39, 1.67, 1.83 × 10-3, and 0.413 respectively. Arrange them in the order of their increasing solubility",
+    "section": "Chemistry",
+    "question": "The KH values for Ar(g), CO2 (aq), HCHO (aq), and CH4(aq) are 40.39, 1.67, 1.83 × 10⁻³, and\n0.413 respectively. Arrange them in the order of their increasing solubility",
     "options": {
       "A": "HCHO < CH4 < CO2 < Ar",
       "B": "HCHO < CO2 < CH4 < Ar",
@@ -166,11 +200,13 @@
       "D": "Ar < CH4 < CO2 < HCHO"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 14,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The dissolution of a gas in a liquid is governed by",
     "options": {
       "A": "Roult's law",
@@ -179,12 +215,14 @@
       "D": "Boyle's law"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 15,
-    "section": "Solutions",
-    "question": "The maximum amount of a solid solute that can be dissolved in a specific amount of a given liquid solvent does not depend upon",
+    "section": "Chemistry",
+    "question": "The maximum amount of a solid solute that can be dissolved in a specific amount of a given\nliquid solvent does not depend upon",
     "options": {
       "A": "Nature of solvent",
       "B": "Pressure",
@@ -192,11 +230,13 @@
       "D": "Temperature"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 16,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The mixture which shows positive deviation from Raoult's law is",
     "options": {
       "A": "Ethanol + Acetone",
@@ -205,12 +245,14 @@
       "D": "Chlorobenzene + Bromoethane"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 17,
-    "section": "Solutions",
-    "question": "The most diluted solution is (molar mass of NaCl = 58.5 g mol-1)",
+    "section": "Chemistry",
+    "question": "The most diluted solution is (molar mass of NaCl = 58.5 g mol⁻¹)",
     "options": {
       "A": "2% (w/w) NaCl in water",
       "B": "1M NaCl",
@@ -218,11 +260,13 @@
       "D": "2 m NaCl"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 18,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The pressure cooker reduces the cooking timing because",
     "options": {
       "A": "Heat is more evenly distributed",
@@ -231,11 +275,13 @@
       "D": "Higher pressure inside the cooker tenderizes food"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 19,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The solubility of a gas in water depends on",
     "options": {
       "A": "Nature of the gas",
@@ -244,11 +290,13 @@
       "D": "All of the above"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 20,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The solubility of a solid gas does not depend on",
     "options": {
       "A": "Nature of the solute",
@@ -257,11 +305,13 @@
       "D": "None of these"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 21,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The solution which has lower osmotic pressure with respect to another is called",
     "options": {
       "A": "Isotonic solution",
@@ -270,11 +320,13 @@
       "D": "None of these"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 22,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The solutions which show a large positive deviation from Raoult's law form",
     "options": {
       "A": "Minimum boiling point azeotrope",
@@ -283,11 +335,13 @@
       "D": "No azeotrope"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 23,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The tanks used by most scuba divers are filled with air diluted with helium of around",
     "options": {
       "A": "88.3%",
@@ -296,11 +350,13 @@
       "D": "11.7%"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 2
   },
   {
     "id": 24,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "The value of Henry's constant KH is",
     "options": {
       "A": "Greater for gases with higher solubility.",
@@ -309,11 +365,13 @@
       "D": "Not related to the solubility of gases."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 3
   },
   {
     "id": 25,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "Value of Henry's constant (KH)",
     "options": {
       "A": "Increases with increase in temperature",
@@ -322,12 +380,14 @@
       "D": "First increases, then decreases"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 3
   },
   {
     "id": 26,
-    "section": "Solutions",
-    "question": "When a substance is dissolved in a solvent, the vapor pressure for the solvent is decreased. This results in",
+    "section": "Chemistry",
+    "question": "When a substance is dissolved in a solvent, the vapor pressure for the solvent is decreased. This\nresults in",
     "options": {
       "A": "The solution having a lower osmotic pressure than the solvent",
       "B": "A decrease in the boiling point of the solvent",
@@ -335,11 +395,13 @@
       "D": "An increase in the boiling point of the solution"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 3
   },
   {
     "id": 27,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "Which of the following aqueous solutions should have the highest boiling point?",
     "options": {
       "A": "1.0 M NaOH",
@@ -348,11 +410,13 @@
       "D": "1.0 M KNO3"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 3
   },
   {
     "id": 28,
-    "section": "Solutions",
+    "section": "Chemistry",
     "question": "Which of the following liquid-liquid solutions show negative deviation from Raoult's law?",
     "options": {
       "A": "Benzene and Toluene",
@@ -361,12 +425,14 @@
       "D": "Chlorobenzene and Bromobenzene"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 3
   },
   {
     "id": 29,
-    "section": "Solutions",
-    "question": "Which of the following solutions is used as an antifreezing agent in car radiators to cool the engine?",
+    "section": "Chemistry",
+    "question": "Which of the following solutions is used as an antifreezing agent in car radiators to cool the\nengine?",
     "options": {
       "A": "35% (v/v) solution of ethylene glycol",
       "B": "35% (m/m) solution of ethylene glycol",
@@ -374,12 +440,14 @@
       "D": "35% (v/m) solution of ethylene glycol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 3
   },
   {
     "id": 30,
-    "section": "Solutions",
-    "question": "Which one of the following is not a solid solution?",
+    "section": "Chemistry",
+    "question": "30. Which one of the following is not a solid solution?",
     "options": {
       "A": "Hydrogen in palladium",
       "B": "Camphor in nitrogen gas",
@@ -387,12 +455,21 @@
       "D": "Copper in gold"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 3
+  },
+  {
+    "question_type": "divider",
+    "question": "Electrochemistry",
+    "id": null,
+    "parsed_ok": true,
+    "page": 3
   },
   {
     "id": 31,
-    "section": "Electrochemistry",
-    "question": "A galvanic cell has an electrical potential of 1.1 V. If an opposing potential of 1.1 V is applied to this cell, what will happen to the cell reaction and current flowing through the cell?",
+    "section": "Chemistry",
+    "question": "A galvanic cell has an electrical potential of 1.1 V. If an opposing potential of 1.1 V is applied\nto this cell, what will happen to the cell reaction and current flowing through the cell?",
     "options": {
       "A": "The reaction stops and no current flows through the cell.",
       "B": "The reaction continues but current flows in the opposite direction.",
@@ -400,11 +477,13 @@
       "D": "The cell does not function as a galvanic cell and zinc is deposited on the zinc plate."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 4
   },
   {
     "id": 32,
-    "section": "Electrochemistry",
+    "section": "Chemistry",
     "question": "An electrochemical cell can behave like an electrolytic cell when",
     "options": {
       "A": "Ecell = 0",
@@ -413,12 +492,14 @@
       "D": "Ecell = Eext"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 4
   },
   {
     "id": 33,
-    "section": "Electrochemistry",
-    "question": "Assertion: The specific conductivity decreases with dilution. Reason: The number of ions per unit volume that carry the current in a solution decreases on dilution.",
+    "section": "Chemistry",
+    "question": "Assertion: The specific conductivity decreases with dilution.\nReason: The number of ions per unit volume that carry the current in a solution decreases on\ndilution.",
     "options": {
       "A": "Both assertion and reason are true, and the reason is the correct explanation of the assertion.",
       "B": "Both assertion and reason are true, but the reason is not the correct explanation of the assertion.",
@@ -426,24 +507,28 @@
       "D": "Both assertion and reason are false."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 4
   },
   {
     "id": 34,
-    "section": "Electrochemistry",
+    "section": "Chemistry",
     "question": "Ecell of Daniel cell is calculated by using the following formula",
     "options": {
-      "A": "Ecell = E°cell - 0.0295 log (Cu2+/Zn2+)",
-      "B": "Ecell = E°cell - 0.0295 log (Cu/Zn2+)",
-      "C": "Ecell = E°cell - 0.0295 log (Zn2+/Cu2+)",
-      "D": "Ecell = E°cell - 0.0295 log (Cu2+/Zn)"
+      "A": "Ecell = E°cell - 0.0295 \\log (Cu²⁺/Zn²⁺)",
+      "B": "Ecell = E°cell - 0.0295 \\log (Cu/Zn²⁺)",
+      "C": "Ecell = E°cell - 0.0295 \\log (Zn²⁺/Cu²⁺)",
+      "D": "Ecell = E°cell - 0.0295 \\log (Cu²⁺/Zn)"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 4
   },
   {
     "id": 35,
-    "section": "Electrochemistry",
+    "section": "Chemistry",
     "question": "Fluorine has the highest standard electrode potential, indicating that fluorine gas is",
     "options": {
       "A": "Strongest reducing agent",
@@ -452,24 +537,28 @@
       "D": "SEP value is zero"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 4
   },
   {
     "id": 36,
-    "section": "Electrochemistry",
-    "question": "If the E0cell for a given reaction has a negative value, then which of the following is the correct relationship for the value of ΔG0 and Keq?",
+    "section": "Chemistry",
+    "question": "If the E⁰cell for a given reaction has a negative value, then which of the following is the correct relationship for the value of ΔG⁰ and Keq?",
     "options": {
-      "A": "ΔG0>0 and Keq>1",
-      "B": "ΔG0<0 and Keq<1",
-      "C": "ΔG0>0 and Keq<1",
-      "D": "ΔG0<0 and Keq>1"
+      "A": "ΔG⁰>0 and Keq>1",
+      "B": "ΔG⁰<0 and Keq<1",
+      "C": "ΔG⁰>0 and Keq<1",
+      "D": "ΔG⁰<0 and Keq>1"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 4
   },
   {
     "id": 37,
-    "section": "Electrochemistry",
+    "section": "Chemistry",
     "question": "In a galvanic cell",
     "options": {
       "A": "Chemical energy is converted into heat",
@@ -478,12 +567,14 @@
       "D": "Electrical energy is converted into chemical energy"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 4
   },
   {
     "id": 38,
-    "section": "Electrochemistry",
-    "question": "Match the batteries in Column I with their anode material in Column II. Column I Column II (i) Leclanché cell (a) Lead (Pb) (ii) Mercury cell (b) Hydrogen(H2) gas (iii) Lead storage battery (c) Zinc (Zn) (iv) H2-O2 fuel cell. (d) Zinc – Mercury amalgam(Zn(Hg))",
+    "section": "Chemistry",
+    "question": "Match the batteries in Column I with their anode material in Column II.\nColumn I Column II\n\n\n\n(i) Leclanché cell (a) Lead (Pb)\n(ii) Mercury cell (b) Hydrogen(H2) gas\n(iii) Lead storage battery (c) Zinc (Zn)\n(iv) H2-O2 fuel cell. (d) Zinc – Mercury amalgam(Zn(Hg))",
     "options": {
       "A": "i-a, ii-b, iii-c, iv-d",
       "B": "i-b, ii-a, iii-d, iv-c",
@@ -491,25 +582,29 @@
       "D": "i-d, ii-c, iii-a, iv-b"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "match_the_column",
+    "page": 4
   },
   {
     "id": 39,
-    "section": "Electrochemistry",
+    "section": "Chemistry",
     "question": "Saturated solution of KNO3 is used to make a salt bridge because",
     "options": {
-      "A": "Velocity of K+ is greater than that of NO3-",
-      "B": "Velocity of NO3- is greater than that of K+",
-      "C": "Velocity of both K+ and NO3- are nearly the same",
+      "A": "Velocity of K⁺ is greater than that of NO3⁻",
+      "B": "Velocity of NO3⁻ is greater than that of K⁺",
+      "C": "Velocity of both K⁺ and NO3⁻ are nearly the same",
       "D": "KNO3 is highly soluble in water"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 5
   },
   {
     "id": 40,
-    "section": "Electrochemistry",
-    "question": "Statement I: Conductivity (κ) of a solution decreases with dilution. Statement II: Molar conductivity (λm) of solution increases with dilution. Identify the correct statement",
+    "section": "Chemistry",
+    "question": "Statement I: Conductivity (κ) of a solution decreases with dilution.\nStatement II: Molar conductivity (λm) of solution increases with dilution.\nIdentify the correct statement",
     "options": {
       "A": "Both statements I and II are correct",
       "B": "Both statements I and II are incorrect",
@@ -517,12 +612,14 @@
       "D": "Statement I is incorrect but statement II is correct"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 5
   },
   {
     "id": 41,
-    "section": "Electrochemistry",
-    "question": "Statement I: Cu displaces H2 gas from dilute acids. Statement II: ions Cu2+ get reduced more easily than H+ ions",
+    "section": "Chemistry",
+    "question": "Statement I: Cu displaces H2 gas from dilute acids. Statement II: ions Cu²⁺ get reduced more easily than H⁺ ions",
     "options": {
       "A": "Both Statement I and II are correct",
       "B": "Both Statement I and II are incorrect",
@@ -530,12 +627,14 @@
       "D": "Statement I is incorrect and Statement II is correct"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 5
   },
   {
     "id": 42,
-    "section": "Electrochemistry",
-    "question": "The E° values of Fe2+ / Fe, Zn2+ / Zn, and Sn2+ / Sn are -0.44V, -0.76V, and -0.14V respectively. Which of these metals can displace iron from an Fe2+ solution?",
+    "section": "Chemistry",
+    "question": "The E° values of Fe²⁺ / Fe, Zn²⁺ / Zn, and Sn²⁺ / Sn are -0.44V, -0.76V, and -0.14V\nrespectively. Which of these metals can displace iron from an Fe²⁺ solution?",
     "options": {
       "A": "Both Zn and Sn",
       "B": "Zn only",
@@ -543,11 +642,13 @@
       "D": "Neither Zn nor Sn"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 5
   },
   {
     "id": 43,
-    "section": "Electrochemistry",
+    "section": "Chemistry",
     "question": "The molar conductivity is maximum for the solution of concentration",
     "options": {
       "A": "0.005 M",
@@ -556,12 +657,14 @@
       "D": "0.002 M"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 5
   },
   {
     "id": 44,
-    "section": "Electrochemistry",
-    "question": "The product formed at the anode during the electrolysis of aqueous NaCl is",
+    "section": "Chemistry",
+    "question": "44. The product formed at the anode during the electrolysis of aqueous NaCl is",
     "options": {
       "A": "H2",
       "B": "O2",
@@ -569,12 +672,21 @@
       "D": "Cl2"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 5
+  },
+  {
+    "question_type": "divider",
+    "question": "Application Based Questions",
+    "id": null,
+    "parsed_ok": true,
+    "page": 5
   },
   {
     "id": 45,
-    "section": "Electrochemistry",
-    "question": "The quantity of electricity required for the reduction of one mole of Al3+ ions is",
+    "section": "Chemistry",
+    "question": "The quantity of electricity required for the reduction of one mole of Al³⁺ ions is",
     "options": {
       "A": "1 Faraday",
       "B": "2 Faraday",
@@ -582,11 +694,13 @@
       "D": "4 Faraday"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 6
   },
   {
     "id": 46,
-    "section": "Electrochemistry",
+    "section": "Chemistry",
     "question": "What will happen in the Daniel cell, when Eext<1.1 V?",
     "options": {
       "A": "Electrons flow from Zn rod to Cu rod; hence current flows from Cu to Zn",
@@ -595,12 +709,14 @@
       "D": "Electrons flow from Cu rod to Zn rod; hence current flows from Zn to Cu"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 6
   },
   {
     "id": 47,
-    "section": "Electrochemistry",
-    "question": "When one Faraday current is passed, which of the following would deposit one-gram atomic mass of the metal?",
+    "section": "Chemistry",
+    "question": "When one Faraday current is passed, which of the following would deposit one-gram atomic\nmass of the metal?",
     "options": {
       "A": "NaCl",
       "B": "ZnSO4",
@@ -608,12 +724,14 @@
       "D": "BaCl2"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 6
   },
   {
     "id": 48,
-    "section": "Electrochemistry",
-    "question": "Which of these statements about a galvanic cell are not true? i) The cathode carries a positive sign. ii) Oxidation occurs at the anode. iii) Electrons flow from cathode to anode in the external circuit. iv) The anode carries a negative sign",
+    "section": "Chemistry",
+    "question": "48. Which of these statements about a galvanic cell are not true?\ni) The cathode carries a positive sign.\nii) Oxidation occurs at the anode.\niii) Electrons flow from cathode to anode in the external circuit.\niv) The anode carries a negative sign",
     "options": {
       "A": "i and iii",
       "B": "i and ii",
@@ -621,11 +739,20 @@
       "D": "ii and iv"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 6
+  },
+  {
+    "question_type": "divider",
+    "question": "Chemical Kinetics",
+    "id": null,
+    "parsed_ok": true,
+    "page": 6
   },
   {
     "id": 49,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "Acid hydrolysis of ethyl acetate is an example of",
     "options": {
       "A": "Zero order reaction",
@@ -634,11 +761,13 @@
       "D": "Pseudo first order reaction"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 7
   },
   {
     "id": 50,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "All natural and artificial radioactive decay of unstable nuclei take place by",
     "options": {
       "A": "Zero order kinetics",
@@ -647,24 +776,28 @@
       "D": "Second-order kinetics"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 7
   },
   {
     "id": 51,
-    "section": "Chemical Kinetics",
-    "question": "For 2NO(g) + O2(g) → 2NO2(g), the following initial-rate data were obtained. Choose the rate equation.",
+    "section": "Chemistry",
+    "question": "For 2NO(g) + O2(g) → 2NO2(g), the following initial-rate data were obtained. Choose the rate\nequation.",
     "options": {
-      "A": "Rate = k[NO]2",
-      "B": "Rate = k[NO]2 [O2]2",
+      "A": "Rate = k[NO]²",
+      "B": "Rate = k[NO]² [O2]²",
       "C": "Rate = k[NO] [O2]",
-      "D": "Rate = k[NO]2 [O2]"
+      "D": "Rate = k[NO]² [O2]"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 7
   },
   {
     "id": 52,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "Consider the Arrhenius equation k=e−Ea/RT and mark the correct option",
     "options": {
       "A": "Rate constant increases exponentially with increasing activation energy and decreasing temperature.",
@@ -673,12 +806,14 @@
       "D": "Rate constant increases exponentially with decreasing activation energy and decreasing temperature."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 7
   },
   {
     "id": 53,
-    "section": "Chemical Kinetics",
-    "question": "For a chemical reaction A → B, it is found that the rate of a reaction doubles when the concentration of A is doubled. The order of the reaction is",
+    "section": "Chemistry",
+    "question": "For a chemical reaction A → B, it is found that the rate of a reaction doubles when the\nconcentration of A is doubled. The order of the reaction is",
     "options": {
       "A": "One",
       "B": "Two",
@@ -686,37 +821,43 @@
       "D": "Three"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 7
   },
   {
     "id": 54,
-    "section": "Chemical Kinetics",
-    "question": "For a zero-order reaction, the intercept for the plot of concentration of reactants vs. time is equal to",
+    "section": "Chemistry",
+    "question": "For a zero-order reaction, the intercept for the plot of concentration of reactants vs. time is\nequal to",
     "options": {
       "A": "-k",
-      "B": "log k",
+      "B": "\\log k",
       "C": "[R0]",
-      "D": "log [R0]"
+      "D": "\\log [R0]"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 7
   },
   {
     "id": 55,
-    "section": "Chemical Kinetics",
-    "question": "In a reaction A + B → products, rate is doubled when the concentration of B is doubled, and rate increases by a factor of 8 when the concentrations of both the reactants (A and B. are doubled. The rate law for the reaction can be written as:",
+    "section": "Chemistry",
+    "question": "In a reaction A + B → products, rate is doubled when the concentration of B is doubled, and\nrate increases by a factor of 8 when the concentrations of both the reactants (A and B. are\ndoubled. The rate law for the reaction can be written as:",
     "options": {
-      "A": "Rate = K [A][B]2",
-      "B": "Rate = K [A]2[B]2",
-      "C": "Rate = K [A]2[B]",
+      "A": "Rate = K [A][B]²",
+      "B": "Rate = K [A]²[B]²",
+      "C": "Rate = K [A]²[B]",
       "D": "Rate = 𝐾 [A] [B]"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 7
   },
   {
     "id": 56,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "In a reaction Hg + Cl2 → HgCl2, the rate of disappearance of Hg is equal to",
     "options": {
       "A": "Rate of disappearance of Cl2",
@@ -725,12 +866,14 @@
       "D": "Both (a) and (b)"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 8
   },
   {
     "id": 57,
-    "section": "Chemical Kinetics",
-    "question": "In a reaction, when the concentration of a reactant is increased two times, the increase in the rate of reaction was four times. The order of the reaction is",
+    "section": "Chemistry",
+    "question": "In a reaction, when the concentration of a reactant is increased two times, the increase in the\nrate of reaction was four times. The order of the reaction is",
     "options": {
       "A": "First order",
       "B": "Zero order",
@@ -738,11 +881,13 @@
       "D": "Second order"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 8
   },
   {
     "id": 58,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "In presence of a catalyst, the heat evolved or absorbed during the reaction",
     "options": {
       "A": "Increases",
@@ -751,11 +896,13 @@
       "D": "Remains unchanged"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 8
   },
   {
     "id": 59,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "Order of a reaction in which unit of rate of reaction and rate constant are the same",
     "options": {
       "A": "0",
@@ -764,12 +911,14 @@
       "D": "2"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 8
   },
   {
     "id": 60,
-    "section": "Chemical Kinetics",
-    "question": "Statement I: A catalyst does not alter Gibb’s energy (ΔG) of a reaction. Statement II: A catalyst alters the activation energy (Ea) of a reaction by providing an alternate pathway.",
+    "section": "Chemistry",
+    "question": "Statement I: A catalyst does not alter Gibb’s energy (ΔG) of a reaction.\nStatement II: A catalyst alters the activation energy (Ea) of a reaction by providing an alternate\npathway.",
     "options": {
       "A": "Both Statement I and II are correct",
       "B": "Both Statement I and II are incorrect",
@@ -777,12 +926,14 @@
       "D": "Statement I is incorrect, but Statement II is correct"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 8
   },
   {
     "id": 61,
-    "section": "Chemical Kinetics",
-    "question": "Statement I: If in a zero-order reaction, the concentration of the reactant is doubled, the half-life period is also doubled. Statement II: For a first-order reaction, the half-life period is independent of the initial concentration of the reactant.",
+    "section": "Chemistry",
+    "question": "Statement I: If in a zero-order reaction, the concentration of the reactant is doubled, the half-life\nperiod is also doubled.\nStatement II: For a first-order reaction, the half-life period is independent of the initial\nconcentration of the reactant.",
     "options": {
       "A": "Both Statement I and II are correct",
       "B": "Both Statement I and II are incorrect",
@@ -790,11 +941,13 @@
       "D": "Statement I is incorrect but Statement II is correct"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 8
   },
   {
     "id": 62,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "The collision frequency in a reaction depends on",
     "options": {
       "A": "Number of moles of reactants",
@@ -803,11 +956,13 @@
       "D": "Both (b) and (c)"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 8
   },
   {
     "id": 63,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "The following factor which does not affect the rate of reaction is",
     "options": {
       "A": "Molecularity",
@@ -816,12 +971,14 @@
       "D": "Concentration of reactant"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 64,
-    "section": "Chemical Kinetics",
-    "question": "The half-life period of a first-order reaction is 15 minutes. The amount of substance left after one hour will be",
+    "section": "Chemistry",
+    "question": "The half-life period of a first-order reaction is 15 minutes. The amount of substance left after\none hour will be",
     "options": {
       "A": "One-half",
       "B": "One-fourth",
@@ -829,11 +986,13 @@
       "D": "One-sixteenth"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 65,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "The molecularity of a reaction cannot be",
     "options": {
       "A": "Zero",
@@ -842,11 +1001,13 @@
       "D": "Whole number"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 66,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "The number of collisions per second per unit volume of the reaction is known as",
     "options": {
       "A": "Collision energy",
@@ -855,11 +1016,13 @@
       "D": "Kinetic energy"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 67,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "The order of a chemical reaction having the rate expression, Rate = k[A] [B] is",
     "options": {
       "A": "1",
@@ -868,25 +1031,29 @@
       "D": "1 4"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 68,
-    "section": "Chemical Kinetics",
-    "question": "The overall order of a reaction which has the rate expression Rate = K[A]1/2[B]3/2 is",
+    "section": "Chemistry",
+    "question": "The overall order of a reaction which has the rate expression Rate = K[A]¹/²[B]³/² is",
     "options": {
       "A": "½",
       "B": "2",
-      "C": "3 2",
+      "C": "3 ₂",
       "D": "1"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 69,
-    "section": "Chemical Kinetics",
-    "question": "The order for a reaction with the rate law Rate=𝑘[𝐴]1[𝐵]1 is:",
+    "section": "Chemistry",
+    "question": "The order for a reaction with the rate law Rate=𝑘[𝐴]¹[𝐵]¹is:",
     "options": {
       "A": "Zero",
       "B": "Fraction",
@@ -894,12 +1061,14 @@
       "D": "Two"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 70,
-    "section": "Chemical Kinetics",
-    "question": "The rate constant of a reaction is k = 2.3 × 10-5 L mol-1 s-1. The order of the reaction is",
+    "section": "Chemistry",
+    "question": "The rate constant of a reaction is k = 2.3 × 10⁻⁵ L mol⁻¹ s⁻¹. The order of the reaction is",
     "options": {
       "A": "Zero",
       "B": "One",
@@ -907,37 +1076,43 @@
       "D": "Three"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 71,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "The S.I. unit of the rate constant of a first-order reaction is",
     "options": {
-      "A": "s-1",
-      "B": "mol dm-3",
-      "C": "mol dm-3 s-1",
-      "D": "mol-1 dm3 s-1"
+      "A": "s⁻¹",
+      "B": "mol dm⁻³",
+      "C": "mol dm⁻³ s⁻¹",
+      "D": "mol⁻¹ dm³ s⁻¹"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 72,
-    "section": "Chemical Kinetics",
-    "question": "The slope of the Arrhenius plot (log k versus 1/T) for a given reaction is found to be −2000 K. What is the activation energy (Ea) of the reaction in J mol−1? (Given R = 8.314 J K−1mol−1)",
+    "section": "Chemistry",
+    "question": "The slope of the Arrhenius plot (\\log k versus 1/T) for a given reaction is found to be −2000 K. What\nis the activation energy (Eₐ) of the reaction in J mol⁻¹? (Given R = 8.314 J K⁻¹mol⁻¹)",
     "options": {
-      "A": "38,314.5 J mol−1 (or 38.3 kJ mol−1)",
-      "B": "19,157.2 J mol−1",
-      "C": "76,629.0 J mol−1",
-      "D": "8,314.0 J mol−1"
+      "A": "38,314.5 J mol⁻¹ (or 38.3 kJ mol⁻¹)",
+      "B": "19,157.2 J mol⁻¹",
+      "C": "76,629.0 J mol⁻¹",
+      "D": "8,314.0 J mol⁻¹"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 73,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "The time required for 100 percent completion of a zero-order reaction is",
     "options": {
       "A": "2k / [R]0",
@@ -946,12 +1121,14 @@
       "D": "[R]0 k"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 74,
-    "section": "Chemical Kinetics",
-    "question": "The unit of the rate constant of a reaction is the same as that of its rate. The order of the reaction is",
+    "section": "Chemistry",
+    "question": "The unit of the rate constant of a reaction is the same as that of its rate. The order of the\nreaction is",
     "options": {
       "A": "Zero order.",
       "B": "First order.",
@@ -959,12 +1136,14 @@
       "D": "Pseudo order."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
   },
   {
     "id": 75,
-    "section": "Chemical Kinetics",
-    "question": "What is the value of ‘x' if the total order of the reaction, which has the rate expression: Rate = k [A]ˣ [B]2ˣ is 3/2?",
+    "section": "Chemistry",
+    "question": "75. What is the value of ‘x' if the total order of the reaction, which has the rate expression:\nRate = k [A]ˣ [B]²ˣ is 3/2?",
     "options": {
       "A": "½",
       "B": "3/2",
@@ -972,12 +1151,21 @@
       "D": "1"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 9
+  },
+  {
+    "question_type": "divider",
+    "question": "Application Based Questions",
+    "id": null,
+    "parsed_ok": true,
+    "page": 9
   },
   {
     "id": 76,
-    "section": "Chemical Kinetics",
-    "question": "When the initial concentration of the reactant is doubled, then the half-life of a zero-order reaction",
+    "section": "Chemistry",
+    "question": "When the initial concentration of the reactant is doubled, then the half-life of a zero-order\nreaction",
     "options": {
       "A": "Is halved",
       "B": "Is doubled",
@@ -985,11 +1173,13 @@
       "D": "Remains unchanged"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 10
   },
   {
     "id": 77,
-    "section": "Chemical Kinetics",
+    "section": "Chemistry",
     "question": "Which of the following factors does not affect the rate of reaction?",
     "options": {
       "A": "Molecularity",
@@ -998,24 +1188,35 @@
       "D": "Concentration of reactant"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 10
   },
   {
     "id": 78,
-    "section": "Chemical Kinetics",
-    "question": "Which of the following is correct for a zero-order reaction?",
+    "section": "Chemistry",
+    "question": "78. Which of the following is correct for a zero-order reaction?",
     "options": {
-      "A": "t½ ∝ [R0]0",
-      "B": "t½ ∝ [R0]2",
-      "C": "t½ ∝ [R0]-1",
-      "D": "t½ ∝ [R0]1"
+      "A": "t½ ∝ [R0]⁰",
+      "B": "t½ ∝ [R0]²",
+      "C": "t½ ∝ [R0]⁻¹",
+      "D": "t½ ∝ [R0]¹"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 10
+  },
+  {
+    "question_type": "divider",
+    "question": "D and F Block elements",
+    "id": null,
+    "parsed_ok": true,
+    "page": 10
   },
   {
     "id": 79,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "Actinoids are",
     "options": {
       "A": "Radioactive",
@@ -1024,11 +1225,13 @@
       "D": "All the above are correct"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 80,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "Among ScCl3, TiCl3, and ZnCl2, the colored compound is",
     "options": {
       "A": "ScCl3",
@@ -1037,11 +1240,13 @@
       "D": "All the above"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 81,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "Diamagnetic compound among the following is",
     "options": {
       "A": "Cu2O",
@@ -1050,25 +1255,29 @@
       "D": "FeO"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 82,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "Identify the correct sequence of the number of unpaired electrons of the following ions.",
     "options": {
-      "A": "Ti3+ > Cr3+ > Fe3+ > Ni2+",
-      "B": "Fe3+ > Ni2+ > Ti2+ > Cr3+",
-      "C": "Fe3+ > Cr3+ > Ni2+ > Ti3+",
-      "D": "Fe3+ > Cr3+ > Ti3+ > Ni2+"
+      "A": "Ti³⁺ > Cr³⁺ > Fe³⁺ > Ni²⁺",
+      "B": "Fe³⁺ > Ni²⁺ > Ti²⁺ > Cr³⁺",
+      "C": "Fe³⁺ > Cr³⁺ > Ni²⁺ > Ti³⁺",
+      "D": "Fe³⁺ > Cr³⁺ > Ti³⁺ > Ni²⁺"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 83,
-    "section": "D and F Block elements",
-    "question": "In a neutral or faintly alkaline medium, KMnO4 oxidizes iodide ions into iodate. The change in oxidation state of manganese in this reaction is from",
+    "section": "Chemistry",
+    "question": "In a neutral or faintly alkaline medium, KMnO4 oxidizes iodide ions into iodate. The\nchange in oxidation state of manganese in this reaction is from",
     "options": {
       "A": "+7 to +2",
       "B": "+7 to +4",
@@ -1076,11 +1285,13 @@
       "D": "+7 to +6"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 84,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "In aqueous solution, copper (I) ions undergo",
     "options": {
       "A": "Oxidation",
@@ -1089,37 +1300,43 @@
       "D": "Redox reaction"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 85,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "Potassium permanganate oxidizes sulphurous acid (H2SO3) into",
     "options": {
       "A": "S",
-      "B": "S2O72-",
-      "C": "SO42-",
-      "D": "SO32-"
+      "B": "S2O7²⁻",
+      "C": "SO4²⁻",
+      "D": "SO3²⁻"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 86,
-    "section": "D and F Block elements",
-    "question": "The aqueous solution of a transition metal ion M+ is colorless. The ion M+ is",
+    "section": "Chemistry",
+    "question": "The aqueous solution of a transition metal ion M⁺ is colorless. The ion M⁺ is",
     "options": {
-      "A": "Mn2+",
-      "B": "Cr3+",
-      "C": "V4+",
-      "D": "Ti4+"
+      "A": "Mn²⁺",
+      "B": "Cr³⁺",
+      "C": "V⁴⁺",
+      "D": "Ti⁴⁺"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 87,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "The characteristic feature of transition metal is",
     "options": {
       "A": "They show variable oxidation state",
@@ -1128,24 +1345,28 @@
       "D": "They exhibit only diamagnetism"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 88,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "The correct order of magnetic moment is",
     "options": {
-      "A": "Sc3+ < Ti3+ < Ti2+",
-      "B": "Ti3+ < Ti2+ < Sc3+",
-      "C": "Ti2+ < Sc3+ < Ti3+",
-      "D": "Sc3+ < Ti2+ < Ti3+"
+      "A": "Sc³⁺ < Ti³⁺ < Ti²⁺",
+      "B": "Ti³⁺ < Ti²⁺ < Sc³⁺",
+      "C": "Ti²⁺ < Sc³⁺ < Ti³⁺",
+      "D": "Sc³⁺ < Ti²⁺ < Ti³⁺"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 89,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "The correct order of melting point is",
     "options": {
       "A": "Cr > Mn > Fe",
@@ -1154,12 +1375,14 @@
       "D": "Mn > Fe > Cr"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 11
   },
   {
     "id": 90,
-    "section": "D and F Block elements",
-    "question": "The electronic configuration of Cu (II) is 3d9, whereas Cu(I) is 3d10. Which of the following is correct?",
+    "section": "Chemistry",
+    "question": "The electronic configuration of Cu (II) is 3d⁹, whereas Cu(I) is 3d¹⁰. Which of the following\nis correct?",
     "options": {
       "A": "Cu (II) is less stable.",
       "B": "Cu (II) is more stable.",
@@ -1167,11 +1390,13 @@
       "D": "Cu(I) and Cu (II) are equally stable."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 91,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "The magnetic moment of an element is 1.73 BM. The number of unpaired electrons in it is",
     "options": {
       "A": "2",
@@ -1180,11 +1405,13 @@
       "D": "0"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 92,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "The most stable manganese compound is",
     "options": {
       "A": "Mn2O7",
@@ -1193,12 +1420,14 @@
       "D": "Mn2SO4"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 93,
-    "section": "D and F Block elements",
-    "question": "The number of moles of K2Cr2O7 reduced by one mole of Sn2+ ion is",
+    "section": "Chemistry",
+    "question": "The number of moles of K2Cr2O7 reduced by one mole of Sn²⁺ ion is",
     "options": {
       "A": "1/3",
       "B": "3",
@@ -1206,11 +1435,13 @@
       "D": "6"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 94,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "The set of 3d series elements that show anomalous electronic configurations are",
     "options": {
       "A": "Cr and Mn",
@@ -1219,11 +1450,13 @@
       "D": "Mn and Zn"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 95,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "The transition metal present in bronze is",
     "options": {
       "A": "Zinc",
@@ -1232,11 +1465,13 @@
       "D": "Copper"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 96,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "The transition metal present in the red pigment of blood haemoglobin is",
     "options": {
       "A": "cobalt",
@@ -1245,11 +1480,13 @@
       "D": "copper"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 97,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "Which of the following actinoids show oxidation states up to +7?",
     "options": {
       "A": "Am (Americium)",
@@ -1258,50 +1495,58 @@
       "D": "Np (Neptunium)"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 98,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "Which of the following ions has the least magnetic moment?",
     "options": {
-      "A": "Cu2+",
-      "B": "Co3+",
-      "C": "Ni2+",
-      "D": "Fe2+"
+      "A": "Cu²⁺",
+      "B": "Co³⁺",
+      "C": "Ni²⁺",
+      "D": "Fe²⁺"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 99,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "Which of the following is a colorless ion?",
     "options": {
-      "A": "V3+",
-      "B": "Fe3+",
-      "C": "Ti3+",
-      "D": "Zn2+"
+      "A": "V³⁺",
+      "B": "Fe³⁺",
+      "C": "Ti³⁺",
+      "D": "Zn²⁺"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 100,
-    "section": "D and F Block elements",
-    "question": "Which of the following pairs have the same paramagnetic moment? (Atomic numbers: Ti = 22, Mn = 25, Ni = 28, Cu = 29)",
+    "section": "Chemistry",
+    "question": "Which of the following pairs have the same paramagnetic moment?\n(Atomic numbers: Ti = 22, Mn = 25, Ni = 28, Cu = 29)",
     "options": {
-      "A": "Ti3+, Ni2+",
-      "B": "Cu2+, Ti3+",
-      "C": "Ti2+, Cu2+",
-      "D": "Mn2+, Cu2+"
+      "A": "Ti³⁺, Ni²⁺",
+      "B": "Cu²⁺, Ti³⁺",
+      "C": "Ti²⁺, Cu²⁺",
+      "D": "Mn²⁺, Cu²⁺"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 12
   },
   {
     "id": 101,
-    "section": "D and F Block elements",
+    "section": "Chemistry",
     "question": "Which of the following statements about transition elements is incorrect?",
     "options": {
       "A": "They show variable oxidation states.",
@@ -1310,25 +1555,36 @@
       "D": "They exhibit catalytic properties."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 13
   },
   {
     "id": 102,
-    "section": "D and F Block elements",
-    "question": "Which of the following transition metal ions is colorless?",
+    "section": "Chemistry",
+    "question": "102. Which of the following transition metal ions is colorless?",
     "options": {
-      "A": "V2+",
-      "B": "Cr3+",
-      "C": "Zn2+",
-      "D": "Ti3+"
+      "A": "V²⁺",
+      "B": "Cr³⁺",
+      "C": "Zn²⁺",
+      "D": "Ti³⁺"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 13
+  },
+  {
+    "question_type": "divider",
+    "question": "Haloalkanes and Haloarenes",
+    "id": null,
+    "parsed_ok": true,
+    "page": 13
   },
   {
     "id": 103,
-    "section": "Haloalkanes and Haloarenes",
-    "question": "A mixture of chloromethane and chlorobenzene are treated with sodium in dry ether, the product obtained is",
+    "section": "Chemistry",
+    "question": "A mixture of chloromethane and chlorobenzene are treated with sodium in dry ether,\nthe product obtained is",
     "options": {
       "A": "Ethane",
       "B": "Toluene",
@@ -1336,11 +1592,13 @@
       "D": "All the above"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 13
   },
   {
     "id": 104,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "Among the following alkyl halides, which is more reactive towards SN2 reaction?",
     "options": {
       "A": "R-I",
@@ -1349,12 +1607,14 @@
       "D": "R-Br"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 13
   },
   {
     "id": 105,
-    "section": "Haloalkanes and Haloarenes",
-    "question": "Assertion: SN2 reactions do not proceed with retention. Reason: SN2 reaction proceeds in single steps. Identify the correct statement",
+    "section": "Chemistry",
+    "question": "Assertion: SN2 reactions do not proceed with retention.\nReason: SN2 reaction proceeds in single steps.\nIdentify the correct statement",
     "options": {
       "A": "If both assertion and reason are correct and reason is correct explanation for assertion",
       "B": "If both assertion and reason are correct but reason is not correct explanation for assertion",
@@ -1362,11 +1622,13 @@
       "D": "If assertion is incorrect but reason is correct"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 13
   },
   {
     "id": 106,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "Chlorobenzene reacts with magnesium in dry ether to give a compound A, which is",
     "options": {
       "A": "C6H5OH",
@@ -1375,11 +1637,13 @@
       "D": "MgCl2"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 13
   },
   {
     "id": 107,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "Chloroform is stored completely filled in a closed dark-colored bottle. This is to",
     "options": {
       "A": "Prevent the oxidation of chloroform by air in the presence of sunlight.",
@@ -1388,12 +1652,14 @@
       "D": "Prevent the reaction of chloroform with CO2 to form extremely poisonous gas carbonyl chloride."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 13
   },
   {
     "id": 108,
-    "section": "Haloalkanes and Haloarenes",
-    "question": "Four haloalkane compounds represented by the letters M, N, O, and P having boiling points of 24.2°C, 38°C, 3.56°C, and 101.6°C respectively. Among the four compounds, N is most likely to be",
+    "section": "Chemistry",
+    "question": "Four haloalkane compounds represented by the letters M, N, O, and P having boiling\npoints of 24.2°C, 38°C, 3.56°C, and 101.6°C respectively. Among the four compounds, N\nis most likely to be",
     "options": {
       "A": "CH3Cl",
       "B": "CH3Br",
@@ -1401,11 +1667,13 @@
       "D": "C3H7I"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 13
   },
   {
     "id": 109,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "Freon can be prepared by",
     "options": {
       "A": "Finkelstein reaction",
@@ -1414,25 +1682,29 @@
       "D": "Swartz reaction"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 13
   },
   {
     "id": 110,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "In vinylic halides, the halogen atom is attached to a carbon atom with",
     "options": {
-      "A": "sp3 hybridization",
-      "B": "sp2 hybridization",
+      "A": "sp³ hybridization",
+      "B": "sp² hybridization",
       "C": "sp hybridization",
-      "D": "dsp2 hybridization"
+      "D": "dsp² hybridization"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 14
   },
   {
     "id": 111,
-    "section": "Haloalkanes and Haloarenes",
-    "question": "Match the organic compounds in Column I with their correct applications in Column II: Column I (Compound) Column II (Application) (1) Carbon tetrachloride (CCl4) (A) Fire extinguisher (2) Iodoform (CHI3) (B) Antiseptic (3) Chloroform (CHCl3) (C) Solvent for fats (4) Methylene chloride (CH2Cl2) (D) Paint remover",
+    "section": "Chemistry",
+    "question": "Match the organic compounds in Column I with their correct applications in Column\nII:\nColumn I (Compound) Column II (Application)\n(1) Carbon tetrachloride (CCl4) (A) Fire extinguisher\n(2) Iodoform (CHI₃) (B) Antiseptic\n(3) Chloroform (CHCl₃) (C) Solvent for fats\n(4) Methylene chloride (CH2Cl2) (D) Paint remover",
     "options": {
       "A": "(1)-(A), (2)-(B), (3)-(C), (4)-(D)",
       "B": "(1)-(D), (2)-(C), (3)-(B), (4)-(A)",
@@ -1441,11 +1713,12 @@
     },
     "answer": null,
     "parsed_ok": true,
-    "question_type": "match_the_column"
+    "question_type": "match_the_column",
+    "page": 14
   },
   {
     "id": 112,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "R - X + NaI (dry acetone) → RI + NaX, name the reaction",
     "options": {
       "A": "Wurtz reaction",
@@ -1454,11 +1727,13 @@
       "D": "Finkelstein reaction"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 14
   },
   {
     "id": 113,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "Select the incorrect match",
     "options": {
       "A": "Swartz reaction - CoF2",
@@ -1467,11 +1742,13 @@
       "D": "Wurtz reaction - Na / dry ether"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 14
   },
   {
     "id": 114,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "Tertiary alkyl halides are least reactive towards SN2 reaction because of",
     "options": {
       "A": "Inductive effect",
@@ -1480,11 +1757,13 @@
       "D": "Electrometric effect"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 14
   },
   {
     "id": 115,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "The best reagent used to produce pure alkyl halides from alcohol is",
     "options": {
       "A": "Concentrated HCl",
@@ -1493,11 +1772,13 @@
       "D": "NaBr"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 14
   },
   {
     "id": 116,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "The chemical formula of phosgene is",
     "options": {
       "A": "SOCl2",
@@ -1506,11 +1787,13 @@
       "D": "CCl4"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 14
   },
   {
     "id": 117,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "The chemical name of phosgene is",
     "options": {
       "A": "Acetyl chloride",
@@ -1519,11 +1802,13 @@
       "D": "Chloroform"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 14
   },
   {
     "id": 118,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "The chiral molecule among the following is",
     "options": {
       "A": "1-Bromo butane",
@@ -1532,11 +1817,13 @@
       "D": "2-Bromopropan-2-ol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 14
   },
   {
     "id": 119,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "The compound H2C=CH-Cl is an example of",
     "options": {
       "A": "Allylic halides",
@@ -1545,11 +1832,13 @@
       "D": "Vinylic halides"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
   },
   {
     "id": 120,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "The increasing order of boiling points of alkyl halides is",
     "options": {
       "A": "RF > RCl > RBr > RI",
@@ -1558,11 +1847,13 @@
       "D": "RCl > RBr > RF > RI"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
   },
   {
     "id": 121,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "The IUPAC name of ethylidene chloride is",
     "options": {
       "A": "1-Chloroethene",
@@ -1571,11 +1862,13 @@
       "D": "1,1-Dichloroethane"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
   },
   {
     "id": 122,
-    "section": "Haloalkanes and Haloarenes",
+    "section": "Chemistry",
     "question": "The reaction CH3Br + AgF → CH3F + AgBr is called",
     "options": {
       "A": "Swarts reaction",
@@ -1584,12 +1877,14 @@
       "D": "Gattermann reaction"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
   },
   {
     "id": 123,
-    "section": "Haloalkanes and Haloarenes",
-    "question": "When 2-Bromo pentane is treated with alcoholic potash, the major product produced is",
+    "section": "Chemistry",
+    "question": "When 2-Bromo pentane is treated with alcoholic potash, the major product produced\nis",
     "options": {
       "A": "1-Pentene",
       "B": "2-Pentene",
@@ -1597,12 +1892,14 @@
       "D": "3-Pentene"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
   },
   {
     "id": 124,
-    "section": "Haloalkanes and Haloarenes",
-    "question": "Which of the following alkyl halides will undergo SN1 reaction most readily?",
+    "section": "Chemistry",
+    "question": "124. Which of the following alkyl halides will undergo SN1 reaction most readily?",
     "options": {
       "A": "(CH3)3C-F",
       "B": "(CH3)3C-Cl",
@@ -1610,12 +1907,21 @@
       "D": "(CH3)3C-I"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
+  },
+  {
+    "question_type": "divider",
+    "question": "Alcohols, Phenols and Ethers",
+    "id": null,
+    "parsed_ok": true,
+    "page": 15
   },
   {
     "id": 125,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "A compound P with formula C3H6 on reaction with H2O in presence of H2SO4 gives the compound Q. Compound Q on heating with Cu at 573K produces the compound R. Compounds P, Q, and R are",
+    "section": "Chemistry",
+    "question": "A compound P with formula C3H6 on reaction with H2O in presence of H2SO4 gives\nthe compound Q. Compound Q on heating with Cu at 573K produces the compound R.\nCompounds P, Q, and R are",
     "options": {
       "A": "P = Propan-1-ol, Q = Propene, R = Propanone",
       "B": "P = Propene, Q = Propan-2-ol, R = Propene",
@@ -1623,12 +1929,14 @@
       "D": "P = Propanone, Q = Propan-1-ol, R = Propane"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
   },
   {
     "id": 126,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "An organic compound ‘A' containing C, H, and O has a pleasant odor with a boiling point of 78°C. On boiling ‘A' with conc. H2SO4, a colorless gas is produced which decolorizes bromine water and alkaline KMnO4. The organic compound A is",
+    "section": "Chemistry",
+    "question": "An organic compound ‘A' containing C, H, and O has a pleasant odor with a boiling\npoint of 78°C. On boiling ‘A' with conc. H2SO4, a colorless gas is produced which\ndecolorizes bromine water and alkaline KMnO4. The organic compound A is",
     "options": {
       "A": "C2H5Cl",
       "B": "C2H5OH",
@@ -1636,11 +1944,13 @@
       "D": "C6H6"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
   },
   {
     "id": 127,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "By which test can 1°, 2°, and 3° alcohols be detected?",
     "options": {
       "A": "Hinsberg test",
@@ -1649,11 +1959,13 @@
       "D": "All of these"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
   },
   {
     "id": 128,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "Byproduct obtained during preparation of phenol from cumene is",
     "options": {
       "A": "Ketone",
@@ -1662,11 +1974,13 @@
       "D": "Cresol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 15
   },
   {
     "id": 129,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "Enantiomers only differ with respect to",
     "options": {
       "A": "Melting point",
@@ -1675,11 +1989,13 @@
       "D": "The rotation of plane-polarized light"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 130,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "Ethane-1,2-diol is an example of",
     "options": {
       "A": "Monohydric alcohol",
@@ -1688,12 +2004,14 @@
       "D": "Monohydric phenol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 131,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "Find out the product of the following reaction: (Reaction involving NaOH, 623K, 300 atm)",
+    "section": "Chemistry",
+    "question": "Find out the product of the following reaction:\n(Reaction involving NaOH, 623K, 300 atm)",
     "options": {
       "A": "Aromatic amine",
       "B": "Aromatic hydroxyl compound",
@@ -1701,12 +2019,14 @@
       "D": "Aromatic nitro compound"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 132,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "Halogenation of benzene occurs in the presence of Lewis acid, but halogenation of phenol occurs even in the absence of Lewis acid due to",
+    "section": "Chemistry",
+    "question": "Halogenation of benzene occurs in the presence of Lewis acid, but halogenation of\nphenol occurs even in the absence of Lewis acid due to",
     "options": {
       "A": "Highly deactivating effect of -OH group attached to the benzene ring",
       "B": "Highly activating effect of -OH group attached to the benzene ring",
@@ -1714,11 +2034,13 @@
       "D": "Highly activating effect of the benzene ring"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 133,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "How many alcohols with molecular formula C4H10O are chiral in nature?",
     "options": {
       "A": "1",
@@ -1727,11 +2049,13 @@
       "D": "4"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 134,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "Identify the simple ether from the following",
     "options": {
       "A": "CH3OC2H5",
@@ -1740,11 +2064,13 @@
       "D": "C6H5OCH3"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 135,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "In Kolbe's reaction, phenol is converted into",
     "options": {
       "A": "Salicylic acid",
@@ -1753,11 +2079,13 @@
       "D": "Benzaldehyde"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 136,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "In picric acid",
     "options": {
       "A": "Three -OH groups are present",
@@ -1766,11 +2094,13 @@
       "D": "One -NO2 group is present"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 137,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "O-nitrophenol and p-nitrophenol are separated by",
     "options": {
       "A": "Sublimation",
@@ -1779,11 +2109,13 @@
       "D": "Steam distillation"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 138,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "Phenol is less acidic than",
     "options": {
       "A": "o-Nitrophenol",
@@ -1792,11 +2124,13 @@
       "D": "o-Methoxyphenol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 139,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "Phenol is more acidic than",
     "options": {
       "A": "Ethanol",
@@ -1805,11 +2139,13 @@
       "D": "p-Nitrophenol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 16
   },
   {
     "id": 140,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "Phenol on oxidation with chromic acid gives",
     "options": {
       "A": "Benzoquinone",
@@ -1818,11 +2154,13 @@
       "D": "Phthalic acid"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 17
   },
   {
     "id": 141,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "Salicylaldehyde can be prepared by",
     "options": {
       "A": "Finkelstein reaction",
@@ -1831,11 +2169,13 @@
       "D": "Kolbe's reaction"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 17
   },
   {
     "id": 142,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "The boiling points of alcohols increase with",
     "options": {
       "A": "Increase in the number of C-atoms",
@@ -1844,12 +2184,14 @@
       "D": "Decrease in the surface area of the C-chain"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 17
   },
   {
     "id": 143,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "The C-O bond angles of P, Q, and R are found to be 111.7°, 109°, and 108.9°, respectively. Compound P, Q, and R are",
+    "section": "Chemistry",
+    "question": "The C-O bond angles of P, Q, and R are found to be 111.7°, 109°, and 108.9°,\nrespectively. Compound P, Q, and R are",
     "options": {
       "A": "P = Phenol, Q = Methanol, R = Methoxy Methane",
       "B": "P = Methoxy Methane, Q = Methanol, R = Phenol",
@@ -1857,11 +2199,13 @@
       "D": "P = Methoxy Methane, Q = Phenol, R = Methanol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 17
   },
   {
     "id": 144,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "The chemicals used to convert commercial alcohol into denatured alcohol are",
     "options": {
       "A": "CuSO4 and Pyrolidine",
@@ -1870,11 +2214,13 @@
       "D": "Cu2S and Pyridine"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 17
   },
   {
     "id": 145,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "The compound that reacts fastest with Luca’s reagent at room temperature is",
     "options": {
       "A": "2-Methylpropan-2-ol",
@@ -1883,12 +2229,14 @@
       "D": "Butan-1-ol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 17
   },
   {
     "id": 146,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "The correct order of acid strength of the following compounds is: (i) o-bromophenol (ii) p-bromophenol (iii) picric acid (2,4,6-trinitrophenol) (iv) 2,4,6-tribromophenol",
+    "section": "Chemistry",
+    "question": "The correct order of acid strength of the following compounds is:\n(i) o-bromophenol\n(ii) p-bromophenol\n(iii) picric acid (2,4,6-trinitrophenol)\n(iv) 2,4,6-tribromophenol",
     "options": {
       "A": "(iii) > (iv) > (i) > (ii)",
       "B": "(iii) > (iv) > (ii) > (i)",
@@ -1896,11 +2244,13 @@
       "D": "(i) > (ii) > (iv) > (iii)"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 17
   },
   {
     "id": 147,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "The decreasing order of boiling points of ethanol, propane, and dimethyl ether is",
     "options": {
       "A": "Ethanol > Dimethyl ether > Propane",
@@ -1909,12 +2259,14 @@
       "D": "Propane > Ethanol > Dimethyl ether"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 18
   },
   {
     "id": 148,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "The high boiling point of ethanol [C2H5OH] compared to methoxy methane [CH3OCH3] and propane is due to",
+    "section": "Chemistry",
+    "question": "The high boiling point of ethanol [C2H5OH] compared to methoxy methane\n[CH3OCH3] and propane is due to",
     "options": {
       "A": "Intra-molecular hydrogen bonding",
       "B": "Inter-molecular hydrogen bonding",
@@ -1922,11 +2274,13 @@
       "D": "None of these"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 18
   },
   {
     "id": 149,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "The major byproduct during the preparation of phenol from cumene is",
     "options": {
       "A": "Acetone.",
@@ -1935,11 +2289,13 @@
       "D": "Acetaldehyde."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 18
   },
   {
     "id": 150,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "The major product formed when phenol is treated with excess bromine water is",
     "options": {
       "A": "o-Bromophenol",
@@ -1948,11 +2304,13 @@
       "D": "2,4,6-Tribromophenol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 18
   },
   {
     "id": 151,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "The role of CO2 in Kolbe's reaction is",
     "options": {
       "A": "acts as catalyst",
@@ -1961,12 +2319,14 @@
       "D": "act as strong electrophile."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 18
   },
   {
     "id": 152,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "What is the correct order of boiling points of alcohols having the same number of carbon atoms?",
+    "section": "Chemistry",
+    "question": "What is the correct order of boiling points of alcohols having the same number of\ncarbon atoms?",
     "options": {
       "A": "1° > 2° > 3°",
       "B": "3° > 2° > 1°",
@@ -1974,12 +2334,14 @@
       "D": "2° > 1° > 3°"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 18
   },
   {
     "id": 153,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "When an alcohol is treated with Luca’s reagent, if immediate turbidity appears, then it confirms the presence of",
+    "section": "Chemistry",
+    "question": "When an alcohol is treated with Luca’s reagent, if immediate turbidity appears, then it\nconfirms the presence of",
     "options": {
       "A": "Primary alcohol",
       "B": "Secondary alcohol",
@@ -1987,12 +2349,14 @@
       "D": "All of these"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 18
   },
   {
     "id": 154,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "When phenol is heated with chloroform in sodium hydroxide followed by acidification, the product is",
+    "section": "Chemistry",
+    "question": "When phenol is heated with chloroform in sodium hydroxide followed by\nacidification, the product is",
     "options": {
       "A": "Chlorobenzene",
       "B": "Benzyl chloride",
@@ -2000,11 +2364,13 @@
       "D": "Salicylic acid"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 18
   },
   {
     "id": 155,
-    "section": "Alcohols, Phenols and Ethers",
+    "section": "Chemistry",
     "question": "When phenol is heated with Zn dust, it gives",
     "options": {
       "A": "Benzyl alcohol",
@@ -2013,12 +2379,14 @@
       "D": "Benzene"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 18
   },
   {
     "id": 156,
-    "section": "Alcohols, Phenols and Ethers",
-    "question": "When phenol is treated with bromine water, a white precipitate of the product obtained is",
+    "section": "Chemistry",
+    "question": "156. When phenol is treated with bromine water, a white precipitate of the product\nobtained is",
     "options": {
       "A": "2-Bromophenol",
       "B": "4-Bromophenol",
@@ -2026,24 +2394,35 @@
       "D": "2,4,6-Tribromophenol"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 19
+  },
+  {
+    "question_type": "divider",
+    "question": "Coordination Compounds",
+    "id": null,
+    "parsed_ok": true,
+    "page": 19
   },
   {
     "id": 157,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "According to the spectrochemical series, the strongest field ligand is",
     "options": {
-      "A": "F-",
+      "A": "F⁻",
       "B": "NH3",
       "C": "H2O",
       "D": "CO"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 19
   },
   {
     "id": 158,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "According to Werner's theory, the primary valencies of the central atom are",
     "options": {
       "A": "Satisfied by negative ions or neutral molecules",
@@ -2052,11 +2431,13 @@
       "D": "Decide the geometry of the complex"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 19
   },
   {
     "id": 159,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "Among the following statements, which statement is correct about metal carbonyls?",
     "options": {
       "A": "Metal carbonyls are s-bonded organometallic compounds",
@@ -2065,38 +2446,44 @@
       "D": "Metal carbonyls involve both s and p bonds between metal and carbon of the carbonyl group"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 19
   },
   {
     "id": 160,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "An ambidentate ligand is",
     "options": {
-      "A": "Cl-",
-      "B": "CN-",
-      "C": "OH-",
-      "D": "NO2+"
+      "A": "Cl⁻",
+      "B": "CN⁻",
+      "C": "OH⁻",
+      "D": "NO2⁺"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 19
   },
   {
     "id": 161,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "An example of an ambidentate ligand is",
     "options": {
       "A": "CO",
-      "B": "CN-",
-      "C": "NO3-",
-      "D": "SO42-"
+      "B": "CN⁻",
+      "C": "NO3⁻",
+      "D": "SO4²⁻"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 19
   },
   {
     "id": 162,
-    "section": "Coordination Compounds",
-    "question": "Cobalt (III) chloride forms several octahedral complexes with ammonia. Which of the following will not give a test for chloride ion with silver nitrate solution?",
+    "section": "Chemistry",
+    "question": "Cobalt (III) chloride forms several octahedral complexes with ammonia. Which of the\nfollowing will not give a test for chloride ion with silver nitrate solution?",
     "options": {
       "A": "CoCl3.4NH3",
       "B": "CoCl3.5NH3",
@@ -2104,25 +2491,29 @@
       "D": "CoCl3.3NH3"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 19
   },
   {
     "id": 163,
-    "section": "Coordination Compounds",
-    "question": "If Δo<P (Pairing energy), for the d4 ion, an entry of the 4th electron gives the configuration",
+    "section": "Chemistry",
+    "question": "If Δo<P (Pairing energy), for the d4 ion, an entry of the 4th electron gives the\nconfiguration",
     "options": {
-      "A": "t2g2e2g",
-      "B": "t2g4e0g",
+      "A": "t2g²e2g",
+      "B": "t2g⁴e0g",
       "C": "t42g e0g",
       "D": "t32g e1g"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 19
   },
   {
     "id": 164,
-    "section": "Coordination Compounds",
-    "question": "In coordination compound [CoCl2(en)2]Br, the primary and secondary valencies of Co are",
+    "section": "Chemistry",
+    "question": "In coordination compound [CoCl2(en)2]Br, the primary and secondary valencies of Co\nare",
     "options": {
       "A": "4 and 1",
       "B": "6 and 1",
@@ -2130,11 +2521,13 @@
       "D": "3 and 6"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 20
   },
   {
     "id": 165,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "In Fe(CO)5, Fe-C bond processes involve",
     "options": {
       "A": "π-character only.",
@@ -2143,12 +2536,14 @@
       "D": "σ-character."
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 20
   },
   {
     "id": 166,
-    "section": "Coordination Compounds",
-    "question": "In metal carbonyls, the M-C sigma bond is formed by the donation of a lone pair of electrons on the",
+    "section": "Chemistry",
+    "question": "In metal carbonyls, the M-C sigma bond is formed by the donation of a lone pair of\nelectrons on the",
     "options": {
       "A": "Carbonyl carbon atom to filled orbital of metal",
       "B": "Carbonyl carbon atom to vacant orbital of metal",
@@ -2156,11 +2551,13 @@
       "D": "Filled d-orbital of metal to vacant bonding π orbital of CO"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 20
   },
   {
     "id": 167,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "IUPAC name of [CoCl(en)2ONO] Br is",
     "options": {
       "A": "ChloridoethylenediaminenitroCobalt (III) Bromide",
@@ -2169,12 +2566,14 @@
       "D": "Chloridobis(ethylenediamine)nitritoCobalt (III) Bromide"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 20
   },
   {
     "id": 168,
-    "section": "Coordination Compounds",
-    "question": "Square planar complex of the type [MABXL] (where A, B, X, L are unidentate) shows",
+    "section": "Chemistry",
+    "question": "Square planar complex of the type [MABXL] (where A, B, X, L are unidentate)\nshows",
     "options": {
       "A": "Two Cis and one Trans",
       "B": "Two Cis and Two Trans",
@@ -2182,12 +2581,14 @@
       "D": "One Cis and One Trans"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 20
   },
   {
     "id": 169,
-    "section": "Coordination Compounds",
-    "question": "Square planar complex of the type MABXL (where A, B, X, L are unidentates) shows three isomers. Among them",
+    "section": "Chemistry",
+    "question": "Square planar complex of the type MABXL (where A, B, X, L are unidentates) shows\nthree isomers. Among them",
     "options": {
       "A": "Two cis and one trans",
       "B": "One cis and two trans",
@@ -2195,11 +2596,13 @@
       "D": "All three are trans only"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 20
   },
   {
     "id": 170,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "The bond between CO and metal in metal carbonyl is stronger due to",
     "options": {
       "A": "Synergic effect",
@@ -2208,11 +2611,13 @@
       "D": "Ambidentate nature of CO ligand"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 20
   },
   {
     "id": 171,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "The central metal atoms/ions in coordination compounds are also called as",
     "options": {
       "A": "Lewis bases",
@@ -2221,11 +2626,13 @@
       "D": "Lewis acids"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 20
   },
   {
     "id": 172,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "The complex [Pt (NH3)2Cl2] exhibits",
     "options": {
       "A": "Linkage isomerism",
@@ -2234,12 +2641,14 @@
       "D": "Cis-trans isomerism"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 20
   },
   {
     "id": 173,
-    "section": "Coordination Compounds",
-    "question": "The complex [PtCl2.4NH3Br2] is treated with excess of AgNO3 solution, and two moles of AgBr is precipitated. The primary and secondary valency of this complex is",
+    "section": "Chemistry",
+    "question": "The complex [PtCl2.4NH3Br2] is treated with excess of AgNO3 solution, and two\nmoles of AgBr is precipitated. The primary and secondary valency of this complex is",
     "options": {
       "A": "6 and 1",
       "B": "6 and 2",
@@ -2247,12 +2656,14 @@
       "D": "3 and 6"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 174,
-    "section": "Coordination Compounds",
-    "question": "The complex PtCl2.4NH3Br2 is treated with excess of AgNO3 solution, two mole of AgBr is precipitated. The primary and secondary valence of this complex is",
+    "section": "Chemistry",
+    "question": "The complex PtCl2.4NH3Br2 is treated with excess of AgNO3 solution, two mole of\nAgBr is precipitated. The primary and secondary valence of this complex is",
     "options": {
       "A": "6 and 1",
       "B": "6 and 2",
@@ -2260,12 +2671,14 @@
       "D": "3 and 6"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 175,
-    "section": "Coordination Compounds",
-    "question": "The complexes [Co (NH3)6] [Cr (CN)6] and [Cr (NH3)6] [Co (CN)6] are examples of which type of isomerism?",
+    "section": "Chemistry",
+    "question": "The complexes [Co (NH3)6] [Cr (CN)6] and [Cr (NH3)6] [Co (CN)6] are examples of\nwhich type of isomerism?",
     "options": {
       "A": "Geometrical isomerism",
       "B": "Ionization isomerism",
@@ -2273,24 +2686,28 @@
       "D": "Linkage isomerism"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 176,
-    "section": "Coordination Compounds",
-    "question": "The electron configuration of an octahedral d4 coordination entity with Δ0 > P is",
+    "section": "Chemistry",
+    "question": "The electron configuration of an octahedral d⁴ coordination entity with Δ0 > P is",
     "options": {
-      "A": "t2g2 e1g",
-      "B": "t2g3 e1g",
-      "C": "t2g4 e0g",
-      "D": "t2g2 e2g"
+      "A": "t2g² e1g",
+      "B": "t2g³ e1g",
+      "C": "t2g⁴ e0g",
+      "D": "t2g² e²g"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 177,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "The geometry of the complex Fe (CO)5 is",
     "options": {
       "A": "octahedral",
@@ -2299,11 +2716,13 @@
       "D": "square pyramidal"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 178,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "The isomerism exhibited by complexes [Co (NH3)5SO4] Br and [Co (NH3)5Br]SO4 is",
     "options": {
       "A": "Linkage isomerism",
@@ -2312,12 +2731,14 @@
       "D": "Solvate isomerism"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 179,
-    "section": "Coordination Compounds",
-    "question": "The IUPAC name of the complex ion [CoCl2(en)2] + is",
+    "section": "Chemistry",
+    "question": "The IUPAC name of the complex ion [CoCl2(en)2]⁺ is",
     "options": {
       "A": "Di-chloridodiethylene diamine cobalt (III)",
       "B": "Dichlorido bis(ethane-1,2-diamine) cobalt (III)",
@@ -2325,11 +2746,13 @@
       "D": "Bis (ethane-1,2-diamine) dichlorido cobalt (III)"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 180,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "The IUPAC name of the ionization isomer of [Co (NH3)5 SO4] Br is",
     "options": {
       "A": "Penta-ammine sulphato cobalt (III) bromide",
@@ -2338,38 +2761,44 @@
       "D": "Penta-ammine bromido sulphato cobaltate (III)"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 181,
-    "section": "Coordination Compounds",
-    "question": "The magnitude of CFSE (Crystal Field Splitting Energy) (Δ0) can be related to the configuration of d-orbitals in a coordination entity as",
+    "section": "Chemistry",
+    "question": "The magnitude of CFSE (Crystal Field Splitting Energy) (Δ0) can be related to the\nconfiguration of d-orbitals in a coordination entity as",
     "options": {
-      "A": "If Δ0 < P, the configuration is t2g3 e1g",
-      "B": "If Δ0 > P, the configuration is t2g6 e0g",
-      "C": "If Δ0 > P, the configuration is t2g5 e0g",
-      "D": "If Δ0 < P, the configuration is t2g4 e1g"
+      "A": "If Δ0 < P, the configuration is t2g³ e1g",
+      "B": "If Δ0 > P, the configuration is t2g⁶ e0g",
+      "C": "If Δ0 > P, the configuration is t2g⁵ e0g",
+      "D": "If Δ0 < P, the configuration is t2g⁴ e1g"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 182,
-    "section": "Coordination Compounds",
-    "question": "The magnitude of CFSE (Crystal Field Splitting Energy, Δ0) can be related to the d4 configuration of the central metal in an octahedral coordination entity as",
+    "section": "Chemistry",
+    "question": "The magnitude of CFSE (Crystal Field Splitting Energy, Δ0) can be related to the d⁴\nconfiguration of the central metal in an octahedral coordination entity as",
     "options": {
-      "A": "If Δ0 < P, the configuration is t2g3 e1g",
-      "B": "If Δ0 > P, the configuration is t2g5 e0g",
-      "C": "If Δ0 > P, the configuration is t2g4 e2g",
+      "A": "If Δ0 < P, the configuration is t2g³ e1g",
+      "B": "If Δ0 > P, the configuration is t2g⁵ e0g",
+      "C": "If Δ0 > P, the configuration is t2g⁴ e2g",
       "D": "If Δ0 < P, the configuration is t42g e0g"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 21
   },
   {
     "id": 183,
-    "section": "Coordination Compounds",
-    "question": "The oxidation number of Cu in [Cu (CN)4]3- is",
+    "section": "Chemistry",
+    "question": "The oxidation number of Cu in [Cu (CN)4]³⁻ is",
     "options": {
       "A": "+1",
       "B": "+4",
@@ -2377,11 +2806,13 @@
       "D": "+3"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 184,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "The oxidation state of metal in metal carbonyl complexes is",
     "options": {
       "A": "1",
@@ -2390,12 +2821,14 @@
       "D": "0"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 185,
-    "section": "Coordination Compounds",
-    "question": "The primary and secondary valencies of [Fe(C2O4)3]3- complexes are 224[M(en)(CO)] Cl is",
+    "section": "Chemistry",
+    "question": "The primary and secondary valencies of [Fe(C2O4)3]³⁻ complexes are\n224[M(en)(CO)] Cl is",
     "options": {
       "A": "3 and 3",
       "B": "3 and 6",
@@ -2403,12 +2836,14 @@
       "D": "0 and 3"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 186,
-    "section": "Coordination Compounds",
-    "question": "The primary and secondary valencies of iron in the complex [Fe(C2O4)3]3- are",
+    "section": "Chemistry",
+    "question": "The primary and secondary valencies of iron in the complex [Fe(C2O4)3]³⁻ are",
     "options": {
       "A": "3 and 3",
       "B": "6 and 6",
@@ -2416,11 +2851,13 @@
       "D": "6 and 3"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 187,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "The sum of coordination number and oxidation number of the metal M in the complex",
     "options": {
       "A": "6",
@@ -2429,11 +2866,13 @@
       "D": "9"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 188,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "The terminal and bridged CO ligands in the compound [Co2(CO)8] are respectively",
     "options": {
       "A": "0, 2",
@@ -2442,50 +2881,58 @@
       "D": "6, 2"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 189,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "Which of the following is an ambidentate ligand?",
     "options": {
       "A": "CO",
       "B": "NH3",
-      "C": "SCN-",
-      "D": "Cl-"
+      "C": "SCN⁻",
+      "D": "Cl⁻"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 190,
-    "section": "Coordination Compounds",
-    "question": "Which of the following is the correct increasing order of strength in the spectrochemical series of ligands?",
+    "section": "Chemistry",
+    "question": "Which of the following is the correct increasing order of strength in the\nspectrochemical series of ligands?",
     "options": {
-      "A": "EDTA4- < C2O42- < Cl- < OH- < CN-",
-      "B": "EDTA4- < C2O42- < CN- < OH- < Cl-",
-      "C": "Cl- < C2O42- < Cl- < OH- < EDTA4-",
-      "D": "Cl- < OH- < C2O42- < EDTA4- < CN-"
+      "A": "EDTA⁴⁻ < C2O4²⁻ < Cl⁻ < OH⁻ < CN⁻",
+      "B": "EDTA⁴⁻ < C2O4²⁻ < CN⁻ < OH⁻ < Cl⁻",
+      "C": "Cl⁻ < C2O4²⁻ < Cl⁻ < OH⁻ < EDTA⁴⁻",
+      "D": "Cl⁻ < OH⁻ < C2O4²⁻ < EDTA⁴⁻ < CN⁻"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 191,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "Which of the following ligands can exhibit linkage isomerism?",
     "options": {
-      "A": "NO2-",
+      "A": "NO2⁻",
       "B": "NH3",
       "C": "H2O",
       "D": "CO"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 192,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "Which of the following ligands produces a synergic effect in coordination complexes?",
     "options": {
       "A": "Oxalates",
@@ -2494,37 +2941,50 @@
       "D": "Nitrates"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 193,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "Which of the following species is not a ligand?",
     "options": {
-      "A": "NH4+",
+      "A": "NH4⁺",
       "B": "NO",
       "C": "CO",
       "D": "H2N-CH2-CH2-NH2"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
   },
   {
     "id": 194,
-    "section": "Coordination Compounds",
-    "question": "Which of the following statements regarding primary and secondary valencies is correct?",
+    "section": "Chemistry",
+    "question": "194. Which of the following statements regarding primary and secondary valencies is\ncorrect?",
     "options": {
       "A": "Primary Valencies are ionisable while Secondary Valencies are non-ionisable.",
       "B": "Primary Valencies are non-ionisable while Secondary Valencies are ionisable.",
       "C": "Both Primary and Secondary Valencies are non-ionisable.",
-      "D": "Both Primary and Secondary Valencies are ionisable."
+      "D": "Both Primary and"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 22
+  },
+  {
+    "question_type": "divider",
+    "question": "Secondary Valencies are ionisable. Application Based Questions",
+    "id": null,
+    "parsed_ok": true,
+    "page": 22
   },
   {
     "id": 195,
-    "section": "Coordination Compounds",
+    "section": "Chemistry",
     "question": "Which type of complexes doesn't show geometrical isomerism?",
     "options": {
       "A": "[MX2L2] Tetrahedral",
@@ -2533,6 +2993,8 @@
       "D": "[MX4L2] Octahedral"
     },
     "answer": null,
-    "parsed_ok": true
+    "parsed_ok": true,
+    "question_type": "mcq",
+    "page": 23
   }
 ]

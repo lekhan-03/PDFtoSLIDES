@@ -73,7 +73,7 @@ def extract_pdf_questions(pdf_path: str) -> list[dict]:
                         })
                         
         for it in items: it.setdefault("line_y0", it["bbox"][1])
-        items.sort(key=lambda i: (i["line_y0"], i["bbox"][0]))
+        items.sort(key=lambda i: (round(i["line_y0"] / 5) * 5, i["bbox"][0]))
         all_items.extend(items)
         
     return segment_and_process(all_items)
@@ -92,7 +92,7 @@ def segment_and_process(items):
             x0 = item["bbox"][0]
             is_start = False
             
-            m1 = re.match(r'^\s*(\d+)\.', text)
+            m1 = re.match(r'^\s*([1-9]\d*)\.(?:\s|$)', text)
             if m1 and abs(x0 - min_x0) < 40:
                 is_start = True
                 current_q_num = int(m1.group(1))
@@ -182,6 +182,18 @@ def parse_question_text(text: str, q_id: int) -> dict:
         "question_type": "mcq"
     }
     
+    from src.parser import _find_match_column_positions
+    
+    # ── Match-the-column check ────────────────────────────────────────────
+    mc_positions = _find_match_column_positions(text)
+    if mc_positions:
+        mc_question = text[: mc_positions["A"][0]].strip()
+        result["question"] = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', mc_question, flags=re.IGNORECASE)
+        result["options"] = _extract_options(text, mc_positions)
+        result["parsed_ok"] = True
+        result["question_type"] = "match_the_column"
+        return result
+
     positions = {}
     search_from = 0
     for letter in "ABCD":
@@ -223,6 +235,9 @@ def parse_question_text(text: str, q_id: int) -> dict:
             result["question"] = question_text
             result["question_type"] = "open"
             result["parsed_ok"] = True
+            
+    if result.get("question"):
+        result["question"] = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', result["question"], flags=re.IGNORECASE)
         
     return result
 
@@ -262,18 +277,21 @@ def group_and_rebuild(region):
         
     current_group = [sorted_items[0]]
     current_y1 = sorted_items[0]['bbox'][3]
+    current_page = sorted_items[0].get('page', 0)
     
     for item in sorted_items[1:]:
         y0 = item['bbox'][1]
         y1 = item['bbox'][3]
+        page = item.get('page', 0)
         
-        if y0 <= current_y1:
+        if page == current_page and y0 <= current_y1:
             current_group.append(item)
             current_y1 = max(current_y1, y1)
         else:
             groups.append(current_group)
             current_group = [item]
             current_y1 = y1
+            current_page = page
             
     if current_group:
         groups.append(current_group)

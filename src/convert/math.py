@@ -19,7 +19,7 @@ SYMBOLS = {
     "–": "-", "—": "-",
 }
 
-FUNC = re.compile(r"\\?(arcsin|arccos|arctan|cosec|sin|cos|tan|cot|sec|log|ln)")
+FUNC = re.compile(r"\\?(arcsin|arccos|arctan|cosec|csc|sin|cos|tan|cot|sec|log|ln)")
 # doubled tokens from the PDF text layer: "sec sec x", "loglog sinx"
 DOUBLE = re.compile(
     r"(?<![A-Za-z])(arcsin|arccos|arctan|cosec|csc|sin|cos|tan|cot|sec|log|ln)\s*\1(?![A-Za-z]{2})"
@@ -31,12 +31,13 @@ def collapse_doubles(s: str) -> str:
 
 
 def fix_functions(s: str) -> str:
-    """One pass. cosec -> \\operatorname{cosec}; sin, cos, ... -> \\sin , \\cos , ...
+    """One pass. cosec -> \\csc; sin, cos, ... -> \\sin , \\cos , ...
     Run it on MATH runs only. Text inside \\text{} / \\operatorname{} must be stashed first
     (convert_math does this)."""
     def repl(m):
         n = m.group(1)
-        return r"\operatorname{cosec} " if n == "cosec" else "\\" + n + " "
+        # Pandoc crashes on \cosec, so we force standard LaTeX \csc
+        return r"\csc " if n in ("cosec", "csc") else "\\" + n + " "
     return FUNC.sub(repl, s)
 
 
@@ -163,6 +164,17 @@ def convert_math(s: str) -> str:
     s = re.sub(r"\s+", " ", s)
     s = re.sub(r"\s+([}^_])", r"\1", s)                # no space before } ^ _
     s = re.sub(r"\x00(\d+)\x00", lambda m: keep[int(m.group(1))], s)
+    
+    # --- UNIVERSAL SANITIZATION ---
+    # 1. Catch any remaining \cosec variants (from external sources like DOCX) 
+    # and force them to standard LaTeX \csc
+    s = s.replace(r"\operatorname{cosec}", r"\csc")
+    s = s.replace(r"\cosec", r"\csc")
+    
+    # 2. Safely escape fill-in-the-blank underscores ONLY inside math
+    # Replaces '__' or '____' with literal escaped underscores '\_\_\_\_'
+    s = re.sub(r'_{2,}', lambda m: r'\_' * len(m.group()), s)
+    
     return s.strip()
 
 
@@ -221,4 +233,3 @@ def split_question(q: str):
             
     # "insert a space between a TEXT run and the next MATH run if the TEXT does not end with one"
     return tag, [(k, t) for k, t in out if t.strip()]
-

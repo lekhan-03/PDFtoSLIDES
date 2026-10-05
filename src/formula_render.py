@@ -77,6 +77,8 @@ def _chem_formula_sub(m: re.Match) -> str:
     raw = m.group(0)
     if not re.search(r'[A-Za-z]', raw):
         return raw
+    if raw.count('(') != raw.count(')'):
+        return raw
 
     charge_match = re.search(r'(\d?)([+-])$', raw)
     if charge_match:
@@ -110,7 +112,8 @@ def _sci_full_sub(m: re.Match) -> str:
 
 def _sci_alone_sub(m: re.Match) -> str:
     """10-5  →  $10^{-5}$"""
-    return f'\uE00010^{{{m.group(1)}}}\uE001'
+    exp = m.group(2) or m.group(5) or m.group(8) or m.group(11)
+    return f'\uE00010^{{{exp}}}\uE001'
 
 
 def _units_sub(m: re.Match) -> str:
@@ -236,7 +239,7 @@ _STRUCTURAL_RULES: list[tuple[re.Pattern, object]] = [
      _existing_script_sub),
 
     # ── Unicode superscripts → $^{...}$ ──────────────────────────────────────
-    (re.compile(r'([A-Za-zα-ωΑ-Ω0-9\)])?([\u2070\u00B9\u00B2\u00B3\u2074-\u2079\u207A\u207B\u02E3\u207F\u1D4E\u02B2\u2071]+)'),
+    (re.compile(r'([A-Za-zα-ωΑ-Ω0-9\)]+)?([\u2070\u00B9\u00B2\u00B3\u2074-\u2079\u207A\u207B\u02E3\u207F\u1D4E\u02B2\u2071]+)'),
      _sup_unicode_sub),
 ]
 
@@ -251,7 +254,7 @@ _SYMBOL_RULES: list[tuple[re.Pattern, object]] = [
     (re.compile(r'\beg\b'),        lambda m: '\uE000e_g\uE001'),
 
     # ── Trig functions run-on with argument: sinx → \sin{x} (cosec/csc before cos!) ──
-    (re.compile(r'\b(cosec|csc|sin|cos|tan|sec|cot|log|ln|exp)([a-zA-Z0-9]+)\b'),
+    (re.compile(r'(?<![a-zA-Z])\\?(cosec|csc|sin|cos|tan|sec|cot|log|ln|exp)\s*([a-zA-Z0-9]+)\b'),
      _trig_sub),
 
     # ── Greek letters (Unicode → LaTeX) ──────────────────────────────────────
@@ -263,8 +266,8 @@ _SYMBOL_RULES: list[tuple[re.Pattern, object]] = [
     (re.compile(r'\b([fghFGH])\(([x-zX-Z])\)'), lambda m: f'\uE000{m.group(1)}({m.group(2)})\uE001'),
 
     # ── Scientific Notation ──────────────────────────────────────────────────
-    (re.compile(r'\b(\d+(?:\.\d+)?)\s*(?:[xX]|\*)\s*10\s*(?:\^|(?=-))\s*(-?\d+)\b'), _sci_full_sub),
-    (re.compile(r'\b10\s*(?:\^|(?=-))\s*(-?\d+)\b'), _sci_alone_sub),
+    (re.compile(r'\uE000?\b(\d+(?:\.\d+)?)\s*(?:[xX]|\*|×|\u00D7)\s*\uE000?10\uE001?\s*(?:\^|(?=-))?\s*\{?\uE000?(-?\d+)\}?\uE001?(?!\d)'), _sci_full_sub),
+    (re.compile(r'(?<!\\times\s)(?<!\\times)\uE000?\b10\uE001?(?:(\s*\^\s*\{?\uE000?)(-?\d+)(\}?)|(\s*\{?\uE000?)(-\d+)(\}?)|(\s+\{?\uE000?)(-?\d+)(\}?)|(\s*\{?\uE000?)(-?\d+)(\}?)(?=(?:[ \u00A0]*(?:[a-zA-Z]*Hz|[a-zA-Z]?Js|[a-zA-Z]?C|m/s(?:[²³]|\^[23])?|kg\b|g\b|s\b|mol\b|eV\b|V\b|A\b|K\b|J\b|N\b|W\b|Ω\b|F\b|T\b|m\b|cm\b|mm\b|μm\b|nm\b|L\b|mL\b))))\uE001?(?!\d)'), _sci_alone_sub),
 
     # ── Lost powers on math variables: 2x2 -> 2x^2 ───────────────────────────
     (re.compile(r'(?<![a-zA-Z])(\d*)([xyzabcnmrt])(\d+)\b'), _lost_power_sub),
@@ -310,10 +313,10 @@ def _merge_math_blocks(text: str) -> str:
             parts.append(p)
     text = ''.join(parts)
 
-    text = re.sub(r'\uE001([ \d+\-*/=,.]*)\uE000', r'\1', text)
-    text = re.sub(r'\uE001([ \d+\-*/=,.]+)(?=$|[^a-zA-Z0-9])', lambda m: m.group(1) + '\uE001', text)
-    text = re.sub(r'(^|[^a-zA-Z0-9])([ \d+\-*/=,.]+)\uE000', lambda m: m.group(1) + '\uE000' + m.group(2), text)
-    text = re.sub(r'\uE000([ \d+\-*/=,.]*)\uE001', r'\1', text)
+    text = text.replace('\uE001\uE000', ' ')
+    text = re.sub(r'\uE001([ \d+\-/=,.\^\{\}<>]+)\uE000', r'\1', text)
+    text = re.sub(r'\uE001([\d+\-/=,.\^\{\}<>]+)(?=$|[^a-zA-Z0-9])', lambda m: m.group(1) + '\uE001', text)
+    text = re.sub(r'(^|[^a-zA-Z0-9])([\d+\-/=,.\^\{\}<>]+)\uE000', lambda m: m.group(1) + '\uE000' + m.group(2), text)
     return text
 
 
@@ -336,8 +339,7 @@ def _resolve_math(text: str) -> str:
             res.append(char)
     res_str = ''.join(res).replace('$$', '')
     # Prevent Pandoc tex_math_dollars rejection by trimming spaces directly inside the $ signs
-    res_str = re.sub(r'\$\s+', '$', res_str)
-    res_str = re.sub(r'\s+\$', '$', res_str)
+    res_str = re.sub(r'\$(.*?)\$', lambda m: f"${m.group(1).strip()}$", res_str)
     # Clean up double backslashes before known LaTeX command names
     res_str = re.sub(
         r'\\\\(sin|cos|tan|sec|csc|cot|log|ln|exp|frac|sqrt|int|Delta|alpha|beta|gamma|pi|theta|lambda|mu)',
@@ -356,6 +358,7 @@ _MATH_ITALIC_MAP[0x210E] = ord('h')
 
 def auto_latex(text: str) -> str:
     """Apply auto-detection rules, avoiding nested $...$ crashes."""
+    text = text.replace('\u2212', '-').replace('\u2013', '-')
     text = text.translate(_MATH_ITALIC_MAP)
     text = re.sub(r'\$(.*?)\$', lambda m: f'\uE000{m.group(1)}\uE001', text)
 
@@ -451,7 +454,7 @@ def _simplify_latex_for_pandoc(text: str) -> str:
     return text
 
 def to_math(text: str) -> str:
-    """
+    r"""
     Format text for OMML math rendering via pandoc.
     1. Strip option labels if they accidentally leaked in.
     2. Remove existing '$' signs.
@@ -494,7 +497,7 @@ def to_math(text: str) -> str:
     return f"${text}$"
 
 # Alias for backwards compatibility with generate_pptx.py
-render_math_text = to_math
+render_math_text = auto_latex
 
 def get_pandoc_text(text: str) -> str:
     """Render a text block to plain unicode text if needed."""

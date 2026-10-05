@@ -75,7 +75,6 @@ DIVIDER_LINE = RGBColor(0x33, 0x33, 0x66) # subtle column divider
 CITATION_COLOR = RGBColor(0x8A, 0xC4, 0xFF) # Soft Sky/Ice Blue for citations
 CITATION_FONT  = 'Georgia'
 
-
 # ── Slide size: widescreen 16:9 ───────────────────────────────────────────────
 SW = 13.33   # slide width  (inches)
 SH = 7.5     # slide height (inches)
@@ -160,7 +159,7 @@ def _rgb_to_hex(c: RGBColor) -> str:
 
 
 def _add_rich_text_fallback(p, text: str, size: float, color: RGBColor,
-                            bold: bool = False, font_name: str = 'Arial'):
+                            bold: bool = True, font_name: str = 'Cambria'):
     """Fallback: use baseline XML for sub/superscript when matplotlib unavailable."""
     text = re.sub(r'Δ([oO0])', r'Δ<sub>\1</sub>', text)
     text = re.sub(r'\bt(\d)2g\b', r't2g\1', text)
@@ -245,30 +244,48 @@ def _extract_and_add_images(slide, text: str, left: float, top: float, width: fl
                     pass
     return re.sub(r'\[IMG:\s*[^\]]+\]', '', text).strip()
 
-def _insert_omml_math_into_paragraph(p, markdown_text: str, size: float, color: RGBColor, bold: bool = False, font_name: str = 'Arial', slide=None):
+def _insert_omml_math_into_paragraph(p, markdown_text: str, size: float, color: RGBColor, bold: bool = True, font_name: str = 'Cambria', slide=None):
     """Convert latex/markdown text to docx via pandoc, extract OMML, and inject into python-pptx paragraph."""
     
+    def _safe_plain_text(text: str) -> str:
+        text = text.replace('$', '')
+        text = re.sub(r'\^\{([^}]*)\}', r'^\1', text)
+        text = re.sub(r'_\{([^}]*)\}', r'_\1', text)
+        text = text.replace(r'\{', '{').replace(r'\}', '}')
+        return text.strip()
+    
+    # Pre-process the math blocks using our internal converter to fix \cosec, _____, etc.
+    try:
+        from src.convert.math import convert_math
+        import re
+        def _math_repl(m):
+            return f"${convert_math(m.group(1))}$"
+        markdown_text = re.sub(r'\$(.+?)\$', _math_repl, markdown_text, flags=re.S)
+    except Exception as e:
+        print(f"[!] Preprocessing math failed: {e}")
+        pass
+
     if markdown_text.count('{') != markdown_text.count('}'):
         s_num = slide.part.partname if slide and hasattr(slide, 'part') else 'Unknown'
         print(f"[!] Slide {s_num}: Unbalanced braces in formula, falling back: {markdown_text}")
-        _add_rich_text_fallback(p, markdown_text, size, color, bold, font_name)
+        _add_rich_text_fallback(p, _safe_plain_text(markdown_text), size, color, bold, font_name)
         return
         
     if markdown_text.count('\\begin') != markdown_text.count('\\end'):
         s_num = slide.part.partname if slide and hasattr(slide, 'part') else 'Unknown'
         print(f"[!] Slide {s_num}: Unbalanced begin/end in formula, falling back: {markdown_text}")
-        _add_rich_text_fallback(p, markdown_text, size, color, bold, font_name)
+        _add_rich_text_fallback(p, _safe_plain_text(markdown_text), size, color, bold, font_name)
         return
 
     tmp_path = Path(tempfile.gettempdir()) / f"tmp_{uuid.uuid4().hex}.docx"
     try:
-        pypandoc.convert_text(markdown_text, 'docx', format='markdown', outputfile=str(tmp_path))
+        pypandoc.convert_text(markdown_text, 'docx', format='markdown-fancy_lists', outputfile=str(tmp_path))
         with zipfile.ZipFile(tmp_path) as z:
             xml_data = z.read('word/document.xml')
     except Exception as e:
         print(f"[!] Pandoc DOCX OMML error: {e}")
         # fallback
-        _add_rich_text_fallback(p, markdown_text, size, color, bold, font_name)
+        _add_rich_text_fallback(p, _safe_plain_text(markdown_text), size, color, bold, font_name)
         if tmp_path.exists(): tmp_path.unlink(missing_ok=True)
         return
         
@@ -277,14 +294,18 @@ def _insert_omml_math_into_paragraph(p, markdown_text: str, size: float, color: 
     root = etree.fromstring(xml_data)
     w_ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
     m_ns = {'m': 'http://schemas.openxmlformats.org/officeDocument/2006/math'}
-    
+
     # Check if pandoc failed to parse the math (it leaves literal $ or ^{ in the text)
     # We can just check the raw xml_data string
     xml_str = xml_data.decode('utf-8', errors='ignore')
-    if '$' in xml_str or '^{' in xml_str:
+    
+    # Improved structural checking for actual OMML math vs literal fallbacks
+    # A true OMML equation will contain <m:oMath>
+    # If Pandoc failed to parse the math, it will output regular text containing $ or ^{
+    if ('<m:oMath' not in xml_str and '$' in xml_str) or '^{' in xml_str:
         s_num = getattr(getattr(slide, 'part', None), 'partname', 'Unknown')
         print(f"[!] Pandoc failed to parse formula on Slide {s_num}, falling back to plain text:\n    {markdown_text}")
-        _add_rich_text_fallback(p, markdown_text.strip('$'), size, color, bold, font_name)
+        _add_rich_text_fallback(p, _safe_plain_text(markdown_text), size, color, bold, font_name)
         return
         
     w_ps = root.xpath('.//w:p', namespaces=w_ns)
@@ -386,7 +407,7 @@ def _get_content_height(text: str, width_in: float, font_size: float) -> float:
 def _tb(slide, text: str,
         l: float, t: float, w: float, h: float,
         size: float, color: RGBColor,
-        bold: bool = False,
+        bold: bool = True,
         align = PP_ALIGN.LEFT,
         wrap: bool = True):
     """Add a textbox. Uses OMML formula pipeline if needed."""
@@ -409,9 +430,9 @@ def _tb(slide, text: str,
     p.alignment = align
     
     if use_omml:
-        _insert_omml_math_into_paragraph(p, text, size, color, bold, 'Arial', slide)
+        _insert_omml_math_into_paragraph(p, text, size, color, bold, 'Cambria', slide)
     else:
-        _add_rich_text_fallback(p, text, size, color, bold, 'Arial')
+        _add_rich_text_fallback(p, text, size, color, bold, 'Cambria')
     return txb
 
 
@@ -442,7 +463,7 @@ def _shape_text(shape, slide, # Added slide to pass to _extract_and_add_images (
     r1.font.bold  = True
     r1.font.size  = Pt(letter_size)
     r1.font.color.rgb = CYAN
-    r1.font.name = 'Arial'
+    r1.font.name = 'Cambria'
     
     use_omml = False
     if render_math_text:
@@ -451,9 +472,9 @@ def _shape_text(shape, slide, # Added slide to pass to _extract_and_add_images (
             use_omml = True
 
     if use_omml:
-        _insert_omml_math_into_paragraph(p, body, body_size, OFF_WHITE, False, 'Arial', slide)
+        _insert_omml_math_into_paragraph(p, body, body_size, OFF_WHITE, True, 'Cambria', slide)
     else:
-        _add_rich_text_fallback(p, body, body_size, OFF_WHITE, False, 'Arial')
+        _add_rich_text_fallback(p, body, body_size, OFF_WHITE, True, 'Cambria')
 
 
 def _logo(slide, logo_path: Path | None = None) -> None:
@@ -473,7 +494,7 @@ def _logo(slide, logo_path: Path | None = None) -> None:
     r.font.size = Pt(10)
     r.font.color.rgb = DIM_WHITE
     r.font.bold = False
-    r.font.name = 'Arial'
+    r.font.name = 'Cambria'
 
 
 def _calc_badge_width(text: str, font_size: float = 15.0) -> float:
@@ -525,7 +546,7 @@ def _badge(slide, text: str | None) -> None:
     r.font.size = Pt(15)
     r.font.color.rgb = GOLD
     r.font.bold = True
-    r.font.name = 'Arial'
+    r.font.name = 'Cambria'
 
 
 
@@ -559,15 +580,24 @@ def _parse_match_col(stem: str):
         col1_items (list[str])  e.g. ["(1)  CCl4", "(2)  CHI3", ...]
         col2_items (list[str])  e.g. ["(A)  Fire ext.", "(B)  Antiseptic", ...]
     """
-    c1m = re.search(r'\bColumn\s+I\b(?:\s*\(([^)]+)\))?', stem, re.I)
-    c2m = re.search(r'\bColumn\s+II\b(?:\s*\(([^)]+)\))?', stem, re.I)
+    # Find where the actual column items begin
+    first_item_match = re.search(r'\((?:i{1,3}|iv|v|\d|I{1,3}|IV|V|[a-dA-D])\)', stem)
+    split_at_items = first_item_match.start() if first_item_match else len(stem)
+    
+    header_part = stem[:split_at_items]
+    rest = stem[split_at_items:]
+
+    c1_matches = list(re.finditer(r'\bColumn\s+I\b(?:\s*\(([^)]+)\))?', header_part, re.I))
+    c2_matches = list(re.finditer(r'\bColumn\s+II\b(?:\s*\(([^)]+)\))?', header_part, re.I))
+
+    c1m = c1_matches[-1] if c1_matches else None
+    c2m = c2_matches[-1] if c2_matches else None
 
     col1_label = c1m.group(1).strip() if (c1m and c1m.group(1)) else "Column I"
     col2_label = c2m.group(1).strip() if (c2m and c2m.group(1)) else "Column II"
 
-    split_at = c1m.start() if c1m else 0
-    intro = stem[:split_at].strip().rstrip(':').strip()
-    rest = stem[split_at:]
+    split_at_headers = c1m.start() if c1m else split_at_items
+    intro = header_part[:split_at_headers].strip().rstrip(':').strip()
 
     digit_items = re.findall(
         r'\((i{1,3}|iv|v|\d|I{1,3}|IV|V)\)\s*(.*?)(?=\s*\((?:i{1,3}|iv|v|\d|I{1,3}|IV|V|[a-dA-D])\)|\s*$)',

@@ -227,63 +227,61 @@ def split_questions(lines: list[str]) -> list[dict]:
 
         is_unnum = False
         if not is_num_q:
-            if in_open_section:
-                if not cur:
-                    is_unnum = True
-                else:
-                    prev_text = " ".join(cur["lines"]).strip()
-                    prev_ends_incomplete = bool(re.search(r'\b(?:is|are|of|for|to|with|where|in|by|given by|that|following|find|evaluate|calculate|determine)\s*(?:\(\d{4}[^\)]*\))?\.?\s*$', prev_text, re.I))
+            text_so_far = " ".join(cur["lines"]) if cur else ""
+            m_d = opt_d_pat.search(text_so_far) if cur else None
+            
+            if m_d:
+                opt_d_content = text_so_far[m_d.end():].strip()
+                is_option_label = bool(opt_bcd_pat.match(stripped))
+                is_answer_or_sol = stripped.lower().startswith(('answer', 'sol', 'hint'))
+                is_pairing = bool(_PAIRING_RE.search(stripped))
 
-                    cur_has_roman = any(re.match(r'^\s*(?:\([iIvVxX]+\)|[iIvVxX]+[.)]\s)', l) for l in cur["lines"])
-                    cur_has_letter = any(re.match(r'^\s*(?:\([a-zA-Z]\)|[a-zA-Z][.)]\s)', l) for l in cur["lines"])
-
-                    new_is_roman = bool(re.match(r'^\s*(?:\([iIvVxX]+\)|[iIvVxX]+[.)]\s)', stripped))
-                    new_is_letter = bool(re.match(r'^\s*(?:\([a-zA-Z]\)|[a-zA-Z][.)]\s)', stripped))
-
-                    is_subpart_continuation = (cur_has_roman and new_is_roman) or (cur_has_letter and new_is_letter)
-                    is_subpart_transition = (cur_has_roman and new_is_letter) or (cur_has_letter and new_is_roman)
-
-                    is_subitem = is_subpart_continuation or bool(re.match(r'^\s*\b(?:Strictly|Part|Case)\b', stripped, re.I))
-
-                    if is_subpart_transition:
+                if opt_d_content and not is_option_label and not is_answer_or_sol and not is_pairing:
+                    if opt_a_pat.search(stripped):
                         is_unnum = True
-                    elif _YEAR_RE.search(prev_text):
-                        if not is_subpart_continuation and not (is_subitem and prev_ends_incomplete):
-                            is_unnum = True
-                    elif bool(_OPEN_Q_STARTERS.match(stripped)):
-                        # If no year in previous block, only split if previous block already asked a question
-                        prev_had_question = bool(re.search(r'\?|\b(?:Evaluate|Find|Integrate|Prove|Show|Verify|Calculate|Derive|State|Define|Explain|Determine|Solve|Write|Mention)\b', prev_text, re.I))
-                        last_line = cur["lines"][-1].strip().lower()
-                        if prev_had_question and not any(last_line.endswith(inc) for inc in _INCOMPLETE_ENDINGS) and not is_subitem:
-                            is_unnum = True
-            else:
-                # MCQ section
-                if not cur:
-                    if not opt_a_pat.match(stripped) and not opt_bcd_pat.match(stripped) and not stripped.lower().startswith(('answer', 'sol')):
+                    elif _YEAR_RE.search(text_so_far):
                         is_unnum = True
-                else:
-                    text_so_far = " ".join(cur["lines"])
-                    # Check if cur already has Option D
-                    m_d = opt_d_pat.search(text_so_far)
-                    if m_d:
-                        opt_d_content = text_so_far[m_d.end():].strip()
-                        is_option_label = bool(opt_bcd_pat.match(stripped))
-                        is_answer_or_sol = stripped.lower().startswith(('answer', 'sol', 'hint'))
-                        is_pairing = bool(_PAIRING_RE.search(stripped))
+                    elif len(stripped) >= 4 and (re.match(r'^[\$A-Z\u222b\u221a\u2211\u0391-\u03c9"\'(]', stripped) or bool(_OPEN_Q_STARTERS.match(stripped))):
+                        is_unnum = True
+                    elif re.search(r'\b\d{4}M\b', stripped, re.I) or re.match(r'^Question\s+\d+', stripped, re.I):
+                        is_unnum = True
+                        
+            if not is_unnum:
+                if in_open_section:
+                    if not cur:
+                        is_unnum = True
+                    else:
+                        prev_text = " ".join(cur["lines"]).strip()
+                        prev_ends_incomplete = bool(re.search(r'\b(?:is|are|of|for|to|with|where|in|by|given by|that|following|find|evaluate|calculate|determine)\s*(?:\(\d{4}[^\)]*\))?\.?\s*$', prev_text, re.I))
 
-                        if opt_d_content and not is_option_label and not is_answer_or_sol and not is_pairing:
-                            # 1. Contains option (a)/(A) -> definite new MCQ
-                            if opt_a_pat.search(stripped):
+                        cur_has_roman = any(re.match(r'^\s*(?:\([iIvVxX]+\)|[iIvVxX]+[.)]\s)', l) for l in cur["lines"])
+                        cur_has_letter = any(re.match(r'^\s*(?:\([a-zA-Z]\)|[a-zA-Z][.)]\s)', l) for l in cur["lines"])
+
+                        new_is_roman = bool(re.match(r'^\s*(?:\([iIvVxX]+\)|[iIvVxX]+[.)]\s)', stripped))
+                        new_is_letter = bool(re.match(r'^\s*(?:\([a-zA-Z]\)|[a-zA-Z][.)]\s)', stripped))
+
+                        is_subpart_continuation = (cur_has_roman and new_is_roman) or (cur_has_letter and new_is_letter)
+                        is_subpart_transition = ((cur_has_roman and new_is_letter) or (cur_has_letter and new_is_roman)) and not is_subpart_continuation
+
+                        is_subitem = is_subpart_continuation or bool(re.match(r'^\s*\b(?:Strictly|Part|Case)\b', stripped, re.I))
+
+                        if is_subpart_transition:
+                            if not opt_a_pat.match(stripped) and not opt_bcd_pat.match(stripped):
                                 is_unnum = True
-                            # 2. Previous question had a year citation after D -> finished
-                            elif _YEAR_RE.search(text_so_far):
+                        elif _YEAR_RE.search(prev_text):
+                            if not is_subpart_continuation and not (is_subitem and prev_ends_incomplete):
+                                if not opt_a_pat.match(stripped) and not opt_bcd_pat.match(stripped):
+                                    is_unnum = True
+                        elif bool(_OPEN_Q_STARTERS.match(stripped)):
+                            prev_had_question = bool(re.search(r'\?|\b(?:Evaluate|Find|Integrate|Prove|Show|Verify|Calculate|Derive|State|Define|Explain|Determine|Solve|Write|Mention)\b', prev_text, re.I))
+                            last_line = cur["lines"][-1].strip().lower()
+                            if prev_had_question and not any(last_line.endswith(inc) for inc in _INCOMPLETE_ENDINGS) and not is_subitem:
                                 is_unnum = True
-                            # 3. Starts with math symbol, Greek letter, uppercase, or question starter (min length 4)
-                            elif len(stripped) >= 4 and (re.match(r'^[\$A-Z\u222b\u221a\u2211\u0391-\u03c9"\'(]', stripped) or bool(_OPEN_Q_STARTERS.match(stripped))):
-                                is_unnum = True
-                            # 4. Question N or Year Tag
-                            elif re.search(r'\b\d{4}M\b', stripped, re.I) or re.match(r'^Question\s+\d+', stripped, re.I):
-                                is_unnum = True
+                else:
+                    # MCQ section logic (without Option D, which we already handled)
+                    if not cur:
+                        if not opt_a_pat.match(stripped) and not opt_bcd_pat.match(stripped) and not stripped.lower().startswith(('answer', 'sol')):
+                            is_unnum = True
 
         if is_num_q or is_unnum:
             if cur:
@@ -341,20 +339,13 @@ def parse_block(block: dict) -> dict:
         "parsed_ok": False,
     }
 
-    # ── Open/short-answer questions ────────────────────────────────────────
-    if in_open:
-        result["question"]      = text.strip()
-        result["question_type"] = "open"
-        result["parsed_ok"]     = True
-        return result
-
     # ── Match-the-column check ────────────────────────────────────────────
     mc_positions = _find_match_column_positions(text)
     if mc_positions:
         mc_question = text[: mc_positions["A"][0]].strip()
         mc_options = _extract_options(text, mc_positions)
         if mc_question and all(mc_options.values()):
-            result["question"]      = mc_question
+            result["question"]      = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', mc_question, flags=re.IGNORECASE)
             result["options"]       = mc_options
             result["parsed_ok"]     = True
             result["question_type"] = "match_the_column"
@@ -372,9 +363,9 @@ def parse_block(block: dict) -> dict:
         search_from = match.end()
 
     if len(positions) != 4:
-        # Fallback: if it really looks like an open question, accept it
-        if _looks_like_open_question(text):
-            result["question"]      = text.strip()
+        # ── Open/short-answer fallback ────────────────────────────────────────
+        if in_open or _looks_like_open_question(text):
+            result["question"]      = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', text.strip(), flags=re.IGNORECASE)
             result["question_type"] = "open"
             result["parsed_ok"]     = True
             return result
@@ -388,9 +379,8 @@ def parse_block(block: dict) -> dict:
             result["parsed_ok"] = True
             return result
             
-        result["question"] = text.strip()
+        result["question"] = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', text.strip(), flags=re.IGNORECASE)
         return result
-
 
     question = text[: positions["A"][0]].strip()
     options = _extract_options(text, positions)
@@ -408,6 +398,9 @@ def parse_block(block: dict) -> dict:
     result["options"]       = options
     result["question_type"] = "mcq"
     result["parsed_ok"]     = True
+    
+    if result.get("question"):
+        result["question"] = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', result["question"], flags=re.IGNORECASE)
 
     last_opt = list(result["options"].keys())[-1]
     opt_text = result["options"][last_opt]
