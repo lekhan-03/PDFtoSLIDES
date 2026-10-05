@@ -1,3 +1,4 @@
+from src.headings import is_heading
 """Extract and parse questions from PDF using geometry."""
 import re
 import pymupdf
@@ -47,7 +48,7 @@ def extract_pdf_questions(pdf_path: str) -> list[dict]:
         pdict = page.get_text("dict")
         
         # Use pdf_spans
-        items = pdf_spans.page_items(pdict, page_num + 1, repeating)
+        items = pdf_spans.page_items(pdict, page_num + 1, repeating_lines=repeating)
         
         for p in page.get_drawings():
             for d_item in p["items"]:
@@ -91,7 +92,7 @@ def segment_and_process(items):
             x0 = item["bbox"][0]
             is_start = False
             
-            m1 = re.match(r'^\s*(\d+)\.\s*$', text)
+            m1 = re.match(r'^\s*(\d+)\.', text)
             if m1 and abs(x0 - min_x0) < 40:
                 is_start = True
                 current_q_num = int(m1.group(1))
@@ -129,16 +130,23 @@ def segment_and_process(items):
         lines = group_and_rebuild(region)
         text = "\n".join(lines)
         
-        parsed = parse_question_text(text, q_id)
-        
-        if validate_question(text, parsed):
-            questions.append(parsed)
-        else:
-            parsed['parsed_ok'] = False
-            questions.append(parsed)
-            # Only flag actual questions, not the title block
-            if q_num > 0 or "A)" in text or "a)" in text:
-                flagged.append(f"Q{q_id} (Page {page})")
+        parsed_res = parse_question_text(text, q_id)
+        if not isinstance(parsed_res, list):
+            parsed_res = [parsed_res]
+            
+        for parsed in parsed_res:
+            if parsed.get("question_type") == "divider":
+                questions.append(parsed)
+                continue
+                
+            if validate_question(text, parsed):
+                questions.append(parsed)
+            else:
+                parsed['parsed_ok'] = False
+                questions.append(parsed)
+                # Only flag actual questions, not the title block
+                if q_num > 0 or "A)" in text or "a)" in text:
+                    flagged.append(f"Q{q_id} (Page {page})")
             
     print("-" * 50)
     print(f"REPORT: Extraction & Validation")
@@ -183,10 +191,26 @@ def parse_question_text(text: str, q_id: int) -> dict:
         result["question"] = text[:positions["A"][0]].strip()
         result["options"] = _extract_options(text, positions)
         result["parsed_ok"] = True
+
+        last_opt = list(result["options"].keys())[-1]
+        opt_text = result["options"][last_opt]
+        words = opt_text.split()
+        from src.headings import is_heading
+        for i in range(min(6, len(words) - 1), 0, -1):
+            suffix = ' '.join(words[-i:]).strip()
+            if is_heading(suffix) and ' '.join(words[:-i]).strip():
+                result["options"][last_opt] = ' '.join(words[:-i]).strip()
+                divider = {
+                    "question_type": "divider",
+                    "question": suffix,
+                    "id": None,
+                    "parsed_ok": True
+                }
+                return [result, divider]
     else:
         question_text = text.strip()
-        words = question_text.split()
-        if len(words) <= 4 and question_text and question_text[0].isalpha() and not re.search(r'\([A-Da-d]\)', question_text):
+        from src.headings import is_heading
+        if is_heading(question_text):
             result["question"] = question_text
             result["question_type"] = "divider"
             result["id"] = None
@@ -226,7 +250,7 @@ def validate_question(text: str, parsed: dict) -> bool:
     return True
 
 def group_and_rebuild(region):
-    sorted_items = sorted(region, key=lambda i: i.get('line_y0', i['bbox'][1]))
+    sorted_items = sorted(region, key=lambda i: (i.get('page', 0), i.get('line_y0', i['bbox'][1]), i['bbox'][0]))
     
     groups = []
     if not sorted_items:

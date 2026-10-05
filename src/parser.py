@@ -381,7 +381,8 @@ def parse_block(block: dict) -> dict:
             return result
         
         words = text.strip().split()
-        if len(words) <= 4 and text.strip() and text.strip()[0].isalpha() and not re.search(r'\([A-Da-d]\)', text):
+        from src.headings import is_heading
+        if is_heading(text.strip()):
             result["question"] = text.strip()
             result["question_type"] = "divider"
             result["id"] = None
@@ -408,6 +409,24 @@ def parse_block(block: dict) -> dict:
     result["options"]       = options
     result["question_type"] = "mcq"
     result["parsed_ok"]     = True
+
+    last_opt = list(result["options"].keys())[-1]
+    opt_text = result["options"][last_opt]
+    words = opt_text.split()
+    from src.headings import is_heading
+    for i in range(min(6, len(words) - 1), 0, -1):
+        suffix = ' '.join(words[-i:]).strip()
+        if is_heading(suffix) and ' '.join(words[:-i]).strip():
+            print(f"DEBUG: suffix={suffix}, prefix={' '.join(words[:-i])}")
+            result["options"][last_opt] = ' '.join(words[:-i]).strip()
+            divider = {
+                "question_type": "divider",
+                "question": suffix,
+                "id": None,
+                "parsed_ok": True
+            }
+            return [result, divider]
+
     return result
 
 
@@ -416,11 +435,13 @@ def parse_all(lines: list[str]) -> tuple[list[dict], list[dict]]:
     blocks = split_questions(lines)
     parsed, failed = [], []
     for b in blocks:
-        r = parse_block(b)
-        if r["parsed_ok"]:
-            parsed.append(r)
-        else:
-            failed.append(b)
+        rs = parse_block(b)
+        if not isinstance(rs, list): rs = [rs]
+        for r in rs:
+            if r["parsed_ok"]:
+                parsed.append(r)
+            else:
+                failed.append(b)
     return parsed, failed
 
 
