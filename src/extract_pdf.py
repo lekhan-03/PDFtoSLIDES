@@ -135,9 +135,14 @@ def segment_and_process(items):
             parsed_res = [parsed_res]
             
         for parsed in parsed_res:
+            parsed['page'] = page
             if parsed.get("question_type") == "divider":
+                # if parsed_res has multiple items, this came from an option D so it's after the question
+                parsed['_sort_order'] = q_id + 0.1 if len(parsed_res) > 1 else q_id - 0.1
                 questions.append(parsed)
                 continue
+            else:
+                parsed['_sort_order'] = q_id
                 
             if validate_question(text, parsed):
                 questions.append(parsed)
@@ -194,24 +199,23 @@ def parse_question_text(text: str, q_id: int) -> dict:
 
         last_opt = list(result["options"].keys())[-1]
         opt_text = result["options"][last_opt]
-        words = opt_text.split()
-        from src.headings import is_heading
-        for i in range(min(6, len(words) - 1), 0, -1):
-            suffix = ' '.join(words[-i:]).strip()
-            if is_heading(suffix) and ' '.join(words[:-i]).strip():
-                result["options"][last_opt] = ' '.join(words[:-i]).strip()
-                divider = {
-                    "question_type": "divider",
-                    "question": suffix,
-                    "id": None,
-                    "parsed_ok": True
-                }
-                return [result, divider]
+        from src.headings import strip_trailing_heading
+        clean_opt, heading = strip_trailing_heading(opt_text)
+        if heading:
+            result["options"][last_opt] = clean_opt
+            divider = {
+                "question_type": "divider",
+                "question": heading,
+                "id": None,
+                "parsed_ok": True
+            }
+            return [result, divider]
     else:
         question_text = text.strip()
         from src.headings import is_heading
-        if is_heading(question_text):
-            result["question"] = question_text
+        words = question_text.split()
+        if is_heading(question_text) or (len(words) <= 4 and not re.search(r'\d', question_text)):
+            result["question"] = question_text.rstrip(':').strip()
             result["question_type"] = "divider"
             result["id"] = None
             result["parsed_ok"] = True

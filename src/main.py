@@ -183,7 +183,14 @@ def main() -> None:
         corr_dict = json.loads(corr_path.read_text(encoding="utf-8"))
         parsed = apply_corrections(parsed, corr_dict)
 
-    parsed.sort(key=lambda q: q["id"] if q.get("id") is not None else float("inf"))
+    # Sort using _sort_order if available, to preserve divider positions
+    parsed.sort(key=lambda q: q.get("_sort_order", q.get("id") if q.get("id") is not None else float("inf")))
+    
+    # Remove _sort_order
+    for q in parsed:
+        if "_sort_order" in q:
+            del q["_sort_order"]
+            
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(
         json.dumps(parsed, indent=2, ensure_ascii=False), encoding="utf-8"

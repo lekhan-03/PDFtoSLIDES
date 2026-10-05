@@ -1,7 +1,4 @@
 {
-  "10": {
-    "question": "$∫_{1}^{sqrt(3)} 3 dt$ (2026M,2025-2)"
-  },
   "17": {
     "question": "The value of $∫ (cos2x+2 sin^{2}x)/(cos^{2}x) dx$"
   },
@@ -13,9 +10,6 @@
   },
   "65": {
     "question": "Integrate $∫ (2-3sinx)/(cos^{2}x) dx$ (2023)"
-  },
-  "66": {
-    "question": "Evaluate $∫_{1}^{sqrt(3)} 3 dt$ (2023,2024-1)"
   },
   "69": {
     "question": "Find $∫ log⁡(x) dx$ (2021m)"

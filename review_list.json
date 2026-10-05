@@ -18,6 +18,12 @@
     ]
   },
   {
+    "id": 4,
+    "reasons": [
+      "stem contains leaked $"
+    ]
+  },
+  {
     "id": 5,
     "reasons": [
       "stem contains leaked $"
@@ -50,13 +56,13 @@
   {
     "id": 10,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 11,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -93,18 +99,18 @@
   {
     "id": 17,
     "reasons": [
-      "stem contains leaked $"
-    ]
-  },
-  {
-    "id": 18,
-    "reasons": [
       "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
-    "id": 22,
+    "id": 21,
+    "reasons": [
+      "stem contains leaked $"
+    ]
+  },
+  {
+    "id": 23,
     "reasons": [
       "stem contains leaked $"
     ]
@@ -118,13 +124,13 @@
   {
     "id": 25,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 26,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -137,13 +143,13 @@
   {
     "id": 28,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 29,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -214,7 +220,7 @@
     ]
   },
   {
-    "id": 41,
+    "id": 42,
     "reasons": [
       "stem contains leaked $"
     ]
@@ -336,13 +342,13 @@
   {
     "id": 62,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 63,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -355,6 +361,7 @@
   {
     "id": 65,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -368,7 +375,6 @@
   {
     "id": 67,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -381,13 +387,13 @@
   {
     "id": 69,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 70,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -514,13 +520,13 @@
   {
     "id": 91,
     "reasons": [
+      "math problems in stem: ['0 integral sign(s) but 1 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 92,
     "reasons": [
-      "math problems in stem: ['0 integral sign(s) but 1 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -605,6 +611,7 @@
   {
     "id": 106,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -618,20 +625,19 @@
   {
     "id": 108,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 109,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 110,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -656,13 +662,13 @@
   {
     "id": 114,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 115,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -675,13 +681,13 @@
   {
     "id": 117,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 118,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -700,26 +706,26 @@
   {
     "id": 121,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 122,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 123,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 124,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -756,26 +762,26 @@
   {
     "id": 130,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 131,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 132,
     "reasons": [
+      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 133,
     "reasons": [
-      "math problems in stem: ['1 integral sign(s) but 0 differential(s)']",
       "stem contains leaked $"
     ]
   },
@@ -794,13 +800,13 @@
   {
     "id": 136,
     "reasons": [
+      "math problems in stem: ['integral with empty integrand']",
       "stem contains leaked $"
     ]
   },
   {
     "id": 137,
     "reasons": [
-      "math problems in stem: ['integral with empty integrand']",
       "stem contains leaked $"
     ]
   },
@@ -824,12 +830,6 @@
   },
   {
     "id": 141,
-    "reasons": [
-      "stem contains leaked $"
-    ]
-  },
-  {
-    "id": 142,
     "reasons": [
       "stem contains leaked $"
     ]
