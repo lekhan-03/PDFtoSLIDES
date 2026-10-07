@@ -37,17 +37,17 @@ def find_repeating_lines(doc, threshold_ratio=0.30):
                         line_counts[(t, y)].add(i)
     return {text for (text, y), pages in line_counts.items() if len(pages) >= threshold}
 
-def extract_pdf_questions(pdf_path: str) -> list[dict]:
+def extract_pdf_blocks(pdf_path: str):
+    from src.document_model import DocumentBlock
     import src.pdf_spans as pdf_spans
     doc = pymupdf.open(pdf_path)
     repeating = find_repeating_lines(doc)
     
-    all_items = []
+    blocks = []
+    global_id = 1
     
     for page_num, page in enumerate(doc):
         pdict = page.get_text("dict")
-        
-        # Use pdf_spans
         items = pdf_spans.page_items(pdict, page_num + 1, repeating_lines=repeating)
         
         for p in page.get_drawings():
@@ -74,199 +74,21 @@ def extract_pdf_questions(pdf_path: str) -> list[dict]:
                         
         for it in items: it.setdefault("line_y0", it["bbox"][1])
         items.sort(key=lambda i: (round(i["line_y0"] / 5) * 5, i["bbox"][0]))
-        all_items.extend(items)
         
-    return segment_and_process(all_items)
-
-def segment_and_process(items):
-    min_x0 = min((i["bbox"][0] for i in items if i["type"] == "text"), default=0)
-    
-    regions = []
-    current_region = []
-    current_q_num = 0
-    max_q_num = 0
-    
-    for item in items:
-        if item["type"] == "text":
-            text = item["text"]
-            x0 = item["bbox"][0]
-            is_start = False
+        lines = group_and_rebuild(items)
+        for line in lines:
+            line = line.strip()
+            if not line: continue
+            blocks.append(DocumentBlock(
+                block_id=global_id,
+                block_type="paragraph",
+                text=line,
+                page=page_num + 1,
+                order=global_id
+            ))
+            global_id += 1
             
-            m1 = re.match(r'^\s*([1-9]\d*)\.(?:\s|$)', text)
-            if m1 and abs(x0 - min_x0) < 40:
-                is_start = True
-                current_q_num = int(m1.group(1))
-                max_q_num = max(max_q_num, current_q_num)
-            elif re.match(r'^\d{4}(,\d{4})*(-\d+)?M?$', text):
-                is_start = True
-                
-            if is_start:
-                if current_region:
-                    regions.append({'num': current_q_num if not is_start else current_region[0].get('q_num', 0), 'items': current_region})
-                current_region = [item]
-                item['q_num'] = current_q_num
-                continue
-                
-        current_region.append(item)
-        
-    if current_region:
-        regions.append({'num': current_q_num, 'items': current_region})
-        
-    questions = []
-    flagged = []
-    found_count = 0
-    
-    for region_obj in regions:
-        region = region_obj['items']
-        if not region: continue
-        
-        q_num = region_obj['num']
-        if q_num > 0:
-            found_count += 1
-            
-        q_id = q_num if q_num > 0 else (len(questions) + 1)
-        page = region[0]['page']
-        
-        lines = group_and_rebuild(region)
-        text = "\n".join(lines)
-        
-        parsed_res = parse_question_text(text, q_id)
-        if not isinstance(parsed_res, list):
-            parsed_res = [parsed_res]
-            
-        for parsed in parsed_res:
-            parsed['page'] = page
-            if parsed.get("question_type") == "divider":
-                # if parsed_res has multiple items, this came from an option D so it's after the question
-                parsed['_sort_order'] = q_id + 0.1 if len(parsed_res) > 1 else q_id - 0.1
-                questions.append(parsed)
-                continue
-            else:
-                parsed['_sort_order'] = q_id
-                
-            if validate_question(text, parsed):
-                questions.append(parsed)
-            else:
-                parsed['parsed_ok'] = False
-                questions.append(parsed)
-                # Only flag actual questions, not the title block
-                if q_num > 0 or "A)" in text or "a)" in text:
-                    flagged.append(f"Q{q_id} (Page {page})")
-            
-    print("-" * 50)
-    print(f"REPORT: Extraction & Validation")
-    print(f"Total questions found: {found_count} | Expected (max num): {max_q_num}")
-    if found_count != max_q_num:
-        print("⚠️  MISMATCH DETECTED: Segmentation may have missed or misidentified questions.")
-    
-    if flagged:
-        print(f"⚠️  Flagged for review ({len(flagged)}): {', '.join(flagged)}")
-    else:
-        print("✅  All questions passed the validation gate.")
-    print("-" * 50)
-    
-    return questions
-
-def parse_question_text(text: str, q_id: int) -> dict:
-    from src.parser import clean_noise
-    text = clean_noise(text)
-    from src.parser import _extract_options, OPTION_RE_TEMPLATE
-    
-    result = {
-        "id": q_id,
-        "section": "Chemistry",
-        "question": None,
-        "options": {},
-        "answer": None,
-        "parsed_ok": False,
-        "question_type": "mcq"
-    }
-    
-    from src.parser import _find_match_column_positions
-    
-    # ── Match-the-column check ────────────────────────────────────────────
-    mc_positions = _find_match_column_positions(text)
-    if mc_positions:
-        mc_question = text[: mc_positions["A"][0]].strip()
-        result["question"] = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', mc_question, flags=re.IGNORECASE)
-        result["options"] = _extract_options(text, mc_positions)
-        result["parsed_ok"] = True
-        result["question_type"] = "match_the_column"
-        return result
-
-    positions = {}
-    search_from = 0
-    for letter in "ABCD":
-        pattern = re.compile(OPTION_RE_TEMPLATE.format(L=letter), re.IGNORECASE)
-        match = pattern.search(text, search_from)
-        if not match:
-            break
-        positions[letter] = (match.start(), match.end())
-        search_from = match.end()
-        
-    if len(positions) == 4:
-        result["question"] = text[:positions["A"][0]].strip()
-        result["options"] = _extract_options(text, positions)
-        result["parsed_ok"] = True
-
-        last_opt = list(result["options"].keys())[-1]
-        opt_text = result["options"][last_opt]
-        from src.headings import strip_trailing_heading
-        clean_opt, heading = strip_trailing_heading(opt_text)
-        if heading:
-            result["options"][last_opt] = clean_opt
-            divider = {
-                "question_type": "divider",
-                "question": heading,
-                "id": None,
-                "parsed_ok": True
-            }
-            return [result, divider]
-    else:
-        question_text = text.strip()
-        from src.headings import is_heading
-        words = question_text.split()
-        if is_heading(question_text) or (len(words) <= 4 and not re.search(r'\d', question_text)):
-            result["question"] = question_text.rstrip(':').strip()
-            result["question_type"] = "divider"
-            result["id"] = None
-            result["parsed_ok"] = True
-        else:
-            result["question"] = question_text
-            result["question_type"] = "open"
-            result["parsed_ok"] = True
-            
-    if result.get("question"):
-        result["question"] = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', result["question"], flags=re.IGNORECASE)
-        
-    return result
-
-def validate_question(text: str, parsed: dict) -> bool:
-    # D. Validation gate
-    if text.count('{') != text.count('}'):
-        return False
-        
-    int_count = text.count('∫') + text.count('\\int')
-    dx_count = text.count('dx')
-    if int_count > 0 and dx_count < int_count:
-        return False
-        
-    # Check for stem
-    if not parsed.get("question"):
-        return False
-        
-    # Check exactly 4 options if it's MCQ
-    # (Actually, rule says EXACTLY 4 options)
-    # If the file is only MCQs, maybe it requires 4 options.
-    # But some might be open. The prompt says "exactly 4 options".
-    # I'll check if it has exactly 4 options.
-    opts = re.findall(r'\([A-Da-d]\)', text)
-    if len(set([o.lower() for o in opts])) != 4:
-        # If open section, maybe it's fine? The prompt said: "Check: it has a stem, exactly 4 options..."
-        # If they strictly want exactly 4 options, they might be running this on a purely MCQ paper.
-        pass
-        
-    return True
+    return blocks
 
 def group_and_rebuild(region):
     sorted_items = sorted(region, key=lambda i: (i.get('page', 0), i.get('line_y0', i['bbox'][1]), i['bbox'][0]))

@@ -1,8 +1,0 @@
-{
-  "statement-1-fix": {
-    "match": "Statement 1: The anti-derivative of",
-    "options": {
-      "B": "Statement 1 is true, and Statement 2 is true, Statement 2 is correct explanation for Statement 1"
-    }
-  }
-}

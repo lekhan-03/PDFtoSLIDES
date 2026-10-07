@@ -1,4 +1,4 @@
-from pdf_spans import spans_to_text, page_items
+from src.pdf_spans import spans_to_text, page_items
 
 
 def sp(text, size, y, x0=0, x1=0):

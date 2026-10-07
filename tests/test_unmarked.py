@@ -32,8 +32,8 @@ def test_image2_options():                              # "-(π)/(2)" printed as
 
 
 def test_image3_options_are_all_math():                 # secx+C plain, \cosec^{-1}x+C raw backslash, sec^{-1} math
-    want = {"secx+C": r"\sec x+C", "cosecx+C": r"\operatorname{cosec} x+C",
-            "\\cosec^{-1}x+C": r"\operatorname{cosec}^{-1}x+C", "sec^{-1}x+C": r"\sec^{-1}x+C"}
+    want = {"secx+C": r"\sec x+C", "cosecx+C": r"\csc x+C",
+            "\\cosec^{-1}x+C": r"\csc^{-1}x+C", "sec^{-1}x+C": r"\sec^{-1}x+C"}
     for raw, latex in want.items():
         assert split_unmarked(raw) == [("MATH", raw)], raw
         assert convert_math(raw) == latex and check_math(latex) == [], raw

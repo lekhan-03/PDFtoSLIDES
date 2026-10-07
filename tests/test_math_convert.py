@@ -25,7 +25,7 @@ CONVERT = [
  ("136a", r"∫_{0}^{a} f(x).dx=∫_{a}^{c} f(x)dx+∫_{c}^{b} f(x)dx",
           r"\int_{0}^{a} f(x)\,dx=\int_{a}^{c} f(x)\,dx+\int_{c}^{b} f(x)\,dx"),
  # earlier slides
- ("cosec", "\\cosec\u2061^{-1}x+C",              r"\operatorname{cosec}^{-1}x+C"),
+ ("cosec", "\\cosec\u2061^{-1}x+C",              r"\csc^{-1}x+C"),
  ("xcos",  "-xcosx-sinx+c",                      r"-x\cos x-\sin x+c"),
 ]
 
