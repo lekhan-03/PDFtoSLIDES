@@ -1,0 +1,178 @@
+{
+  "questions": [
+    {
+      "id": "safe-q1",
+      "question": "Value: $x_B = n_A + n_B$",
+      "options": {
+        "A": "x+1"
+      },
+      "inline_content": [
+        {
+          "kind": "text",
+          "value": "Value: ",
+          "source_block_id": "stem-1"
+        },
+        {
+          "kind": "math_sequence",
+          "value": "$x_B = n_A + n_B$",
+          "source_block_id": "stem-1"
+        }
+      ],
+      "source_blocks": [
+        {
+          "block_id": "stem-1",
+          "role": "stem"
+        }
+      ],
+      "render": {
+        "status": "degraded",
+        "diagnostics": [
+          {
+            "code": "TEXT_LAYOUT_DEGRADED",
+            "severity": "warning",
+            "question_id": "safe-q1",
+            "component_id": "option:A",
+            "source_block_id": "stem-1",
+            "node_id": "stem-1:unknown:1",
+            "reason": "canonical nodes could not be aligned with rendered component text",
+            "fallback": "compatibility text",
+            "slide_ids": [
+              2
+            ]
+          },
+          {
+            "code": "MATH_RENDER_FAILED",
+            "severity": "warning",
+            "reason": "canonical math node has no render outcome",
+            "fallback": "no output",
+            "fallback_text": "no output",
+            "source_text": "$x_B = n_A + n_B$",
+            "render_path": "fallback",
+            "status": "degraded",
+            "question_id": "safe-q1",
+            "component_id": "question",
+            "component_type": "stem",
+            "option_label": null,
+            "source_block_id": "stem-1",
+            "node_id": null,
+            "math_id": "SAFE-Q1-BLOCK-STEM-1-MATH-001",
+            "original": "$x_B = n_A + n_B$"
+          }
+        ],
+        "slide_ids": [
+          2
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "rendered_count": 1,
+    "rendered_slides": 2,
+    "render_diagnostics": [
+      {
+        "code": "MATH_COMPATIBILITY_RENDERED",
+        "severity": "info",
+        "reason": "native inline math is deferred for PowerPoint package safety",
+        "fallback": "x_B = n_A + n_B",
+        "fallback_text": "x_B = n_A + n_B",
+        "source_text": "$x_B = n_A + n_B$",
+        "render_path": "compatibility",
+        "status": "ok",
+        "question_id": "safe-q1",
+        "component_id": "question",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "stem-1",
+        "node_id": "stem-1:unknown:2",
+        "math_id": "SAFE-Q1-BLOCK-STEM-1-MATH-002",
+        "original": "$x_B = n_A + n_B$",
+        "slide_ids": [
+          2
+        ]
+      },
+      {
+        "code": "TEXT_LAYOUT_DEGRADED",
+        "severity": "warning",
+        "question_id": "safe-q1",
+        "component_id": "option:A",
+        "source_block_id": "stem-1",
+        "node_id": "stem-1:unknown:1",
+        "reason": "canonical nodes could not be aligned with rendered component text",
+        "fallback": "compatibility text",
+        "slide_ids": [
+          2
+        ]
+      },
+      {
+        "code": "MATH_RENDER_FAILED",
+        "severity": "warning",
+        "reason": "canonical math node has no render outcome",
+        "fallback": "no output",
+        "fallback_text": "no output",
+        "source_text": "$x_B = n_A + n_B$",
+        "render_path": "fallback",
+        "status": "degraded",
+        "question_id": "safe-q1",
+        "component_id": "question",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "stem-1",
+        "node_id": null,
+        "math_id": "SAFE-Q1-BLOCK-STEM-1-MATH-001",
+        "original": "$x_B = n_A + n_B$"
+      }
+    ],
+    "render_status": "degraded",
+    "math_fallback_count": 1,
+    "render_diagnostic_counts": {
+      "MATH_COMPATIBILITY_RENDERED": 1,
+      "TEXT_LAYOUT_DEGRADED": 1,
+      "MATH_RENDER_FAILED": 1
+    },
+    "math_render_counts": {
+      "canonical_math_nodes": 1,
+      "native_math_entries": 0,
+      "fallback_math_entries": 0,
+      "fallback_math_nodes": 0,
+      "compatibility_math_nodes": 1,
+      "failed_math_nodes": 1,
+      "unrendered_canonical_math_nodes": 0,
+      "native_entries_without_canonical_node": 0,
+      "math_outcome_nodes": 2,
+      "math_outcome_ids_unique": true
+    },
+    "math_render_outcomes": [
+      {
+        "math_id": "SAFE-Q1-BLOCK-STEM-1-MATH-002",
+        "question_id": "safe-q1",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "stem-1",
+        "node_id": "stem-1:unknown:2",
+        "render_path": "compatibility",
+        "status": "ok",
+        "source_text": "$x_B = n_A + n_B$",
+        "fallback_text": "x_B = n_A + n_B",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0
+      },
+      {
+        "math_id": "SAFE-Q1-BLOCK-STEM-1-MATH-001",
+        "question_id": "safe-q1",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "stem-1",
+        "node_id": null,
+        "render_path": "failed",
+        "status": "failed",
+        "source_text": "$x_B = n_A + n_B$",
+        "fallback_text": "",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0,
+        "reason": "canonical math node has no render outcome"
+      }
+    ]
+  }
+}

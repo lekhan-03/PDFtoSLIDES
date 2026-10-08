@@ -1,4 +1,4 @@
-from src.pdf_spans import spans_to_text, page_items
+from src.pdf_spans import spans_to_text, spans_to_inline_content, page_items
 
 
 def sp(text, size, y, x0=0, x1=0):
@@ -20,6 +20,8 @@ def test_subscripts_and_exponents():
     assert spans_to_text([sp("e", 12, 100), sp("x", 8, 96)]) == "eˣ"
     assert spans_to_text([sp("x", 12, 100), sp("2n+1", 8, 96)]) == "x²ⁿ⁺¹"
     assert spans_to_text([sp("x", 12, 100), sp("q", 8, 96)]) == "x^{q}"            # not mappable -> ^{..} marker
+    inline = spans_to_inline_content([sp("x", 12, 100), sp("2", 8, 103)])
+    assert inline[1]["vertical_align"] == "subscript"
 
 
 def test_small_text_on_the_baseline_is_left_alone():    # e.g. small-caps or a footnote marker on the same baseline
@@ -36,6 +38,9 @@ def test_page_items_keep_the_charge_with_its_own_line_and_split_columns():
     items = page_items(page, 7)
     assert [i["text"] for i in items] == ["Statement II is correct", "42. Fe²⁺ / Fe", "(A) Zero order kinetics",
                                           "(B) Half-order kinetics"], [i["text"] for i in items]
+    charge = next(item for item in items if "Fe²⁺" in item["text"])
+    assert any(part["value"] == "2+" and part["vertical_align"] == "superscript"
+               for part in charge["inline_content"])
 
 
 if __name__ == "__main__":

@@ -38,7 +38,7 @@ def find_repeating_lines(doc, threshold_ratio=0.30):
     return {text for (text, y), pages in line_counts.items() if len(pages) >= threshold}
 
 def extract_pdf_blocks(pdf_path: str):
-    from src.document_model import DocumentBlock
+    from src.document_model import DocumentBlock, InlineContent
     import src.pdf_spans as pdf_spans
     doc = pymupdf.open(pdf_path)
     repeating = find_repeating_lines(doc)
@@ -84,7 +84,15 @@ def extract_pdf_blocks(pdf_path: str):
                 block_type="paragraph",
                 text=line,
                 page=page_num + 1,
-                order=global_id
+                order=global_id,
+                inline_content=[InlineContent(
+                    kind=part.get("kind", "text"),
+                    value=part.get("value", ""),
+                    vertical_align=part.get("vertical_align"),
+                    formatting=part.get("formatting", {}),
+                    source=part.get("source", {}),
+                ) for part in it.get("inline_content", [])],
+                runs=it.get("inline_content", []),
             ))
             global_id += 1
             

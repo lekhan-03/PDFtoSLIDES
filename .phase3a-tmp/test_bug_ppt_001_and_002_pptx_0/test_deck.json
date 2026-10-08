@@ -1,0 +1,61 @@
+{
+  "source": {
+    "filename": "physics_sample_exam.docx"
+  },
+  "metadata": {
+    "title": "Physics Sample Exam"
+  },
+  "questions": [
+    {
+      "id": "q-1",
+      "question": "What is the speed of light?",
+      "options": {
+        "A": "3x10^8 m/s",
+        "B": "3x10^6 m/s",
+        "C": "100 m/s",
+        "D": "0"
+      },
+      "question_type": "mcq",
+      "parsed_ok": true,
+      "needs_review": false,
+      "render": {
+        "status": "rendered",
+        "diagnostics": [],
+        "slide_ids": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "q-2",
+      "question": "Incomplete question needing review",
+      "options": {},
+      "question_type": "mcq",
+      "parsed_ok": false,
+      "needs_review": true,
+      "render": {
+        "status": "rendered",
+        "diagnostics": [],
+        "slide_ids": [
+          3
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "rendered_count": 2,
+    "rendered_slides": 3,
+    "render_diagnostics": [],
+    "render_status": "rendered",
+    "math_fallback_count": 0,
+    "render_diagnostic_counts": {},
+    "math_render_counts": {
+      "canonical_math_nodes": 0,
+      "native_math_entries": 3,
+      "fallback_math_entries": 3,
+      "failed_math_nodes": 0,
+      "unrendered_canonical_math_nodes": 0,
+      "native_entries_without_canonical_node": 3
+    }
+  }
+}

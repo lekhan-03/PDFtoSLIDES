@@ -1,0 +1,85 @@
+{
+  "questions": [
+    {
+      "id": "q-media",
+      "question": "See image",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "images": [
+        {
+          "path": "absent.png",
+          "media_id": "m-7",
+          "source_block_id": "b-8"
+        }
+      ],
+      "render": {
+        "status": "degraded",
+        "diagnostics": [
+          {
+            "code": "MEDIA_RENDER_FAILED",
+            "severity": "warning",
+            "question_id": "q-media",
+            "source_block_id": "b-8",
+            "component_id": "image:m-7",
+            "node_id": "m-7",
+            "media_id": "m-7",
+            "source_path": "absent.png",
+            "reason": "missing_file",
+            "exception": "FileNotFoundError",
+            "fallback": "placeholder",
+            "slide_ids": [
+              2
+            ]
+          }
+        ],
+        "slide_ids": [
+          2
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "rendered_count": 1,
+    "rendered_slides": 2,
+    "render_diagnostics": [
+      {
+        "code": "MEDIA_RENDER_FAILED",
+        "severity": "warning",
+        "question_id": "q-media",
+        "source_block_id": "b-8",
+        "component_id": "image:m-7",
+        "node_id": "m-7",
+        "media_id": "m-7",
+        "source_path": "absent.png",
+        "reason": "missing_file",
+        "exception": "FileNotFoundError",
+        "fallback": "placeholder",
+        "slide_ids": [
+          2
+        ]
+      }
+    ],
+    "render_status": "degraded",
+    "math_fallback_count": 0,
+    "render_diagnostic_counts": {
+      "MEDIA_RENDER_FAILED": 1
+    },
+    "math_render_counts": {
+      "canonical_math_nodes": 0,
+      "native_math_entries": 0,
+      "fallback_math_entries": 0,
+      "fallback_math_nodes": 0,
+      "compatibility_math_nodes": 0,
+      "failed_math_nodes": 0,
+      "unrendered_canonical_math_nodes": 0,
+      "native_entries_without_canonical_node": 0,
+      "math_outcome_nodes": 0,
+      "math_outcome_ids_unique": true
+    },
+    "math_render_outcomes": []
+  }
+}

@@ -52,6 +52,39 @@ def spans_to_text(spans, small=0.95, min_shift=1.0):
     return "".join(out)
 
 
+def spans_to_inline_content(spans, small=0.95, min_shift=1.0):
+    """Return ordered span data with script roles before Unicode conversion."""
+    real = [s for s in spans if s["text"].strip()]
+    base_size = None
+    base_y = None
+    if real:
+        top = max(s["size"] for s in real)
+        counts = Counter()
+        for span in real:
+            if span["size"] >= top * small:
+                counts[round(span["size"], 1)] += len(span["text"].strip())
+        if counts:
+            base_size = counts.most_common(1)[0][0]
+            base_y = next(s["origin"][1] for s in real if round(s["size"], 1) == base_size)
+
+    result = []
+    for span in spans:
+        align = None
+        if (base_size is not None and span["text"].strip()
+                and span["size"] < base_size * small
+                and abs(span["origin"][1] - base_y) >= min_shift):
+            align = "superscript" if span["origin"][1] < base_y else "subscript"
+        result.append({
+            "kind": "text",
+            "value": span["text"],
+            "vertical_align": align,
+            "formatting": {"font": span.get("font"), "size": span.get("size"),
+                           "color": span.get("color"), "flags": span.get("flags")},
+            "source": {"bbox": span.get("bbox"), "origin": span.get("origin")},
+        })
+    return result
+
+
 def page_items(page_dict, page_no, gap_factor=2.0, repeating_lines=None):
     repeating_lines = repeating_lines or set()
     """One item per line segment; spans further apart than gap_factor * font size start a new segment
@@ -79,6 +112,7 @@ def page_items(page_dict, page_no, gap_factor=2.0, repeating_lines=None):
                 text = spans_to_text(g).strip()
                 if text:
                     items.append({"type": "text", "text": text, "page": page_no,
-                                  "bbox": (g[0]["bbox"][0], ly0, g[-1]["bbox"][2], ly1)})
+                                  "bbox": (g[0]["bbox"][0], ly0, g[-1]["bbox"][2], ly1),
+                                  "inline_content": spans_to_inline_content(g)})
     items.sort(key=lambda i: (round(i["bbox"][1] / 5) * 5, i["bbox"][0]))
     return items

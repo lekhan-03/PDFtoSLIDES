@@ -1,0 +1,33 @@
+{
+  "source": {
+    "filename": "math_exam.docx"
+  },
+  "questions": [
+    {
+      "id": "q-1",
+      "source_question_number": "1",
+      "question": "Evaluate α + β + γ + Δ and ∫ √x dx with H₂O and SO₄²⁻ and 10¹⁴",
+      "options": {
+        "A": "10¹⁴",
+        "B": "H₂O",
+        "C": "α",
+        "D": "√2"
+      },
+      "question_type": "mcq",
+      "render": {
+        "pdf": {
+          "status": "rendered",
+          "diagnostics": []
+        }
+      }
+    }
+  ],
+  "diagnostics": {
+    "pdf_render": {
+      "rendered_count": 1,
+      "page_count": 1,
+      "status": "rendered",
+      "render_diagnostics": []
+    }
+  }
+}

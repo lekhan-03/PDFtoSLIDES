@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "id": "q-pdf",
+      "source_question_number": "1",
+      "section": "Physics",
+      "question": "10⁵ × N C⁻¹ and ε₀ E; SO₄²⁻ at 90° ± 5°; √(a²+b²).",
+      "options": {
+        "A": "Na⁺",
+        "B": "Cl⁻",
+        "C": "μ + π",
+        "D": "45°"
+      },
+      "table": {
+        "rows": [
+          [
+            "Quantity",
+            "\\frac{a+b}{c+d}",
+            "H₂O"
+          ]
+        ]
+      },
+      "render": {
+        "pdf": {
+          "status": "rendered",
+          "diagnostics": []
+        }
+      }
+    }
+  ],
+  "diagnostics": {
+    "pdf_render": {
+      "rendered_count": 1,
+      "page_count": 1,
+      "status": "rendered",
+      "render_diagnostics": []
+    }
+  }
+}

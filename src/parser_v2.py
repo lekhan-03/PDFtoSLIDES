@@ -1,5 +1,5 @@
 import re
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 from src.document_model import DocumentBlock
 
 # ── Regex Constants ──────────────────────────────────────────
@@ -11,10 +11,10 @@ OPTION_RE_TEMPLATE = r"(?:(?<!-)\({L}\)|(?<![a-zA-Z0-9-])\b{L}\.(?=\s|$)|(?<![a-
 _MARKS_HEADER_RE = re.compile(
     r'^\d+\s+[Mm]arks?(\s*\(.*?\))?\s*$', re.IGNORECASE)
 _KNOWN_SECTION_HEADERS_RE = re.compile(
-    r'^(?:MCQs?|MCQ[’\']s|Fill in the blanks?(\s*\(.*?\))?|FIB|'
+    r'^(?:Multiple Choice Questions|Fill in the blanks?(\s*\(.*?\))?|FIB|'
     r'Match the (?:following|column)|Assertion and Reason|'
     r'Very Short Answer Questions?|Short Answer Questions?|Long Answer Questions?|'
-    r'Section\s+[A-Z\d]+|Part\s+[A-Z\d]+|'
+    r'(?:Section|Part)\s+[A-Z\d]+(?:\s*[:\-–—].*)?|'
     r'Physics|Chemistry|Biology|'
     r'Previous Years Questions|NCERT Based Questions)\s*$',
     re.IGNORECASE
@@ -80,11 +80,14 @@ def extract_metadata_spans(text: str) -> Tuple[str, List[str]]:
 # ── Pipeline ─────────────────────────────────────────────────
 
 
-def run_pipeline(blocks: List[DocumentBlock]) -> Dict[str, Any]:
-    blocks = remove_noise(blocks)
-    section_map = detect_sections(blocks)
+def run_pipeline(blocks: List[DocumentBlock], use_llm: bool = False) -> Dict[str, Any]:
+    initial_block_ids = {b.block_id for b in blocks}
+    cleaned_blocks = remove_noise(blocks)
+    noise_block_ids = initial_block_ids - {b.block_id for b in cleaned_blocks}
 
-    for b in blocks:
+    section_map = detect_sections(cleaned_blocks)
+
+    for b in cleaned_blocks:
         if b.block_type == "paragraph":
             cleaned, apps = extract_metadata_spans(b.text)
             b.text = cleaned
@@ -93,8 +96,12 @@ def run_pipeline(blocks: List[DocumentBlock]) -> Dict[str, Any]:
                     b.metadata['appearances'] = []
                 b.metadata['appearances'].extend(apps)
 
-    blocks = split_inline_options(blocks)
-    candidates = build_question_candidates(blocks, section_map)
+    split_blocks = split_inline_options(cleaned_blocks)
+    for b in split_blocks:
+        if "parent_block_id" in b.metadata and b.metadata["parent_block_id"] in section_map:
+            section_map[b.block_id] = section_map[b.metadata["parent_block_id"]]
+
+    candidates = build_question_candidates(split_blocks, section_map)
 
     parsed = []
     global_id = 1
@@ -111,10 +118,81 @@ def run_pipeline(blocks: List[DocumentBlock]) -> Dict[str, Any]:
 
     final_questions = recover_and_validate(parsed)
 
-    # Extract unique sections for the schema
-    unique_sections = list(set(section_map.values()))
+    # Optional LLM recovery if requested (BUG-LLM-001 / BUG-FBK-001)
+    if use_llm:
+        try:
+            from src.llm_fallback import recover_questions_batch
+            final_questions = recover_questions_batch(final_questions)
+            final_questions = recover_and_validate(final_questions)
+        except Exception as e:
+            print(f"⚠️ LLM recovery skipped: {e}")
+
+    # Citation-only paragraphs have no candidate text after metadata extraction.
+    # Attach them to the nearest preceding question (or the first following one)
+    # so their source identity and appearances remain traceable.
+    metadata_only = [b for b in cleaned_blocks
+                     if b.block_type == "paragraph" and not b.text.strip()
+                     and b.metadata.get("appearances")]
+    order_by_id = {b.block_id: b.order for b in blocks}
+    order_by_id.update({b.block_id: order_by_id.get(b.metadata.get("parent_block_id"), b.order)
+                        for b in split_blocks if "parent_block_id" in b.metadata})
+    for source_block in metadata_only:
+        preceding = [q for q in final_questions if any(
+            order_by_id.get(block_id, -1) < source_block.order
+            for block_id in q.get("block_ids", []))]
+        target = preceding[-1] if preceding else (final_questions[0] if final_questions else None)
+        if target is None:
+            continue
+        target["appearances"] = list(dict.fromkeys(
+            target.get("appearances", []) + source_block.metadata["appearances"]))
+        if source_block.block_id not in target.setdefault("block_ids", []):
+            target["block_ids"].append(source_block.block_id)
+        source_refs = target.setdefault("source_blocks", [])
+        if not any(ref.get("block_id") == source_block.block_id for ref in source_refs):
+            source_refs.append({"block_id": source_block.block_id, "role": "metadata"})
+
+    # BUG-DET-001: Extract unique sections preserving document appearance order
+    unique_sections = list(dict.fromkeys(section_map.values()))
     sections_list = [{"id": f"section-{i+1}", "title": s}
         for i, s in enumerate(unique_sections)]
+
+    # Source Block Ledger & Reconciliation (BUG-DIAG-001, BUG-DIAG-002)
+    assigned_block_ids = []
+    block_owners = {}
+    for q in final_questions:
+        for bid in q.get("block_ids", []):
+            assigned_block_ids.append(bid)
+            block_owners.setdefault(bid, []).append(q.get("id"))
+
+    from collections import Counter
+    counts = Counter(assigned_block_ids)
+    duplicate_blocks = [bid for bid, count in counts.items() if count > 1]
+    assigned_set = set(assigned_block_ids)
+
+    orphan_blocks = []
+    source_ledger = []
+    for source in blocks:
+        bid = source.block_id
+        if bid in noise_block_ids:
+            source_ledger.append({"source_block_id": bid, "status": "ignored_with_reason", "reason": "matched configured noise filter"})
+            continue
+        # If bid was split, check if its derived parts were assigned
+        is_assigned = (bid in assigned_set) or any(
+            isinstance(ab, str) and ab.startswith(f"{bid}.part_") for ab in assigned_set
+        )
+        if is_assigned:
+            owner_id = next((qid for owned_id, owners in block_owners.items()
+                             if owned_id == bid or (isinstance(owned_id, str) and owned_id.startswith(f"{bid}.part_"))
+                             for qid in owners), None)
+            source_ledger.append({"source_block_id": bid, "question_id": owner_id, "status": "consumed"})
+            continue
+        if not is_assigned:
+            # Also check if it was a standalone section header
+            if source.block_type == "paragraph" and is_section_header(source.text):
+                source_ledger.append({"source_block_id": bid, "status": "ignored_with_reason", "reason": "section heading retained in section metadata"})
+                continue
+            orphan_blocks.append(bid)
+            source_ledger.append({"source_block_id": bid, "status": "orphaned"})
 
     numbered = sum(1 for q in final_questions if q.get("source_question_number"))
     unnumbered = len(final_questions) - numbered
@@ -123,18 +201,29 @@ def run_pipeline(blocks: List[DocumentBlock]) -> Dict[str, Any]:
     images_count = sum(len(q.get("images", [])) for q in final_questions)
     suspicious = sum(1 for q in final_questions if any("SUSPICIOUS" in issue for issue in q.get("validation", {}).get("issues", [])))
     
+    accepted_count = sum(1 for q in final_questions if q.get("parsed_ok") and not q.get("needs_review"))
+    # Keep outcome buckets disjoint so diagnostics reconcile to detected count.
+    needs_review_count = sum(1 for q in final_questions if q.get("needs_review") and q.get("parsed_ok"))
+    rejected_count = sum(1 for q in final_questions if not q.get("parsed_ok"))
+    numbering_events = [q["numbering_event"] for q in final_questions
+                        if q.get("numbering_event")
+                        and q["numbering_event"].get("event") != "sequence"]
+
     print("\nParser Audit")
     print("-" * 23)
     print(f"Sections: {len(unique_sections)}")
     print(f"Questions: {len(final_questions)}")
+    print(f"  Accepted: {accepted_count}")
+    print(f"  Needs Review: {needs_review_count}")
+    print(f"  Rejected: {rejected_count}")
     print(f"Numbered: {numbered}")
     print(f"Unnumbered: {unnumbered}")
     print(f"Subparts: {subparts_count}")
     print(f"Tables: {tables_count}")
     print(f"Images: {images_count}")
     print(f"Suspicious candidates: {suspicious}")
-    print(f"Orphan blocks: 0")
-    print(f"Duplicate block references: 0\n")
+    print(f"Orphan blocks: {len(orphan_blocks)}")
+    print(f"Duplicate block references: {len(duplicate_blocks)}\n")
 
     return {
         "schema_version": "2.0",
@@ -146,9 +235,17 @@ def run_pipeline(blocks: List[DocumentBlock]) -> Dict[str, Any]:
         "sections": sections_list,
         "questions": final_questions,
         "diagnostics": {
-            "total_source_blocks": len(blocks),
+            "total_source_blocks": len(initial_block_ids),
             "total_questions": len(final_questions),
-            "orphan_blocks": [],
+            "questions_detected": len(final_questions),
+            "questions_accepted": accepted_count,
+            "questions_needs_review": needs_review_count,
+            "questions_rejected": rejected_count,
+            "questions_flagged_for_review": sum(1 for q in final_questions if q.get("needs_review")),
+            "orphan_blocks": orphan_blocks,
+            "duplicate_blocks": duplicate_blocks,
+            "source_ledger": source_ledger,
+            "numbering_events": numbering_events,
             "warnings": [],
             "errors": []
         }
@@ -201,23 +298,47 @@ def split_inline_options(blocks: List[DocumentBlock]) -> List[DocumentBlock]:
             new_blocks.append(b)
             continue
 
-        # Split it up!
+        # Split it up with stable derived IDs (BUG-BLOCK-001)
         last_idx = 0
+        part_idx = 1
         for m in matches:
             # Add text before this option if any
             if m.start() > last_idx:
                 pre_text = text[last_idx:m.start()].strip()
                 if pre_text:
+                    sub_meta = b.metadata.copy()
+                    sub_meta["parent_block_id"] = b.block_id
+                    sub_meta["derived_part"] = part_idx
                     new_blocks.append(DocumentBlock(
-                        block_id=b.block_id, block_type="paragraph", text=pre_text, metadata=b.metadata.copy()))
+                        block_id=f"{b.block_id}.part_{part_idx}",
+                        block_type="paragraph",
+                        text=pre_text,
+                        order=b.order,
+                        source=b.source,
+                        metadata=sub_meta,
+                        runs=b.runs,
+                        inline_content=b.inline_content
+                    ))
+                    part_idx += 1
             last_idx = m.start()
 
         # Add the last option and its text
         if last_idx < len(text):
             post_text = text[last_idx:].strip()
             if post_text:
+                sub_meta = b.metadata.copy()
+                sub_meta["parent_block_id"] = b.block_id
+                sub_meta["derived_part"] = part_idx
                 new_blocks.append(DocumentBlock(
-                    block_id=b.block_id, block_type="paragraph", text=post_text, metadata=b.metadata.copy()))
+                    block_id=f"{b.block_id}.part_{part_idx}",
+                    block_type="paragraph",
+                    text=post_text,
+                    order=b.order,
+                    source=b.source,
+                    metadata=sub_meta,
+                    runs=b.runs,
+                    inline_content=b.inline_content
+                ))
 
     return new_blocks
 
@@ -229,6 +350,8 @@ def is_instruction(text: str) -> bool:
 
 def is_section_header(text: str) -> bool:
     stripped = text.strip()
+    if stripped.upper() in ("MCQ", "MCQS", "MCQ'S", "MCQ’S", "EXPLANATION", "IMPORTANT", "NOTE", "II", "III", "IV"):
+        return False
     if _MARKS_HEADER_RE.match(stripped) or _KNOWN_SECTION_HEADERS_RE.match(stripped):
         return True
     if len(stripped) < 3 or len(stripped) > 80:
@@ -238,6 +361,18 @@ def is_section_header(text: str) -> bool:
     if _NON_SECTION_STARTERS.match(stripped):
         return False
     if _Q_NUM_RE.match(stripped) or _OPTION_LABEL_RE.match(stripped):
+        return False
+
+    # Exclude column headers, statements, and match items (BUG-BND-002)
+    t_lower = stripped.lower()
+    if re.search(r'\b(?:column\s*[iIvV\d]+|list\s*[-–—]?[iIvV\d]+|statement\s*[-–—]?[iIvV\d]+)\b', t_lower):
+        return False
+    if re.match(r'^(?:[ivxIVX]+|[a-eA-E])\b', stripped) and len(stripped.split()) <= 2:
+        return False
+    # Exclude math formulas
+    if any(m in stripped for m in ('$', '\\int', '\\frac', '=', '∫', '∑', '√', '±', '→')):
+        return False
+    if is_instruction(text):
         return False
 
     words = stripped.split()
@@ -253,9 +388,7 @@ def is_section_header(text: str) -> bool:
     if not significant_words:
         return False
     upper_words = sum(
-        1 for w in significant_words if w[0].isupper() or w.isdigit())
-    if is_instruction(text):
-        return False
+        1 for w in significant_words if (w.rstrip(':.,') and (w.rstrip(':.,')[0].isupper() or w.rstrip(':.,')[0].isdigit())))
     return upper_words / len(significant_words) >= 0.7 and len(words) <= 10
 
 
@@ -365,9 +498,15 @@ def decide_boundary(
         decision = "CONTINUE"
         reason = "Subpart/Roman numeral"
     elif section_transition:
-        signals["section_change"] = 0.9
-        decision = "NEW_QUESTION"
-        reason = "Section transition"
+        # BUG-BND-001: Only split if current candidate is substantial
+        if current_cand["blocks"] and (has_options or num_info or is_question_like_start(text)):
+            signals["section_change"] = 0.9
+            decision = "NEW_QUESTION"
+            reason = "Section transition"
+        else:
+            signals["section_change"] = 0.4
+            decision = "CONTINUE"
+            reason = "Section transition but current candidate incomplete"
     elif is_instruction(text):
         signals["continuation"] = 0.9
         decision = "CONTINUE"
@@ -407,7 +546,9 @@ def decide_boundary(
                 
         if is_question_like_start(text):
             signals["new_question_like"] = 0.7
-            if cand_seems_complete:
+            # BUG-BND-003: Do not split premise + command (e.g. "Let f(x)... Find...")
+            is_premise_cmd = not has_options and not num_info and any(text.lower().startswith(w) for w in ["find", "evaluate", "calculate", "prove", "determine", "then", "hence", "where"])
+            if cand_seems_complete and not is_premise_cmd:
                 decision = "NEW_QUESTION"
                 reason = "Looks like new question + previous complete"
                 
@@ -447,7 +588,10 @@ def build_question_candidates(blocks: List[DocumentBlock], section_map: Dict[int
     candidates = []
     current_cand = None
     
-    numbering_context = {"section": "General", "current_main": None, "observed": set()}
+    numbering_context = {"section": "General", "current_main": None,
+                         "observed": set(), "last_kind": None}
+    roman_values = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5,
+                    "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10}
     
     for b in blocks:
         if b.block_type == "paragraph" and is_section_header(b.text): continue
@@ -455,21 +599,36 @@ def build_question_candidates(blocks: List[DocumentBlock], section_map: Dict[int
             
         block_section = section_map.get(b.block_id, "General")
         section_transition = False
+        section_previous_main = None
         if block_section != numbering_context["section"]:
+            section_previous_main = numbering_context["current_main"]
             numbering_context["section"] = block_section
             numbering_context["current_main"] = None
             numbering_context["observed"] = set()
+            numbering_context["last_kind"] = None
             section_transition = True
             
         num_info = None
         if b.block_type == "paragraph":
             num_info = detect_question_number(b.text)
             
+        roman_as_main = False
+        if num_info and num_info["kind"] == "roman":
+            roman_body = re.sub(r'^[IVX]+\.\s*', '', b.text.strip(), flags=re.I)
+            current_text = " ".join(x.text for x in current_cand["blocks"]) if current_cand else ""
+            has_complete_options = all(re.search(
+                OPTION_RE_TEMPLATE.format(L=f"[{letter.lower()}{letter.upper()}]"), current_text, re.I)
+                for letter in "ABCD")
+            roman_as_main = is_question_like_start(roman_body) and (
+                current_cand is None or has_complete_options or section_transition)
+
         if current_cand:
             decision, _ = decide_boundary(
                 current_cand, b, block_section, section_transition, 
                 num_info, numbering_context, debug=debug
             )
+            if roman_as_main:
+                decision = "NEW_QUESTION"
             
             if decision == "NEW_QUESTION":
                 candidates.append(current_cand)
@@ -477,11 +636,35 @@ def build_question_candidates(blocks: List[DocumentBlock], section_map: Dict[int
                 
         if current_cand is None:
             current_cand = {"blocks": [b], "section": block_section}
-            if num_info and num_info["kind"] == "main":
-                current_cand["source_question_number"] = str(num_info["value"])
+            if num_info and (num_info["kind"] == "main" or roman_as_main):
+                scheme = "roman" if roman_as_main else "arabic"
+                value = roman_values[num_info["value"]] if roman_as_main else num_info["value"]
+                label = str(num_info["value"])
+                previous = section_previous_main if section_transition else numbering_context["current_main"]
+                if section_transition and section_previous_main is not None:
+                    event = "section_reset"
+                elif scheme != numbering_context["last_kind"] and numbering_context["last_kind"]:
+                    event = "numbering_scheme_transition"
+                elif previous is not None and value < previous:
+                    event = "regression"
+                elif value in numbering_context["observed"]:
+                    event = "duplicate"
+                elif previous is not None and value > previous + 1:
+                    event = "gap"
+                else:
+                    event = "sequence"
+                current_cand["source_question_number"] = label
                 current_cand["raw_question_number"] = num_info["raw"]
-                numbering_context["current_main"] = num_info["value"]
-                numbering_context["observed"].add(num_info["value"])
+                current_cand["numbering"] = {"scheme": scheme, "value": value,
+                                              "section": block_section}
+                current_cand["numbering_event"] = {
+                    "event": event, "previous": previous, "current": value,
+                    "scheme": scheme, "section": block_section,
+                    "duplicate": value in numbering_context["observed"],
+                }
+                numbering_context["current_main"] = value
+                numbering_context["observed"].add(value)
+                numbering_context["last_kind"] = scheme
         else:
             current_cand["blocks"].append(b)
                 
@@ -505,10 +688,43 @@ def reconstruct_components(cand: Dict[str, Any]) -> Dict[str, Any]:
     
     source_blocks = []
     block_ids = []
+    inline_content = []
+    seen_inline_sources = set()
     for b in blocks:
+        extracted_text = b.text
+        source_paragraph_id = b.metadata.get(
+            "source_paragraph_id", b.metadata.get("parent_block_id", b.block_id))
+        if b.inline_content and source_paragraph_id not in seen_inline_sources:
+            seen_inline_sources.add(source_paragraph_id)
+            for inline in b.inline_content:
+                item = inline.to_dict() if hasattr(inline, "to_dict") else dict(inline)
+                item["source_block_id"] = b.metadata.get("parent_block_id", b.block_id)
+                item["source_order"] = b.order
+                item["inline_index"] = len(inline_content)
+                inline_content.append(item)
+        if b.block_type == "paragraph":
+            # Keep citations/appearance tags in their source block metadata even
+            # when reconstruct_components is called outside the full pipeline.
+            extracted_text, inline_appearances = extract_metadata_spans(b.text)
+            if inline_appearances:
+                existing = b.metadata.setdefault("appearances", [])
+                b.metadata["appearances"] = list(dict.fromkeys(existing + inline_appearances))
         if b.block_id not in block_ids:
             block_ids.append(b.block_id)
-            source_blocks.append({"block_id": b.block_id, "role": "stem"}) # Default role
+            # BUG-REC-001: Assign meaningful roles to source blocks
+            role = "stem"
+            if b.block_type == "table":
+                role = "table"
+            elif b.block_type == "image" or "[IMG:" in b.text:
+                role = "image"
+            elif re.match(OPTION_RE_TEMPLATE.format(L="[A-Ea-e]"), b.text, re.I):
+                role = "option"
+            elif re.match(r'^(?:Statement\s*(?:I|II|1|2)|[A-E]\.\s+)', b.text, re.I):
+                role = "statement"
+            elif re.match(r'^\([a-zivx]+\)\s+', b.text, re.I):
+                role = "subpart"
+            b.metadata["role"] = role
+            source_blocks.append({"block_id": b.block_id, "role": role})
             
         if b.metadata.get("appearances"): metadata_appearances.extend(b.metadata["appearances"])
         if b.block_type == "table":
@@ -518,7 +734,7 @@ def reconstruct_components(cand: Dict[str, Any]) -> Dict[str, Any]:
                 img_path = match.group(1)
                 images.append({"id": f"img-{len(images)+1}", "path": img_path, "source_block_id": b.block_id, "confidence": 1.0})
                 return ""
-            t = re.sub(r'\[IMG:\s*(.*?)\]', img_replacer, b.text)
+            t = re.sub(r'\[IMG:\s*(.*?)\]', img_replacer, extracted_text)
             
             for m in re.finditer(r'\$(.*?)\$', t):
                 raw_text = m.group(1).strip()
@@ -533,7 +749,10 @@ def reconstruct_components(cand: Dict[str, Any]) -> Dict[str, Any]:
             combined_text += t + "\n"
             
     combined_text = combined_text.strip()
-    combined_text = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', combined_text, flags=re.IGNORECASE).strip()
+    if cand.get("numbering", {}).get("scheme") == "roman":
+        combined_text = re.sub(r'^[IVX]+[\.\)]\s*', '', combined_text, flags=re.IGNORECASE).strip()
+    else:
+        combined_text = re.sub(r'^(?:Q\s*)?\d+[\.\)]\s*', '', combined_text, flags=re.IGNORECASE).strip()
     
     extracted_options = {}
     stem = combined_text
@@ -626,14 +845,26 @@ def reconstruct_components(cand: Dict[str, Any]) -> Dict[str, Any]:
                         continue
                 extracted_subparts.append({"label": a, "text": subpart_text[m_curr.end():].strip()})
 
+    has_num = bool(cand.get("source_question_number"))
+    has_stem = bool(stem.strip())
+    has_full_mcq = (len(extracted_options) == 4)
+
+    score = 0.90
+    if not has_num: score -= 0.15
+    if not has_stem: score -= 0.30
+    if extracted_options and not has_full_mcq: score -= 0.10
+    score = round(max(0.10, min(1.0, score)), 2)
+
     q_dict = {
-        "section": cand["section"],
+        "section": cand.get("section", "General"),
         "source_question_number": cand.get("source_question_number"),
         "raw_question_number": cand.get("raw_question_number"),
+        "numbering": cand.get("numbering"),
+        "numbering_event": cand.get("numbering_event"),
         "question": stem,
         "statements": extracted_statements,
         "options": extracted_options,
-        "appearances": list(set(metadata_appearances)),
+        "appearances": list(dict.fromkeys(metadata_appearances)),
         "images": images,
         "subparts": extracted_subparts,
         "equations": equations,
@@ -643,37 +874,50 @@ def reconstruct_components(cand: Dict[str, Any]) -> Dict[str, Any]:
         "needs_review": False,
         "block_ids": block_ids,
         "source_blocks": source_blocks,
+        "inline_content": inline_content,
         "confidence": {
-            "overall": 0.95,
-            "boundary": 0.95,
-            "components": 0.95,
-            "classification": 0.95,
-            "metadata": 1.0
+            "overall": score,
+            "boundary": 0.95 if has_num else 0.75,
+            "components": 0.95 if (has_full_mcq or extracted_statements or extracted_subparts) else 0.85,
+            "classification": 0.90,
+            "metadata": 1.0 if metadata_appearances else 0.85
         },
         "validation": {
             "valid": True,
             "issues": [],
             "checks": {
                 "has_question_stem": bool(stem.strip()),
-                "options_consistent": True,
-                "source_blocks_accounted_for": True,
+                "options_consistent": len(extracted_options) in (0, 4, 5) and len(set(extracted_options.values())) == len(extracted_options),
+                "source_blocks_accounted_for": len(block_ids) > 0,
                 "metadata_cleaned": True,
-                "no_duplicate_components": True
+                "no_duplicate_components": len(block_ids) == len(set(block_ids))
             }
         }
     }
     
     if tables:
         tbl = tables[0]
-        table_data = {"headers": [], "rows": [], "source_block_ids": [tbl.block_id]}
+        table_data = {"headers": [], "rows": [], "cell_content": [],
+                      "source_block_ids": [tbl.block_id]}
         for i, r in enumerate(tbl.children):
             row_data = []
-            for c in r.children: row_data.append(c.text.strip())
+            rich_row = []
+            for c in r.children:
+                row_data.append(c.text.strip())
+                cell_inline = [item.to_dict() if hasattr(item, "to_dict") else dict(item)
+                               for child in c.children for item in child.inline_content]
+                for inline_index, item in enumerate(cell_inline):
+                    item.setdefault("source_block_id", c.block_id)
+                    item["inline_index"] = inline_index
+                rich_row.append({
+                    "text": c.text.strip(),
+                    "source_block_id": c.block_id,
+                    "inline_content": cell_inline,
+                })
             if i == 0:
                 table_data["headers"] = row_data
-                table_data["rows"].append(row_data) # Keep in rows for compatibility
-            else:
-                table_data["rows"].append(row_data)
+            table_data["rows"].append(row_data)
+            table_data["cell_content"].append(rich_row)
         q_dict["table"] = table_data
     else:
         q_dict["table"] = None
@@ -699,7 +943,7 @@ def extract_features(q_dict: Dict[str, Any]) -> Dict[str, Any]:
         "has_assertion": False,
         "has_reason": False,
         "has_blank": False,
-        "has_equation": False,
+        "has_equation": bool(q_dict.get("equations")),
         "has_statement_list": len(stmts) > 0,
         "has_numeric_instruction": False,
         "has_match_list": False,
@@ -742,38 +986,116 @@ def classify_question(q_dict: Dict[str, Any]) -> Dict[str, Any]:
     return q_dict
 
 def recover_and_validate(questions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    try:
+        from src.convert.math import check_math
+    except ImportError:
+        check_math = lambda x: []
+
     for i, q in enumerate(questions):
-        if not q.get("question") and not q.get("table") and not q.get("images"):
+        if "validation" not in q:
+            q["validation"] = {"valid": True, "issues": [], "checks": {}}
+        validation = q["validation"]
+        validation.setdefault("base_parsed_ok", bool(q.get("parsed_ok", True)))
+        validation.setdefault("base_needs_review", bool(q.get("needs_review", False)))
+        validation.setdefault("source_issues", list(validation.get("issues", [])))
+        q["parsed_ok"] = validation["base_parsed_ok"]
+        q["needs_review"] = validation["base_needs_review"]
+        issues = list(validation["source_issues"])
+        validation["issues"] = issues
+
+        stem = q.get("question", "").strip()
+        opts = q.get("options", {})
+        q_type = q.get("question_type", "")
+        validation_errors = []
+        q["validation_errors"] = validation_errors
+
+        def add_error(message: str) -> None:
+            if message not in issues:
+                issues.append(message)
+            if message not in validation_errors:
+                validation_errors.append(message)
+
+        # Check empty stem and missing content
+        if not stem and not q.get("table") and not q.get("images"):
             q["parsed_ok"] = False
             q["needs_review"] = True
-        if q["question_type"] == "mcq" and len(q.get("options", {})) != 4:
-            q["parsed_ok"] = False
-            q["needs_review"] = True
+            add_error("EMPTY_STEM_NO_CONTENT")
+
+        # Validate MCQ option counts & values (BUG-VAL-002)
+        if q_type == "mcq" or (opts and len(opts) > 0):
+            if len(opts) not in (4, 5):
+                q["parsed_ok"] = False
+                q["needs_review"] = True
+                add_error(f"INVALID_OPTION_COUNT: got {len(opts)}, expected 4")
+
+            # Check empty options
+            empty_opts = [k for k, v in opts.items() if not str(v).strip()]
+            if empty_opts:
+                q["needs_review"] = True
+                add_error(f"EMPTY_OPTIONS: {empty_opts}")
+
+            # Check duplicate options
+            non_empty_vals = [str(v).strip() for v in opts.values() if str(v).strip()]
+            if len(non_empty_vals) != len(set(non_empty_vals)):
+                q["needs_review"] = True
+                if "DUPLICATE_OPTION_VALUES" not in issues:
+                    issues.append("DUPLICATE_OPTION_VALUES")
+
+        # Validate math formulas (BUG-VAL-005)
+        # Detect equations across the stem and options as well as extracted IR.
+        equation_text = "\n".join([stem, *(str(v) for v in opts.values())])
+        has_equation = bool(q.get("equations")) or bool(re.search(r"\$[^$]+\$|\\(?:frac|sqrt|int|sum|prod|pi|alpha|beta)\b|[=∫∑√∞]", equation_text))
+        q["has_equation"] = has_equation
+        for eq in q.get("equations", []):
+            latex = eq.get("latex", "")
+            math_probs = check_math(latex)
+            if math_probs:
+                for problem in math_probs:
+                    add_error(f"MATH_ISSUE: {problem}")
+                q["needs_review"] = True
+
         if "00 g" in q.get("question", ""):
             q["needs_review"] = True
             
-        stem = q.get("question", "")
         # SUSPICIOUS MERGE
         num_main_markers = len(re.findall(r'(?:^|\n)(?:Q(?:uestion)?\s*(?:No\.?)?\s*|Q\.\s*)?0*\d+(?:[\.\):]|\s*-)(?:\s+|$)', stem, re.IGNORECASE))
         starts = len(re.findall(r'\b(?:Evaluate|Find|Calculate|Prove|Determine|Explain|Define|Mention|Write|State|Describe|Deduce|Derive)\b', stem, re.IGNORECASE))
         
-        if num_main_markers >= 1 or (starts >= 3 and len(q.get("block_ids", [])) > 5) or len(q.get("block_ids", [])) >= 20:
+        if (num_main_markers >= 1 and not q.get("source_question_number")) or (starts >= 3 and len(q.get("block_ids", [])) > 5) or len(q.get("block_ids", [])) >= 20:
             q["needs_review"] = True
-            if "issues" not in q.get("validation", {}):
-                q["validation"] = q.get("validation", {})
-                q["validation"]["issues"] = []
             if len(q.get("block_ids", [])) >= 20:
-                q["validation"]["issues"].append("SUSPICIOUS_LARGE_CANDIDATE")
+                if "SUSPICIOUS_LARGE_CANDIDATE" not in issues:
+                    issues.append("SUSPICIOUS_LARGE_CANDIDATE")
             else:
-                q["validation"]["issues"].append("SUSPICIOUS_MERGE")
+                if "SUSPICIOUS_MERGE" not in issues:
+                    issues.append("SUSPICIOUS_MERGE")
                 
         # SUSPICIOUS SPLIT
         if i > 0:
             if not q.get("source_question_number") and not q.get("options"):
                 if stem.startswith("where ") or stem.startswith("which ") or (len(stem) > 0 and stem[0].islower()):
                     q["needs_review"] = True
-                    if "issues" not in q.get("validation", {}):
-                        q["validation"] = q.get("validation", {})
-                        q["validation"]["issues"] = []
-                    q["validation"]["issues"].append("SUSPICIOUS_SPLIT")
+                    if "SUSPICIOUS_SPLIT" not in issues:
+                        issues.append("SUSPICIOUS_SPLIT")
+
+        # Update valid flag and checks dynamically (BUG-VAL-001, BUG-VAL-004)
+        # Validation errors determine parsed_ok; review warnings may still leave
+        # a question renderable, but never make malformed structure look valid.
+        q["parsed_ok"] = bool(q.get("parsed_ok", True)) and not validation_errors
+        validation["valid"] = q["parsed_ok"] and not bool(q.get("needs_review", False))
+        validation["checks"] = {
+            "has_question_stem": bool(stem),
+            "options_consistent": len(opts) in (0, 4, 5) and len(set(opts.values())) == len(opts),
+            "source_blocks_accounted_for": len(q.get("block_ids", [])) > 0,
+            "metadata_cleaned": True,
+            "no_duplicate_components": len(q.get("block_ids", [])) == len(set(q.get("block_ids", [])))
+        }
+        q["quality_score"] = round(max(0.0, min(1.0,
+            0.65 + (0.2 if stem else 0.0) + (0.15 if len(opts) in (4, 5) else 0.0)
+            - (0.25 if validation_errors else 0.0)
+            - (0.1 if q.get("needs_review") else 0.0))), 2)
+        q["review_reasons"] = list(dict.fromkeys(issues)) if q.get("needs_review") else []
+        if q.get("needs_review") and not q["review_reasons"]:
+            q["review_reasons"] = ["REVIEW_REQUIRED"]
+
     return questions

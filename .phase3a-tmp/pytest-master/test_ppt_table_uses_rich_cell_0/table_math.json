@@ -1,0 +1,188 @@
+{
+  "questions": [
+    {
+      "id": "q-table",
+      "question": "Read the table",
+      "table": {
+        "rows": [
+          [
+            "$x^2$"
+          ]
+        ],
+        "cell_content": [
+          [
+            {
+              "text": "$x^2$",
+              "source_block_id": "b-cell",
+              "inline_content": [
+                {
+                  "kind": "math_sequence"
+                }
+              ]
+            }
+          ]
+        ]
+      },
+      "render": {
+        "status": "degraded",
+        "diagnostics": [
+          {
+            "code": "TEXT_LAYOUT_DEGRADED",
+            "severity": "warning",
+            "question_id": "q-table",
+            "component_id": "table:0:0",
+            "source_block_id": "b-cell",
+            "math_outcomes": [
+              {
+                "math_id": "Q-TABLE-BLOCK-B-CELL-MATH-001",
+                "question_id": "q-table",
+                "component_type": "table",
+                "option_label": null,
+                "source_block_id": "b-cell",
+                "node_id": "table:0:0-compat:math:1",
+                "render_path": "native",
+                "status": "ok",
+                "source_text": "x^2",
+                "fallback_text": "x^2",
+                "native_entries": 1,
+                "fallback_entries": 1,
+                "alternate_fallback_entries": 1
+              }
+            ],
+            "node_id": null,
+            "reason": "table cell canonical nodes do not match compatibility text",
+            "fallback": "compatibility cell text",
+            "slide_ids": [
+              2
+            ]
+          },
+          {
+            "code": "MATH_RENDER_FAILED",
+            "severity": "warning",
+            "reason": "canonical math node has no render outcome",
+            "fallback": "no output",
+            "fallback_text": "no output",
+            "source_text": "",
+            "render_path": "fallback",
+            "status": "degraded",
+            "question_id": "q-table",
+            "component_id": "table",
+            "component_type": "table",
+            "option_label": null,
+            "source_block_id": null,
+            "node_id": null,
+            "math_id": "Q-TABLE-TABLE-0-0-MATH-001",
+            "original": ""
+          }
+        ],
+        "slide_ids": [
+          2
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "rendered_count": 1,
+    "rendered_slides": 2,
+    "render_diagnostics": [
+      {
+        "code": "TEXT_LAYOUT_DEGRADED",
+        "severity": "warning",
+        "question_id": "q-table",
+        "component_id": "table:0:0",
+        "source_block_id": "b-cell",
+        "math_outcomes": [
+          {
+            "math_id": "Q-TABLE-BLOCK-B-CELL-MATH-001",
+            "question_id": "q-table",
+            "component_type": "table",
+            "option_label": null,
+            "source_block_id": "b-cell",
+            "node_id": "table:0:0-compat:math:1",
+            "render_path": "native",
+            "status": "ok",
+            "source_text": "x^2",
+            "fallback_text": "x^2",
+            "native_entries": 1,
+            "fallback_entries": 1,
+            "alternate_fallback_entries": 1
+          }
+        ],
+        "node_id": null,
+        "reason": "table cell canonical nodes do not match compatibility text",
+        "fallback": "compatibility cell text",
+        "slide_ids": [
+          2
+        ]
+      },
+      {
+        "code": "MATH_RENDER_FAILED",
+        "severity": "warning",
+        "reason": "canonical math node has no render outcome",
+        "fallback": "no output",
+        "fallback_text": "no output",
+        "source_text": "",
+        "render_path": "fallback",
+        "status": "degraded",
+        "question_id": "q-table",
+        "component_id": "table",
+        "component_type": "table",
+        "option_label": null,
+        "source_block_id": null,
+        "node_id": null,
+        "math_id": "Q-TABLE-TABLE-0-0-MATH-001",
+        "original": ""
+      }
+    ],
+    "render_status": "degraded",
+    "math_fallback_count": 1,
+    "render_diagnostic_counts": {
+      "TEXT_LAYOUT_DEGRADED": 1,
+      "MATH_RENDER_FAILED": 1
+    },
+    "math_render_counts": {
+      "canonical_math_nodes": 1,
+      "native_math_entries": 1,
+      "fallback_math_entries": 1,
+      "fallback_math_nodes": 0,
+      "failed_math_nodes": 1,
+      "unrendered_canonical_math_nodes": 0,
+      "native_entries_without_canonical_node": 0,
+      "math_outcome_nodes": 2,
+      "math_outcome_ids_unique": true
+    },
+    "math_render_outcomes": [
+      {
+        "math_id": "Q-TABLE-BLOCK-B-CELL-MATH-001",
+        "question_id": "q-table",
+        "component_type": "table",
+        "option_label": null,
+        "source_block_id": "b-cell",
+        "node_id": "table:0:0-compat:math:1",
+        "render_path": "native",
+        "status": "ok",
+        "source_text": "x^2",
+        "fallback_text": "x^2",
+        "native_entries": 1,
+        "fallback_entries": 1,
+        "alternate_fallback_entries": 1
+      },
+      {
+        "math_id": "Q-TABLE-TABLE-0-0-MATH-001",
+        "question_id": "q-table",
+        "component_type": "table",
+        "option_label": null,
+        "source_block_id": null,
+        "node_id": null,
+        "render_path": "failed",
+        "status": "failed",
+        "source_text": "",
+        "fallback_text": "",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0,
+        "reason": "canonical math node has no render outcome"
+      }
+    ]
+  }
+}

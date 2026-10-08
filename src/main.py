@@ -71,7 +71,7 @@ def main() -> None:
             with open(debug_dir / "raw_blocks.json", "w", encoding="utf-8") as f:
                 json.dump([b.to_dict() for b in blocks], f, indent=2, ensure_ascii=False)
                 
-    parsed_data = run_pipeline(blocks)
+    parsed_data = run_pipeline(blocks, use_llm=args.use_llm)
     if isinstance(parsed_data, dict) and "questions" in parsed_data:
         parsed_questions = parsed_data["questions"]
         if "source" in parsed_data:

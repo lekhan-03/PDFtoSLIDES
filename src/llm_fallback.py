@@ -21,6 +21,8 @@ from __future__ import annotations
 import json
 import os
 import re
+from dataclasses import dataclass, field
+from typing import Any, Protocol
 
 # ---------------------------------------------------------------------------
 # Prompts
@@ -254,3 +256,184 @@ def fix_with_llm(failed_blocks: list[dict]) -> list[dict]:
             "llm_model":    model,
         })
     return out
+
+
+@dataclass
+class RecoveryContext:
+    question_id: Any
+    section: str = "General"
+    source_question_number: str | None = None
+    question: str = ""
+    options: dict[str, str] = field(default_factory=dict)
+    question_type: str = "unknown"
+    source_blocks: list[dict] = field(default_factory=list)
+    inline_content: list[dict] = field(default_factory=list)
+
+
+@dataclass
+class RecoveryProposal:
+    question_id: Any
+    question: str
+    options: dict[str, str]
+    extra_fields: dict[str, Any] = field(default_factory=dict)
+
+
+class LLMRecoveryProvider(Protocol):
+    def recover_questions(self, contexts: list[RecoveryContext]) -> list[RecoveryProposal | dict]: ...
+
+
+class GroqRecoveryProvider:
+    """Provider adapter; parser and recovery validation do not depend on Groq."""
+    def __init__(self, api_key: str, model: str):
+        from groq import Groq
+        self.client = Groq(api_key=api_key)
+        self.model = model
+
+    def recover_questions(self, contexts: list[RecoveryContext]) -> list[dict]:
+        context_payload = [{
+            "id": context.question_id,
+            "question": context.question,
+            "options": context.options,
+            "question_type": context.question_type,
+            "section": context.section,
+            "source_question_number": context.source_question_number,
+            "source_blocks": context.source_blocks,
+            "inline_content": context.inline_content,
+        } for context in contexts]
+        prompt = (
+            "Return a JSON array with one recovery proposal for each input id. "
+            "Each proposal may contain only id, question, and options. Preserve the supplied source. "
+            "Do not invent missing options or metadata. Non-MCQ items use an empty options object.\n\n"
+            + json.dumps(context_payload, ensure_ascii=False)
+        )
+        response = self.client.chat.completions.create(
+            model=self.model,
+            max_tokens=1000 * len(contexts) + 500,
+            messages=[
+                {"role": "system", "content": "Recover ambiguous exam questions. Return valid JSON only."},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0,
+        )
+        return _extract_json_array(response.choices[0].message.content.strip())
+
+
+def recover_questions_batch(
+    questions: list[dict], provider: LLMRecoveryProvider | None = None,
+) -> list[dict]:
+    """Propose recoveries for failed items; canonical validation remains downstream."""
+    failed = [q for q in questions if not q.get("parsed_ok") or q.get("needs_review")]
+    if not failed:
+        return questions
+
+    if provider is None:
+        api_key = os.environ.get("GROQ_API_KEY", "").strip()
+        if not api_key or api_key == "gsk_your_key_here":
+            print("    [!] GROQ_API_KEY not configured. Skipping LLM recovery.")
+            for question in failed:
+                question.setdefault("recovery_diagnostics", []).append({
+                    "status": "skipped", "reason": "provider_not_configured",
+                    "question_id": question.get("id"),
+                })
+            return questions
+        model = os.environ.get("MCQ_LLM_MODEL") or os.environ.get("GROQ_MODEL") or _DEFAULT_MODEL
+        try:
+            provider = GroqRecoveryProvider(api_key, model)
+        except ImportError:
+            print("    [!] groq package not installed. Skipping LLM recovery.")
+            return questions
+
+    contexts = []
+    question_by_id = {}
+    for index, question in enumerate(failed):
+        question_id = question.get("id", f"recovery-{index + 1}")
+        key = str(question_id)
+        if key in question_by_id:
+            key = f"{key}#{index + 1}"
+        question_by_id[key] = question
+        contexts.append(RecoveryContext(
+            question_id=key,
+            section=question.get("section") or "General",
+            source_question_number=question.get("source_question_number"),
+            question=str(question.get("question") or ""),
+            options=question.get("options") if isinstance(question.get("options"), dict) else {},
+            question_type=question.get("question_type") or "unknown",
+            source_blocks=question.get("source_blocks", []),
+            inline_content=question.get("inline_content", []),
+        ))
+
+    try:
+        proposals = provider.recover_questions(contexts)
+        if not isinstance(proposals, list):
+            raise ValueError("provider must return a JSON array of recovery proposals")
+    except Exception as exc:
+        print(f"    [!] LLM recovery attempt failed: {exc}")
+        for question in failed:
+            question.setdefault("recovery_diagnostics", []).append({
+                "status": "failed", "reason": "provider_error",
+                "question_id": question.get("id"), "exception": repr(exc),
+                "fallback": "retain deterministic parse and validation result",
+            })
+            validation = question.setdefault("validation", {})
+            validation.setdefault("base_needs_review", False)
+            validation["base_needs_review"] = True
+            issues = validation.setdefault("source_issues", [])
+            if "LLM_PROVIDER_ERROR" not in issues:
+                issues.append("LLM_PROVIDER_ERROR")
+        return questions
+
+    seen_ids = set()
+    for raw in proposals if isinstance(proposals, list) else []:
+        if isinstance(raw, RecoveryProposal):
+            proposal = raw
+            extra_fields = proposal.extra_fields
+        elif isinstance(raw, dict):
+            extra_fields = set(raw) - {"id", "question", "options"}
+            if ("id" not in raw or not isinstance(raw.get("question"), str)
+                    or not isinstance(raw.get("options"), dict)):
+                extra_fields = set(extra_fields) | {"__schema_error__"}
+            proposal = RecoveryProposal(
+                question_id=raw.get("id"),
+                question=raw.get("question") if isinstance(raw.get("question"), str) else "",
+                options=raw.get("options") if isinstance(raw.get("options"), dict) else {},
+                extra_fields={key: raw[key] for key in extra_fields},
+            )
+        else:
+            continue
+
+        key = str(proposal.question_id)
+        question = question_by_id.get(key)
+        if question is None or key in seen_ids:
+            continue
+        seen_ids.add(key)
+
+        qtype = str(question.get("question_type") or "").lower()
+        is_mcq = qtype in ("mcq", "multiple_correct", "statement_based", "assertion_reason", "match_list") or bool(question.get("options"))
+        labels = {str(k).strip().upper(): str(v).strip() for k, v in proposal.options.items()}
+        valid = bool(proposal.question.strip()) and not extra_fields
+        valid = valid and set(labels) <= {"A", "B", "C", "D", "E"} and all(labels.values())
+        if is_mcq:
+            valid = valid and all(labels.get(label) for label in ("A", "B", "C", "D"))
+        if not valid:
+            validation = question.setdefault("validation", {})
+            validation.setdefault("base_needs_review", False)
+            validation["base_needs_review"] = True
+            validation.setdefault("source_issues", []).append("LLM_PROPOSAL_INVALID_OR_INCOMPLETE")
+            question.setdefault("recovery_diagnostics", []).append({
+                "status": "rejected", "reason": "invalid_or_incomplete_proposal",
+                "question_id": question.get("id"),
+                "unexpected_fields": sorted(extra_fields),
+                "fallback": "retain deterministic parse and validate it",
+            })
+            continue
+
+        question["question"] = proposal.question.strip()
+        question["options"] = labels
+        question["recovered_by_llm"] = True
+        question["llm_model"] = getattr(provider, "model", "configured-provider")
+        question.setdefault("recovery_diagnostics", []).append({
+            "status": "proposal_applied", "question_id": question.get("id"),
+            "provider": type(provider).__name__,
+        })
+
+    return questions

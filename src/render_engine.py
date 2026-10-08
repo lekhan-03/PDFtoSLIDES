@@ -47,6 +47,7 @@ class LayoutEngine:
         self.slide = None
         self.y = Q_TOP
         self.slide_count = 0
+        self.render_diagnostics = []
         self.new_slide()
         
     def new_slide(self):
@@ -118,14 +119,30 @@ class LayoutEngine:
         from pptx.util import Inches
         if not os.path.exists(img_path):
             print(f"Warning: Image {img_path} not found")
+            self.render_diagnostics.append({
+                "code": "MEDIA_RENDER_FAILED", "severity": "warning",
+                "question_id": self.q.get("id"), "component_id": "image",
+                "source_block_id": None, "node_id": None,
+                "reason": "missing_file", "source_path": str(img_path),
+                "fallback": "visible placeholder",
+            })
+            self.add_text("[Image unavailable]", font_size=12, color=OFF_WHITE, bold=False)
             return
             
         from PIL import Image
         try:
             with Image.open(img_path) as img:
                 w_px, h_px = img.size
-        except Exception:
+        except Exception as exc:
             print(f"Warning: Failed to read image {img_path}")
+            self.render_diagnostics.append({
+                "code": "MEDIA_RENDER_FAILED", "severity": "warning",
+                "question_id": self.q.get("id"), "component_id": "image",
+                "source_block_id": None, "node_id": None,
+                "reason": repr(exc), "source_path": str(img_path),
+                "fallback": "visible placeholder",
+            })
+            self.add_text("[Image unavailable]", font_size=12, color=OFF_WHITE, bold=False)
             return
             
         aspect = h_px / w_px
@@ -206,5 +223,24 @@ class LayoutEngine:
                 self.y += row2_h + 0.1
 
     def add_table(self, table_data):
-        # ... logic to render table using PPTX tables ...
-        pass
+        rows = table_data.get("rows", []) if isinstance(table_data, dict) else []
+        if not isinstance(rows, list) or not rows:
+            self.render_diagnostics.append({
+                "code": "TABLE_RENDER_FAILED", "severity": "warning",
+                "question_id": self.q.get("id"), "component_id": "table",
+                "source_block_id": None, "node_id": None,
+                "reason": "table has no renderable rows", "fallback": "empty-table diagnostic",
+            })
+            return
+        self.render_diagnostics.append({
+            "code": "RENDER_NODE_UNSUPPORTED", "severity": "warning",
+            "question_id": self.q.get("id"), "component_id": "table",
+            "source_block_id": (table_data.get("source_block_ids") or [None])[0],
+            "node_id": None,
+            "reason": "legacy renderer has no native table layout adapter",
+            "fallback": "readable row text",
+        })
+        for row in rows:
+            if isinstance(row, list):
+                self.add_text("    |    ".join(str(cell or "") for cell in row),
+                              font_size=14, color=OFF_WHITE, bold=False)

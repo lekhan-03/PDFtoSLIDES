@@ -1,0 +1,42 @@
+{
+  "questions": [
+    {
+      "id": "q-count",
+      "question": "$x^{2}$",
+      "options": {},
+      "inline_content": [
+        {
+          "kind": "math_sequence",
+          "value": "$x^{2}$",
+          "source_block_id": "b-1",
+          "source": {
+            "omml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\"><m:r><m:t>x</m:t></m:r></m:oMath>"
+          }
+        }
+      ],
+      "render": {
+        "status": "rendered",
+        "diagnostics": [],
+        "slide_ids": [
+          2
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "rendered_count": 1,
+    "rendered_slides": 2,
+    "render_diagnostics": [],
+    "render_status": "rendered",
+    "math_fallback_count": 0,
+    "render_diagnostic_counts": {},
+    "math_render_counts": {
+      "canonical_math_nodes": 1,
+      "native_math_entries": 1,
+      "fallback_math_entries": 1,
+      "failed_math_nodes": 0,
+      "unrendered_canonical_math_nodes": 0,
+      "native_entries_without_canonical_node": 0
+    }
+  }
+}

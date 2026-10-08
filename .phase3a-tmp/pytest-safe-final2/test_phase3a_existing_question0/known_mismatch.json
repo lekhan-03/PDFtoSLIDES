@@ -1,0 +1,1283 @@
+{
+  "questions": [
+    {
+      "section": "General",
+      "source_question_number": "16",
+      "raw_question_number": "16.",
+      "numbering": {
+        "scheme": "arabic",
+        "value": 16,
+        "section": "General"
+      },
+      "numbering_event": {
+        "event": "sequence",
+        "previous": 15,
+        "current": 16,
+        "scheme": "arabic",
+        "section": "General",
+        "duplicate": false
+      },
+      "question": "A copper rod AB of length l is rotated about end A with a constant angular velocity . The electric field at a distance x from the axis of rotation is\na) $\\frac{mω^{2}x}{e}$ \t\tb)$\\frac{mωx}{el}$\nc) $\\frac{mx}{ω^{2}l}$\nd) $\\frac{me}{ω^{2}x}$",
+      "statements": [],
+      "options": {},
+      "appearances": [
+        "2021"
+      ],
+      "images": [],
+      "subparts": [],
+      "equations": [
+        {
+          "id": "eq-1",
+          "raw": "$\\frac{mω^{2}x}{e}$",
+          "latex": "\\frac{mω^{2}x}{e}",
+          "source_block_id": 62,
+          "confidence": 0.95
+        },
+        {
+          "id": "eq-2",
+          "raw": "$\\frac{mωx}{el}$",
+          "latex": "\\frac{mωx}{el}",
+          "source_block_id": 62,
+          "confidence": 0.95
+        },
+        {
+          "id": "eq-3",
+          "raw": "$\\frac{mx}{ω^{2}l}$",
+          "latex": "\\frac{mx}{ω^{2}l}",
+          "source_block_id": "63.part_1",
+          "confidence": 0.95
+        },
+        {
+          "id": "eq-4",
+          "raw": "$\\frac{me}{ω^{2}x}$",
+          "latex": "\\frac{me}{ω^{2}x}",
+          "source_block_id": "63.part_2",
+          "confidence": 0.95
+        }
+      ],
+      "blanks": [],
+      "answer": null,
+      "parsed_ok": true,
+      "needs_review": false,
+      "block_ids": [
+        61,
+        62,
+        "63.part_1",
+        "63.part_2"
+      ],
+      "source_blocks": [
+        {
+          "block_id": 61,
+          "role": "stem"
+        },
+        {
+          "block_id": 62,
+          "role": "option"
+        },
+        {
+          "block_id": "63.part_1",
+          "role": "option"
+        },
+        {
+          "block_id": "63.part_2",
+          "role": "option"
+        }
+      ],
+      "inline_content": [
+        {
+          "kind": "text",
+          "value": "A copper rod AB of length l is rotated about end A with a constant angular velocity ",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 61,
+          "source_order": 61
+        },
+        {
+          "kind": "text",
+          "value": ". The electric field at a distance x from the axis of rotation is ",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 61,
+          "source_order": 61
+        },
+        {
+          "kind": "text",
+          "value": "(20",
+          "vertical_align": null,
+          "formatting": {
+            "bold": true
+          },
+          "children": [],
+          "source": {},
+          "source_block_id": 61,
+          "source_order": 61
+        },
+        {
+          "kind": "text",
+          "value": "21",
+          "vertical_align": null,
+          "formatting": {
+            "bold": true
+          },
+          "children": [],
+          "source": {},
+          "source_block_id": 61,
+          "source_order": 61
+        },
+        {
+          "kind": "text",
+          "value": ")",
+          "vertical_align": null,
+          "formatting": {
+            "bold": true
+          },
+          "children": [],
+          "source": {},
+          "source_block_id": 61,
+          "source_order": 61
+        },
+        {
+          "kind": "text",
+          "value": "a) ",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 62,
+          "source_order": 62
+        },
+        {
+          "kind": "math_sequence",
+          "value": "$\\frac{mω^{2}x}{e}$",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [
+            {
+              "kind": "fraction",
+              "value": "\\frac{mω^{2}x}{e}",
+              "vertical_align": null,
+              "formatting": {},
+              "children": [
+                {
+                  "kind": "numerator",
+                  "value": "mω^{2}x",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [
+                    {
+                      "kind": "math_sequence",
+                      "value": "mω^{2}x",
+                      "vertical_align": null,
+                      "formatting": {},
+                      "children": [
+                        {
+                          "kind": "math_token",
+                          "value": "m",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [],
+                          "source": {
+                            "omml_tag": "r"
+                          }
+                        },
+                        {
+                          "kind": "superscript",
+                          "value": "ω^{2}",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [
+                            {
+                              "kind": "base",
+                              "value": "ω",
+                              "vertical_align": null,
+                              "formatting": {},
+                              "children": [
+                                {
+                                  "kind": "math_sequence",
+                                  "value": "ω",
+                                  "vertical_align": null,
+                                  "formatting": {},
+                                  "children": [
+                                    {
+                                      "kind": "math_token",
+                                      "value": "ω",
+                                      "vertical_align": null,
+                                      "formatting": {},
+                                      "children": [],
+                                      "source": {
+                                        "omml_tag": "r"
+                                      }
+                                    }
+                                  ],
+                                  "source": {
+                                    "omml_tag": "e"
+                                  }
+                                }
+                              ],
+                              "source": {}
+                            },
+                            {
+                              "kind": "superscript",
+                              "value": "2",
+                              "vertical_align": null,
+                              "formatting": {},
+                              "children": [
+                                {
+                                  "kind": "math_sequence",
+                                  "value": "2",
+                                  "vertical_align": null,
+                                  "formatting": {},
+                                  "children": [
+                                    {
+                                      "kind": "math_token",
+                                      "value": "2",
+                                      "vertical_align": null,
+                                      "formatting": {},
+                                      "children": [],
+                                      "source": {
+                                        "omml_tag": "r"
+                                      }
+                                    }
+                                  ],
+                                  "source": {
+                                    "omml_tag": "sup"
+                                  }
+                                }
+                              ],
+                              "source": {}
+                            }
+                          ],
+                          "source": {
+                            "omml_tag": "sSup"
+                          }
+                        },
+                        {
+                          "kind": "math_token",
+                          "value": "x",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [],
+                          "source": {
+                            "omml_tag": "r"
+                          }
+                        }
+                      ],
+                      "source": {
+                        "omml_tag": "num"
+                      }
+                    }
+                  ],
+                  "source": {}
+                },
+                {
+                  "kind": "denominator",
+                  "value": "e",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [
+                    {
+                      "kind": "math_sequence",
+                      "value": "e",
+                      "vertical_align": null,
+                      "formatting": {},
+                      "children": [
+                        {
+                          "kind": "math_token",
+                          "value": "e",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [],
+                          "source": {
+                            "omml_tag": "r"
+                          }
+                        }
+                      ],
+                      "source": {
+                        "omml_tag": "den"
+                      }
+                    }
+                  ],
+                  "source": {}
+                }
+              ],
+              "source": {
+                "omml_tag": "f"
+              }
+            }
+          ],
+          "source": {
+            "omml_tag": "oMath",
+            "omml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:oel=\"http://schemas.microsoft.com/office/2019/extlst\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16du=\"http://schemas.microsoft.com/office/word/2023/wordml/word16du\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16sdtfl=\"http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\"><m:f><m:fPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:i/><w:sz w:val=\"24\"/></w:rPr></m:ctrlPr></m:fPr><m:num><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>m</m:t></m:r><m:sSup><m:sSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:i/><w:sz w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>ω</m:t></m:r></m:e><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>2</m:t></m:r></m:sup></m:sSup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>x</m:t></m:r></m:num><m:den><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>e</m:t></m:r></m:den></m:f></m:oMath>"
+          },
+          "source_block_id": 62,
+          "source_order": 62
+        },
+        {
+          "kind": "text",
+          "value": " ",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 62,
+          "source_order": 62
+        },
+        {
+          "kind": "text",
+          "value": "\t",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 62,
+          "source_order": 62
+        },
+        {
+          "kind": "text",
+          "value": "\t",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 62,
+          "source_order": 62
+        },
+        {
+          "kind": "text",
+          "value": "b",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 62,
+          "source_order": 62
+        },
+        {
+          "kind": "text",
+          "value": ")",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 62,
+          "source_order": 62
+        },
+        {
+          "kind": "math_sequence",
+          "value": "$\\frac{mωx}{el}$",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [
+            {
+              "kind": "fraction",
+              "value": "\\frac{mωx}{el}",
+              "vertical_align": null,
+              "formatting": {},
+              "children": [
+                {
+                  "kind": "numerator",
+                  "value": "mωx",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [
+                    {
+                      "kind": "math_sequence",
+                      "value": "mωx",
+                      "vertical_align": null,
+                      "formatting": {},
+                      "children": [
+                        {
+                          "kind": "math_token",
+                          "value": "mωx",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [],
+                          "source": {
+                            "omml_tag": "r"
+                          }
+                        }
+                      ],
+                      "source": {
+                        "omml_tag": "num"
+                      }
+                    }
+                  ],
+                  "source": {}
+                },
+                {
+                  "kind": "denominator",
+                  "value": "el",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [
+                    {
+                      "kind": "math_sequence",
+                      "value": "el",
+                      "vertical_align": null,
+                      "formatting": {},
+                      "children": [
+                        {
+                          "kind": "math_token",
+                          "value": "el",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [],
+                          "source": {
+                            "omml_tag": "r"
+                          }
+                        }
+                      ],
+                      "source": {
+                        "omml_tag": "den"
+                      }
+                    }
+                  ],
+                  "source": {}
+                }
+              ],
+              "source": {
+                "omml_tag": "f"
+              }
+            }
+          ],
+          "source": {
+            "omml_tag": "oMath",
+            "omml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:oel=\"http://schemas.microsoft.com/office/2019/extlst\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16du=\"http://schemas.microsoft.com/office/word/2023/wordml/word16du\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16sdtfl=\"http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\"><m:f><m:fPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:i/><w:sz w:val=\"24\"/></w:rPr></m:ctrlPr></m:fPr><m:num><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>mωx</m:t></m:r></m:num><m:den><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>el</m:t></m:r></m:den></m:f></m:oMath>"
+          },
+          "source_block_id": 62,
+          "source_order": 62
+        },
+        {
+          "kind": "text",
+          "value": "c",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 63,
+          "source_order": 63
+        },
+        {
+          "kind": "text",
+          "value": ") ",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 63,
+          "source_order": 63
+        },
+        {
+          "kind": "math_sequence",
+          "value": "$\\frac{mx}{ω^{2}l}$",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [
+            {
+              "kind": "fraction",
+              "value": "\\frac{mx}{ω^{2}l}",
+              "vertical_align": null,
+              "formatting": {},
+              "children": [
+                {
+                  "kind": "numerator",
+                  "value": "mx",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [
+                    {
+                      "kind": "math_sequence",
+                      "value": "mx",
+                      "vertical_align": null,
+                      "formatting": {},
+                      "children": [
+                        {
+                          "kind": "math_token",
+                          "value": "mx",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [],
+                          "source": {
+                            "omml_tag": "r"
+                          }
+                        }
+                      ],
+                      "source": {
+                        "omml_tag": "num"
+                      }
+                    }
+                  ],
+                  "source": {}
+                },
+                {
+                  "kind": "denominator",
+                  "value": "ω^{2}l",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [
+                    {
+                      "kind": "math_sequence",
+                      "value": "ω^{2}l",
+                      "vertical_align": null,
+                      "formatting": {},
+                      "children": [
+                        {
+                          "kind": "superscript",
+                          "value": "ω^{2}",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [
+                            {
+                              "kind": "base",
+                              "value": "ω",
+                              "vertical_align": null,
+                              "formatting": {},
+                              "children": [
+                                {
+                                  "kind": "math_sequence",
+                                  "value": "ω",
+                                  "vertical_align": null,
+                                  "formatting": {},
+                                  "children": [
+                                    {
+                                      "kind": "math_token",
+                                      "value": "ω",
+                                      "vertical_align": null,
+                                      "formatting": {},
+                                      "children": [],
+                                      "source": {
+                                        "omml_tag": "r"
+                                      }
+                                    }
+                                  ],
+                                  "source": {
+                                    "omml_tag": "e"
+                                  }
+                                }
+                              ],
+                              "source": {}
+                            },
+                            {
+                              "kind": "superscript",
+                              "value": "2",
+                              "vertical_align": null,
+                              "formatting": {},
+                              "children": [
+                                {
+                                  "kind": "math_sequence",
+                                  "value": "2",
+                                  "vertical_align": null,
+                                  "formatting": {},
+                                  "children": [
+                                    {
+                                      "kind": "math_token",
+                                      "value": "2",
+                                      "vertical_align": null,
+                                      "formatting": {},
+                                      "children": [],
+                                      "source": {
+                                        "omml_tag": "r"
+                                      }
+                                    }
+                                  ],
+                                  "source": {
+                                    "omml_tag": "sup"
+                                  }
+                                }
+                              ],
+                              "source": {}
+                            }
+                          ],
+                          "source": {
+                            "omml_tag": "sSup"
+                          }
+                        },
+                        {
+                          "kind": "math_token",
+                          "value": "l",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [],
+                          "source": {
+                            "omml_tag": "r"
+                          }
+                        }
+                      ],
+                      "source": {
+                        "omml_tag": "den"
+                      }
+                    }
+                  ],
+                  "source": {}
+                }
+              ],
+              "source": {
+                "omml_tag": "f"
+              }
+            }
+          ],
+          "source": {
+            "omml_tag": "oMath",
+            "omml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:oel=\"http://schemas.microsoft.com/office/2019/extlst\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16du=\"http://schemas.microsoft.com/office/word/2023/wordml/word16du\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16sdtfl=\"http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\"><m:f><m:fPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:i/><w:sz w:val=\"24\"/></w:rPr></m:ctrlPr></m:fPr><m:num><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>mx</m:t></m:r></m:num><m:den><m:sSup><m:sSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:i/><w:sz w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>ω</m:t></m:r></m:e><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>2</m:t></m:r></m:sup></m:sSup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>l</m:t></m:r></m:den></m:f></m:oMath>"
+          },
+          "source_block_id": 63,
+          "source_order": 63
+        },
+        {
+          "kind": "text",
+          "value": "\t",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 63,
+          "source_order": 63
+        },
+        {
+          "kind": "text",
+          "value": "\t",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 63,
+          "source_order": 63
+        },
+        {
+          "kind": "text",
+          "value": "\t",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 63,
+          "source_order": 63
+        },
+        {
+          "kind": "text",
+          "value": "d) ",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [],
+          "source": {},
+          "source_block_id": 63,
+          "source_order": 63
+        },
+        {
+          "kind": "math_sequence",
+          "value": "$\\frac{me}{ω^{2}x}$",
+          "vertical_align": null,
+          "formatting": {},
+          "children": [
+            {
+              "kind": "fraction",
+              "value": "\\frac{me}{ω^{2}x}",
+              "vertical_align": null,
+              "formatting": {},
+              "children": [
+                {
+                  "kind": "numerator",
+                  "value": "me",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [
+                    {
+                      "kind": "math_sequence",
+                      "value": "me",
+                      "vertical_align": null,
+                      "formatting": {},
+                      "children": [
+                        {
+                          "kind": "math_token",
+                          "value": "me",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [],
+                          "source": {
+                            "omml_tag": "r"
+                          }
+                        }
+                      ],
+                      "source": {
+                        "omml_tag": "num"
+                      }
+                    }
+                  ],
+                  "source": {}
+                },
+                {
+                  "kind": "denominator",
+                  "value": "ω^{2}x",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [
+                    {
+                      "kind": "math_sequence",
+                      "value": "ω^{2}x",
+                      "vertical_align": null,
+                      "formatting": {},
+                      "children": [
+                        {
+                          "kind": "superscript",
+                          "value": "ω^{2}",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [
+                            {
+                              "kind": "base",
+                              "value": "ω",
+                              "vertical_align": null,
+                              "formatting": {},
+                              "children": [
+                                {
+                                  "kind": "math_sequence",
+                                  "value": "ω",
+                                  "vertical_align": null,
+                                  "formatting": {},
+                                  "children": [
+                                    {
+                                      "kind": "math_token",
+                                      "value": "ω",
+                                      "vertical_align": null,
+                                      "formatting": {},
+                                      "children": [],
+                                      "source": {
+                                        "omml_tag": "r"
+                                      }
+                                    }
+                                  ],
+                                  "source": {
+                                    "omml_tag": "e"
+                                  }
+                                }
+                              ],
+                              "source": {}
+                            },
+                            {
+                              "kind": "superscript",
+                              "value": "2",
+                              "vertical_align": null,
+                              "formatting": {},
+                              "children": [
+                                {
+                                  "kind": "math_sequence",
+                                  "value": "2",
+                                  "vertical_align": null,
+                                  "formatting": {},
+                                  "children": [
+                                    {
+                                      "kind": "math_token",
+                                      "value": "2",
+                                      "vertical_align": null,
+                                      "formatting": {},
+                                      "children": [],
+                                      "source": {
+                                        "omml_tag": "r"
+                                      }
+                                    }
+                                  ],
+                                  "source": {
+                                    "omml_tag": "sup"
+                                  }
+                                }
+                              ],
+                              "source": {}
+                            }
+                          ],
+                          "source": {
+                            "omml_tag": "sSup"
+                          }
+                        },
+                        {
+                          "kind": "math_token",
+                          "value": "x",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [],
+                          "source": {
+                            "omml_tag": "r"
+                          }
+                        }
+                      ],
+                      "source": {
+                        "omml_tag": "den"
+                      }
+                    }
+                  ],
+                  "source": {}
+                }
+              ],
+              "source": {
+                "omml_tag": "f"
+              }
+            }
+          ],
+          "source": {
+            "omml_tag": "oMath",
+            "omml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:oel=\"http://schemas.microsoft.com/office/2019/extlst\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16du=\"http://schemas.microsoft.com/office/word/2023/wordml/word16du\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16sdtfl=\"http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\"><m:f><m:fPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:i/><w:sz w:val=\"24\"/></w:rPr></m:ctrlPr></m:fPr><m:num><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>me</m:t></m:r></m:num><m:den><m:sSup><m:sSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:i/><w:sz w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>ω</m:t></m:r></m:e><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>2</m:t></m:r></m:sup></m:sSup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:eastAsiaTheme=\"minorEastAsia\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:sz w:val=\"24\"/></w:rPr><m:t>x</m:t></m:r></m:den></m:f></m:oMath>"
+          },
+          "source_block_id": 63,
+          "source_order": 63
+        }
+      ],
+      "confidence": {
+        "overall": 0.9,
+        "boundary": 0.95,
+        "components": 0.85,
+        "classification": 0.9,
+        "metadata": 1.0
+      },
+      "validation": {
+        "valid": true,
+        "issues": [],
+        "checks": {
+          "has_question_stem": true,
+          "options_consistent": true,
+          "source_blocks_accounted_for": true,
+          "metadata_cleaned": true,
+          "no_duplicate_components": true
+        },
+        "base_parsed_ok": true,
+        "base_needs_review": false,
+        "source_issues": []
+      },
+      "table": null,
+      "id": 16,
+      "features": {
+        "has_options": false,
+        "option_count": 0,
+        "has_table": false,
+        "has_image": false,
+        "has_assertion": false,
+        "has_reason": false,
+        "has_blank": false,
+        "has_equation": true,
+        "has_statement_list": false,
+        "has_numeric_instruction": false,
+        "has_match_list": false,
+        "has_multiple_correct_instruction": false
+      },
+      "question_type": "open_question",
+      "validation_errors": [],
+      "has_equation": true,
+      "quality_score": 0.85,
+      "render": {
+        "status": "degraded",
+        "diagnostics": [
+          {
+            "code": "TEXT_LAYOUT_DEGRADED",
+            "severity": "warning",
+            "question_id": 16,
+            "component_id": "question",
+            "source_block_id": "61",
+            "node_id": "61:61:1",
+            "reason": "canonical nodes could not be aligned with rendered component text",
+            "fallback": "compatibility text",
+            "slide_ids": [
+              2
+            ]
+          },
+          {
+            "code": "MATH_RENDER_FAILED",
+            "severity": "warning",
+            "reason": "canonical math node has no render outcome",
+            "fallback": "no output",
+            "fallback_text": "no output",
+            "source_text": "$\\frac{mω^{2}x}{e}$",
+            "render_path": "fallback",
+            "status": "degraded",
+            "question_id": 16,
+            "component_id": "option:A",
+            "component_type": "option",
+            "option_label": "A",
+            "source_block_id": "62",
+            "node_id": null,
+            "math_id": "Q16-BLOCK-62-MATH-001",
+            "original": "$\\frac{mω^{2}x}{e}$"
+          },
+          {
+            "code": "MATH_RENDER_FAILED",
+            "severity": "warning",
+            "reason": "canonical math node has no render outcome",
+            "fallback": "no output",
+            "fallback_text": "no output",
+            "source_text": "$\\frac{mωx}{el}$",
+            "render_path": "fallback",
+            "status": "degraded",
+            "question_id": 16,
+            "component_id": "option:A",
+            "component_type": "option",
+            "option_label": "A",
+            "source_block_id": "62",
+            "node_id": null,
+            "math_id": "Q16-BLOCK-62-MATH-002",
+            "original": "$\\frac{mωx}{el}$"
+          },
+          {
+            "code": "MATH_RENDER_FAILED",
+            "severity": "warning",
+            "reason": "canonical math node has no render outcome",
+            "fallback": "no output",
+            "fallback_text": "no output",
+            "source_text": "$\\frac{mx}{ω^{2}l}$",
+            "render_path": "fallback",
+            "status": "degraded",
+            "question_id": 16,
+            "component_id": "question",
+            "component_type": "stem",
+            "option_label": null,
+            "source_block_id": "63",
+            "node_id": null,
+            "math_id": "Q16-BLOCK-63-MATH-003",
+            "original": "$\\frac{mx}{ω^{2}l}$"
+          },
+          {
+            "code": "MATH_RENDER_FAILED",
+            "severity": "warning",
+            "reason": "canonical math node has no render outcome",
+            "fallback": "no output",
+            "fallback_text": "no output",
+            "source_text": "$\\frac{me}{ω^{2}x}$",
+            "render_path": "fallback",
+            "status": "degraded",
+            "question_id": 16,
+            "component_id": "question",
+            "component_type": "stem",
+            "option_label": null,
+            "source_block_id": "63",
+            "node_id": null,
+            "math_id": "Q16-BLOCK-63-MATH-004",
+            "original": "$\\frac{me}{ω^{2}x}$"
+          }
+        ],
+        "slide_ids": [
+          2
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "rendered_count": 1,
+    "rendered_slides": 2,
+    "render_diagnostics": [
+      {
+        "code": "TEXT_LAYOUT_DEGRADED",
+        "severity": "warning",
+        "question_id": 16,
+        "component_id": "question",
+        "source_block_id": "61",
+        "node_id": "61:61:1",
+        "reason": "canonical nodes could not be aligned with rendered component text",
+        "fallback": "compatibility text",
+        "slide_ids": [
+          2
+        ]
+      },
+      {
+        "code": "MATH_COMPATIBILITY_RENDERED",
+        "severity": "info",
+        "reason": "native inline math is deferred for PowerPoint package safety",
+        "fallback": "(mω² x)/(e)",
+        "fallback_text": "(mω² x)/(e)",
+        "source_text": "\\frac{mω^{2}x}{e}",
+        "render_path": "compatibility",
+        "status": "ok",
+        "question_id": 16,
+        "component_id": "question",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "61",
+        "node_id": "question-compat:math:1",
+        "math_id": "Q16-BLOCK-61-MATH-001",
+        "original": "\\frac{mω^{2}x}{e}",
+        "slide_ids": [
+          2
+        ]
+      },
+      {
+        "code": "MATH_COMPATIBILITY_RENDERED",
+        "severity": "info",
+        "reason": "native inline math is deferred for PowerPoint package safety",
+        "fallback": "(mω x)/(el)",
+        "fallback_text": "(mω x)/(el)",
+        "source_text": "\\frac{mωx}{el}",
+        "render_path": "compatibility",
+        "status": "ok",
+        "question_id": 16,
+        "component_id": "question",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "61",
+        "node_id": "question-compat:math:2",
+        "math_id": "Q16-BLOCK-61-MATH-002",
+        "original": "\\frac{mωx}{el}",
+        "slide_ids": [
+          2
+        ]
+      },
+      {
+        "code": "MATH_COMPATIBILITY_RENDERED",
+        "severity": "info",
+        "reason": "native inline math is deferred for PowerPoint package safety",
+        "fallback": "(mx)/(ω²l)",
+        "fallback_text": "(mx)/(ω²l)",
+        "source_text": "\\frac{mx}{ω^{2}l}",
+        "render_path": "compatibility",
+        "status": "ok",
+        "question_id": 16,
+        "component_id": "question",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "61",
+        "node_id": "question-compat:math:3",
+        "math_id": "Q16-BLOCK-61-MATH-003",
+        "original": "\\frac{mx}{ω^{2}l}",
+        "slide_ids": [
+          2
+        ]
+      },
+      {
+        "code": "MATH_COMPATIBILITY_RENDERED",
+        "severity": "info",
+        "reason": "native inline math is deferred for PowerPoint package safety",
+        "fallback": "(me)/(ω² x)",
+        "fallback_text": "(me)/(ω² x)",
+        "source_text": "\\frac{me}{ω^{2}x}",
+        "render_path": "compatibility",
+        "status": "ok",
+        "question_id": 16,
+        "component_id": "question",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "61",
+        "node_id": "question-compat:math:4",
+        "math_id": "Q16-BLOCK-61-MATH-004",
+        "original": "\\frac{me}{ω^{2}x}",
+        "slide_ids": [
+          2
+        ]
+      },
+      {
+        "code": "MATH_RENDER_FAILED",
+        "severity": "warning",
+        "reason": "canonical math node has no render outcome",
+        "fallback": "no output",
+        "fallback_text": "no output",
+        "source_text": "$\\frac{mω^{2}x}{e}$",
+        "render_path": "fallback",
+        "status": "degraded",
+        "question_id": 16,
+        "component_id": "option:A",
+        "component_type": "option",
+        "option_label": "A",
+        "source_block_id": "62",
+        "node_id": null,
+        "math_id": "Q16-BLOCK-62-MATH-001",
+        "original": "$\\frac{mω^{2}x}{e}$"
+      },
+      {
+        "code": "MATH_RENDER_FAILED",
+        "severity": "warning",
+        "reason": "canonical math node has no render outcome",
+        "fallback": "no output",
+        "fallback_text": "no output",
+        "source_text": "$\\frac{mωx}{el}$",
+        "render_path": "fallback",
+        "status": "degraded",
+        "question_id": 16,
+        "component_id": "option:A",
+        "component_type": "option",
+        "option_label": "A",
+        "source_block_id": "62",
+        "node_id": null,
+        "math_id": "Q16-BLOCK-62-MATH-002",
+        "original": "$\\frac{mωx}{el}$"
+      },
+      {
+        "code": "MATH_RENDER_FAILED",
+        "severity": "warning",
+        "reason": "canonical math node has no render outcome",
+        "fallback": "no output",
+        "fallback_text": "no output",
+        "source_text": "$\\frac{mx}{ω^{2}l}$",
+        "render_path": "fallback",
+        "status": "degraded",
+        "question_id": 16,
+        "component_id": "question",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "63",
+        "node_id": null,
+        "math_id": "Q16-BLOCK-63-MATH-003",
+        "original": "$\\frac{mx}{ω^{2}l}$"
+      },
+      {
+        "code": "MATH_RENDER_FAILED",
+        "severity": "warning",
+        "reason": "canonical math node has no render outcome",
+        "fallback": "no output",
+        "fallback_text": "no output",
+        "source_text": "$\\frac{me}{ω^{2}x}$",
+        "render_path": "fallback",
+        "status": "degraded",
+        "question_id": 16,
+        "component_id": "question",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "63",
+        "node_id": null,
+        "math_id": "Q16-BLOCK-63-MATH-004",
+        "original": "$\\frac{me}{ω^{2}x}$"
+      }
+    ],
+    "render_status": "degraded",
+    "math_fallback_count": 4,
+    "render_diagnostic_counts": {
+      "TEXT_LAYOUT_DEGRADED": 1,
+      "MATH_COMPATIBILITY_RENDERED": 4,
+      "MATH_RENDER_FAILED": 4
+    },
+    "math_render_counts": {
+      "canonical_math_nodes": 4,
+      "native_math_entries": 0,
+      "fallback_math_entries": 0,
+      "fallback_math_nodes": 0,
+      "compatibility_math_nodes": 4,
+      "failed_math_nodes": 4,
+      "unrendered_canonical_math_nodes": 0,
+      "native_entries_without_canonical_node": 0,
+      "math_outcome_nodes": 8,
+      "math_outcome_ids_unique": true
+    },
+    "math_render_outcomes": [
+      {
+        "math_id": "Q16-BLOCK-61-MATH-001",
+        "question_id": 16,
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "61",
+        "node_id": "question-compat:math:1",
+        "render_path": "compatibility",
+        "status": "ok",
+        "source_text": "\\frac{mω^{2}x}{e}",
+        "fallback_text": "(mω² x)/(e)",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0
+      },
+      {
+        "math_id": "Q16-BLOCK-61-MATH-002",
+        "question_id": 16,
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "61",
+        "node_id": "question-compat:math:2",
+        "render_path": "compatibility",
+        "status": "ok",
+        "source_text": "\\frac{mωx}{el}",
+        "fallback_text": "(mω x)/(el)",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0
+      },
+      {
+        "math_id": "Q16-BLOCK-61-MATH-003",
+        "question_id": 16,
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "61",
+        "node_id": "question-compat:math:3",
+        "render_path": "compatibility",
+        "status": "ok",
+        "source_text": "\\frac{mx}{ω^{2}l}",
+        "fallback_text": "(mx)/(ω²l)",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0
+      },
+      {
+        "math_id": "Q16-BLOCK-61-MATH-004",
+        "question_id": 16,
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "61",
+        "node_id": "question-compat:math:4",
+        "render_path": "compatibility",
+        "status": "ok",
+        "source_text": "\\frac{me}{ω^{2}x}",
+        "fallback_text": "(me)/(ω² x)",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0
+      },
+      {
+        "math_id": "Q16-BLOCK-62-MATH-001",
+        "question_id": 16,
+        "component_type": "option",
+        "option_label": "A",
+        "source_block_id": "62",
+        "node_id": null,
+        "render_path": "failed",
+        "status": "failed",
+        "source_text": "$\\frac{mω^{2}x}{e}$",
+        "fallback_text": "",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0,
+        "reason": "canonical math node has no render outcome"
+      },
+      {
+        "math_id": "Q16-BLOCK-62-MATH-002",
+        "question_id": 16,
+        "component_type": "option",
+        "option_label": "A",
+        "source_block_id": "62",
+        "node_id": null,
+        "render_path": "failed",
+        "status": "failed",
+        "source_text": "$\\frac{mωx}{el}$",
+        "fallback_text": "",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0,
+        "reason": "canonical math node has no render outcome"
+      },
+      {
+        "math_id": "Q16-BLOCK-63-MATH-003",
+        "question_id": 16,
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "63",
+        "node_id": null,
+        "render_path": "failed",
+        "status": "failed",
+        "source_text": "$\\frac{mx}{ω^{2}l}$",
+        "fallback_text": "",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0,
+        "reason": "canonical math node has no render outcome"
+      },
+      {
+        "math_id": "Q16-BLOCK-63-MATH-004",
+        "question_id": 16,
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "63",
+        "node_id": null,
+        "render_path": "failed",
+        "status": "failed",
+        "source_text": "$\\frac{me}{ω^{2}x}$",
+        "fallback_text": "",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0,
+        "reason": "canonical math node has no render outcome"
+      }
+    ]
+  }
+}

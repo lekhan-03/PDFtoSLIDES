@@ -1,0 +1,302 @@
+{
+  "questions": [
+    {
+      "section": "Math",
+      "source_question_number": null,
+      "raw_question_number": null,
+      "numbering": null,
+      "numbering_event": null,
+      "question": "Read the table and select the correct row.",
+      "statements": [],
+      "options": {},
+      "appearances": [],
+      "images": [],
+      "subparts": [],
+      "equations": [],
+      "blanks": [],
+      "answer": null,
+      "parsed_ok": true,
+      "needs_review": false,
+      "block_ids": [
+        1,
+        2
+      ],
+      "source_blocks": [
+        {
+          "block_id": 1,
+          "role": "stem"
+        },
+        {
+          "block_id": 2,
+          "role": "table"
+        }
+      ],
+      "inline_content": [
+        {
+          "kind": "text",
+          "value": "1. Read the table and select the correct row.",
+          "vertical_align": null,
+          "formatting": {
+            "bold": true
+          },
+          "children": [],
+          "source": {},
+          "source_block_id": 1,
+          "source_order": 1,
+          "inline_index": 0
+        }
+      ],
+      "confidence": {
+        "overall": 0.75,
+        "boundary": 0.75,
+        "components": 0.85,
+        "classification": 0.9,
+        "metadata": 0.85
+      },
+      "validation": {
+        "valid": true,
+        "issues": [],
+        "checks": {
+          "has_question_stem": true,
+          "options_consistent": true,
+          "source_blocks_accounted_for": true,
+          "metadata_cleaned": true,
+          "no_duplicate_components": true
+        }
+      },
+      "table": {
+        "headers": [
+          "Quantity",
+          "$\\frac{a+b}{c+d}$",
+          "SO₄²⁻"
+        ],
+        "rows": [
+          [
+            "Quantity",
+            "$\\frac{a+b}{c+d}$",
+            "SO₄²⁻"
+          ]
+        ],
+        "cell_content": [
+          [
+            {
+              "text": "Quantity",
+              "source_block_id": 4,
+              "inline_content": [
+                {
+                  "kind": "text",
+                  "value": "Quantity",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [],
+                  "source": {},
+                  "source_block_id": 4,
+                  "inline_index": 0
+                }
+              ]
+            },
+            {
+              "text": "$\\frac{a+b}{c+d}$",
+              "source_block_id": 6,
+              "inline_content": [
+                {
+                  "kind": "math_sequence",
+                  "value": "$\\frac{a+b}{c+d}$",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [
+                    {
+                      "kind": "fraction",
+                      "value": "\\frac{a+b}{c+d}",
+                      "vertical_align": null,
+                      "formatting": {},
+                      "children": [
+                        {
+                          "kind": "numerator",
+                          "value": "a+b",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [
+                            {
+                              "kind": "math_sequence",
+                              "value": "a+b",
+                              "vertical_align": null,
+                              "formatting": {},
+                              "children": [
+                                {
+                                  "kind": "math_token",
+                                  "value": "a+b",
+                                  "vertical_align": null,
+                                  "formatting": {},
+                                  "children": [],
+                                  "source": {
+                                    "omml_tag": "r"
+                                  }
+                                }
+                              ],
+                              "source": {
+                                "omml_tag": "num"
+                              }
+                            }
+                          ],
+                          "source": {}
+                        },
+                        {
+                          "kind": "denominator",
+                          "value": "c+d",
+                          "vertical_align": null,
+                          "formatting": {},
+                          "children": [
+                            {
+                              "kind": "math_sequence",
+                              "value": "c+d",
+                              "vertical_align": null,
+                              "formatting": {},
+                              "children": [
+                                {
+                                  "kind": "math_token",
+                                  "value": "c+d",
+                                  "vertical_align": null,
+                                  "formatting": {},
+                                  "children": [],
+                                  "source": {
+                                    "omml_tag": "r"
+                                  }
+                                }
+                              ],
+                              "source": {
+                                "omml_tag": "den"
+                              }
+                            }
+                          ],
+                          "source": {}
+                        }
+                      ],
+                      "source": {
+                        "omml_tag": "f"
+                      }
+                    }
+                  ],
+                  "source": {
+                    "omml_tag": "oMath",
+                    "omml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mo=\"http://schemas.microsoft.com/office/mac/office/2008/main\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:mv=\"urn:schemas-microsoft-com:mac:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\"><m:f><m:num><m:r><m:t>a+b</m:t></m:r></m:num><m:den><m:r><m:t>c+d</m:t></m:r></m:den></m:f></m:oMath>"
+                  },
+                  "source_block_id": 6,
+                  "inline_index": 0
+                }
+              ]
+            },
+            {
+              "text": "SO₄²⁻",
+              "source_block_id": 8,
+              "inline_content": [
+                {
+                  "kind": "text",
+                  "value": "SO",
+                  "vertical_align": null,
+                  "formatting": {},
+                  "children": [],
+                  "source": {},
+                  "source_block_id": 8,
+                  "inline_index": 0
+                },
+                {
+                  "kind": "text",
+                  "value": "4",
+                  "vertical_align": "subscript",
+                  "formatting": {},
+                  "children": [],
+                  "source": {},
+                  "source_block_id": 8,
+                  "inline_index": 1
+                },
+                {
+                  "kind": "text",
+                  "value": "2−",
+                  "vertical_align": "superscript",
+                  "formatting": {},
+                  "children": [],
+                  "source": {},
+                  "source_block_id": 8,
+                  "inline_index": 2
+                }
+              ]
+            }
+          ]
+        ],
+        "source_block_ids": [
+          2
+        ]
+      },
+      "id": "q-table-rich",
+      "render": {
+        "status": "rendered",
+        "diagnostics": [],
+        "slide_ids": [
+          2
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "rendered_count": 1,
+    "rendered_slides": 2,
+    "render_diagnostics": [
+      {
+        "code": "MATH_COMPATIBILITY_RENDERED",
+        "severity": "info",
+        "reason": "native inline math is deferred for PowerPoint package safety",
+        "fallback": "(a+b)/(c+d)",
+        "fallback_text": "(a+b)/(c+d)",
+        "source_text": "$\\frac{a+b}{c+d}$",
+        "render_path": "compatibility",
+        "status": "ok",
+        "question_id": "q-table-rich",
+        "component_id": "table:0:1",
+        "component_type": "table",
+        "option_label": null,
+        "source_block_id": "6",
+        "node_id": "6:unknown:1",
+        "math_id": "Q-TABLE-RICH-BLOCK-6-MATH-001",
+        "original": "$\\frac{a+b}{c+d}$",
+        "slide_ids": [
+          2
+        ]
+      }
+    ],
+    "render_status": "rendered",
+    "math_fallback_count": 0,
+    "render_diagnostic_counts": {
+      "MATH_COMPATIBILITY_RENDERED": 1
+    },
+    "math_render_counts": {
+      "canonical_math_nodes": 1,
+      "native_math_entries": 0,
+      "fallback_math_entries": 0,
+      "fallback_math_nodes": 0,
+      "compatibility_math_nodes": 1,
+      "failed_math_nodes": 0,
+      "unrendered_canonical_math_nodes": 0,
+      "native_entries_without_canonical_node": 0,
+      "math_outcome_nodes": 1,
+      "math_outcome_ids_unique": true
+    },
+    "math_render_outcomes": [
+      {
+        "math_id": "Q-TABLE-RICH-BLOCK-6-MATH-001",
+        "question_id": "q-table-rich",
+        "component_type": "table",
+        "option_label": null,
+        "source_block_id": "6",
+        "node_id": "6:unknown:1",
+        "render_path": "compatibility",
+        "status": "ok",
+        "source_text": "$\\frac{a+b}{c+d}$",
+        "fallback_text": "(a+b)/(c+d)",
+        "native_entries": 0,
+        "fallback_entries": 0,
+        "alternate_fallback_entries": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "id": "q-inline",
+      "question": "$x^{2}$",
+      "options": {},
+      "inline_content": [
+        {
+          "kind": "math_sequence",
+          "value": "$x^{2}$",
+          "source_block_id": "b-1",
+          "source_order": 1,
+          "source": {
+            "omml_tag": "oMath",
+            "omml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\"><m:sSup><m:e><m:r><m:t>x</m:t></m:r></m:e><m:sup><m:r><m:t>2</m:t></m:r></m:sup></m:sSup></m:oMath>"
+          },
+          "children": []
+        }
+      ],
+      "source_blocks": [
+        {
+          "block_id": "b-1",
+          "role": "stem"
+        }
+      ],
+      "render": {
+        "status": "rendered",
+        "diagnostics": [],
+        "slide_ids": [
+          2
+        ]
+      }
+    }
+  ],
+  "diagnostics": {
+    "rendered_count": 1,
+    "rendered_slides": 2,
+    "render_diagnostics": [],
+    "render_status": "rendered",
+    "math_fallback_count": 0,
+    "render_diagnostic_counts": {},
+    "math_render_counts": {
+      "canonical_math_nodes": 1,
+      "native_math_entries": 1,
+      "fallback_math_entries": 1,
+      "fallback_math_nodes": 0,
+      "failed_math_nodes": 0,
+      "unrendered_canonical_math_nodes": 0,
+      "native_entries_without_canonical_node": 0,
+      "math_outcome_nodes": 1,
+      "math_outcome_ids_unique": true
+    },
+    "math_render_outcomes": [
+      {
+        "math_id": "Q-INLINE-BLOCK-B-1-MATH-001",
+        "question_id": "q-inline",
+        "component_type": "stem",
+        "option_label": null,
+        "source_block_id": "b-1",
+        "node_id": "b-1:1:1",
+        "render_path": "native",
+        "status": "ok",
+        "source_text": "$x^{2}$",
+        "fallback_text": "x²",
+        "native_entries": 1,
+        "fallback_entries": 1,
+        "alternate_fallback_entries": 1
+      }
+    ]
+  }
+}
